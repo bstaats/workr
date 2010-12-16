@@ -3,12 +3,8 @@
 *  Copyright: ©2010 Brian Staats and contributors
 *  ==========================================================================
 */
-.header{
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: 20px;
-  font-weight:bolder;
-  text-shadow: 1px 1px 0px rgba(255,255,255,1);
-  position: absolute;
+
+.menu{
   background: -webkit-gradient(
       linear,
       left bottom,
@@ -21,5 +17,86 @@
       #C2C2C2 38%,
       #ECECEC 85%
   );
+  -moz-box-shadow: 0px 2px 2px #666;
+  -webkit-box-shadow: 0px 2px 2px #666;
+  box-shadow: 0px 2px 2px #666;
+}
+.menu > .sc-button-view{
+  border: none;
 }
 
+.menu > .sc-button-view span{
+  padding-top: 5px;
+}
+
+.menu > .menu-item{
+  text-shadow:    0px 1px 0px rgba(255,255,255,1);
+  color:          #464646;
+  font-size:      18px;
+  font-weight:    bolder;
+  border-radius:  0;
+}
+
+.menu > .menu-item:hover{
+  color: #fff;
+  text-shadow:    0px -1px 0px #000;
+  border-right: 1px ridge #ddd;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+}
+
+.menu > .menu-item label{
+  border-right: 1px ridge #aaa;
+}
+
+.menu > .menu-item:hover label{
+  border-right: none;
+}
+
+.appNavButton > span > label{
+  text-align:left;
+  padding-left:10px;
+}
+
+
+.libraryButton > span > label{
+  width:24px;
+  height:24px;
+  background: static_url('images/sprites.png') no-repeat -24px 0;
+}
+
+.libraryButton:hover > span > label{
+  background: static_url('images/sprites.png') no-repeat -24px -24px;
+}
+
+.libraryButton .selected > span > label{
+  background: static_url('images/sprites.png') no-repeat -24px -48px;
+}
+
+.libraryButton .disabled > span > label{
+  background: static_url('images/sprites.png') no-repeat -24px -72px;
+}
+
+
+/* ==========================================================================
+*  Sproutcore styles
+*  Copyright: ©2010 Brian Staats and contributors
+*  ==========================================================================
+*/
+.sc-base{
+  font-family: Helvetica, Arial, sans-serif;
+}
