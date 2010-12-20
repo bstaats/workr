@@ -1,7 +1,7 @@
 Workr.mainPage = SC.Page.design({
 
   mainPane: SC.MainPane.design({
-    defaultResponder: 'Workr.stateChart',
+    defaultResponder: 'Workr.statechart',
     childViews: 'menu'.w(),
 
     menu: SC.View.design({
