@@ -2,7 +2,18 @@ Workr.statechart = Ki.Statechart.create({
 
   rootState: Ki.State.design({
 
-    initialSubstate: 'loggedOut',
+    initialSubstate: 'loadingLoginBundle',
+    
+    loadingLoginBundle: Ki.State.design({
+      
+      enterState: function() {
+        var self = this ;
+        SC.loadBundle('login', function() {
+          self.gotoState('loggedOut');
+        });
+      }
+      
+    }),
 
     loggedOut: Ki.State.design({
 
