@@ -1,4 +1,4 @@
-Workr.main = function main() {
+function main() {
 
   // append #fixtures to url in order to use them
   if (window.location.hash.toString().match('fixtures')) {
@@ -16,6 +16,4 @@ Workr.main = function main() {
 
   Workr.stateChart.initStatechart();
 
-} ;
-
-function main() { Workr.main(); }
+};
