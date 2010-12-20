@@ -1,8 +1,8 @@
-Workr.stateChart = Ki.Statechart.create({
+Workr.statechart = Ki.Statechart.create({
 
   rootState: Ki.State.design({
 
-    initialSubstate: 'loggedIn',//'loggedOut',
+    initialSubstate: 'loggedOut',
 
     loggedOut: Ki.State.design({
 

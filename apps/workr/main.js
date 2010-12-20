@@ -9,11 +9,11 @@ function main() {
   if (CoreWorkr.remoteDataSource === YES) {
     console.log('No remote datasource defined.. yet. Append #fixtures to the URL');
   } else {
-    this.set('store', SC.Store.create().from(SC.Record.fixtures));
+    Workr.set('store', SC.Store.create().from(SC.Record.fixtures));
     console.log('Initialized main store with fixtures data source.');
   }
 
 
-  Workr.stateChart.initStatechart();
+  Workr.statechart.initStatechart();
 
 };

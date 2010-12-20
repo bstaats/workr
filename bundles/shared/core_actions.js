@@ -42,7 +42,7 @@ Workr.mixin({
     }
 */
     Workr.loginController.set('isLoggingIn', YES);
-    Workr.stateChart.sendAction('loginSuccess',SC.Object.create(),SC.Object.create());
+    Workr.statechart.sendAction('loginSuccess',SC.Object.create(),SC.Object.create());
   },
 
   /**
@@ -53,7 +53,7 @@ Workr.mixin({
   authenticationFailure: function(response) {
     // console.log('DEBUG: authenticationFailure()');
     Workr.loginController.set('isLoggingIn', NO);
-    Workr.stateChart.sendAction('loginFailure',SC.Object.create(),SC.Object.create());
+    Workr.statechart.sendAction('loginFailure',SC.Object.create(),SC.Object.create());
   },
 
 
