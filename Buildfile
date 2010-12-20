@@ -10,7 +10,7 @@ config 'husky',
   :debug_required => ['sproutcore/debug']
 
 # BUNDLES
-config :workr_bundles, :required => [:shared]
+config :workr_bundles, :required => [:shared, :login]
 
 config :all,
   :required => [:sproutcore, :ki, :husky, :workr_bundles],
