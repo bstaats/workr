@@ -2,15 +2,18 @@
 # Project:   Workr
 # ===========================================================================
 
-# Add initial buildfile information here
+# THEME
 config 'husky',
   :required => ['sproutcore/standard_theme'],
   :theme_name => 'husky',
   :test_required => ['sproutcore/testing'],
   :debug_required => ['sproutcore/debug']
 
+# BUNDLES
+config :workr_bundles, :required => [:shared]
+
 config :all,
-  :required => [:sproutcore, :ki, :husky],
+  :required => [:sproutcore, :ki, :husky, :workr_bundles],
   :theme => 'husky'
 
 #proxy "/", :to => "localhost:3000"
