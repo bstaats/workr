@@ -2,7 +2,7 @@ Workr.mainPage = SC.Page.design({
 
   mainPane: SC.MainPane.design({
     defaultResponder: 'Workr.statechart',
-    childViews: 'menu'.w(),
+    childViews: 'menu button'.w(),
 
     menu: SC.View.design({
       layout: {left: 0, top: 0, right: 0, height: 30},
@@ -36,8 +36,11 @@ Workr.mainPage = SC.Page.design({
         title:''
       })
 
-    }) // header
+    }), // header
 
+    button: ButtonView.design({
+      layout: { top: 50, left: 50, width: 100, height: 50 }
+    })
 
   }) //mainPane
 

@@ -2,7 +2,7 @@ Workr.statechart = Ki.Statechart.create({
 
   rootState: Ki.State.design({
 
-    initialSubstate: 'loadingLoginBundle',
+    initialSubstate: 'loggedIn', // 'loadingLoginBundle',
     
     loadingLoginBundle: Ki.State.design({
       

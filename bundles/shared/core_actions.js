@@ -1,5 +1,10 @@
 Workr.mixin({
 
+  
+  action: function() {
+    alert('action called');
+  },
+  
   /**
    * Authenticate user trying to log in to Workr application.
    *
