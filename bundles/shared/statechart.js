@@ -18,6 +18,13 @@ Workr.statechart = Ki.Statechart.create({
     loggedOut: Ki.State.design({
 
       enterState: function() {
+        // view tree configuration
+        // controller network configuration
+        // queries in the datastore
+        // rules:
+          // no if statements
+          // only loop for looping, not for logic
+          // MUST be the exact same configuration
         Workr.getPath('loginPage.loginPane').append();
       },
 
@@ -67,4 +74,4 @@ Workr.statechart = Ki.Statechart.create({
 
   })  // rootState
 
-})
+});
