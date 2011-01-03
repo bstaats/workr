@@ -6,7 +6,8 @@
 
 /** @class
 
-  Describes an Expression in Ruote
+  Describes an Expression in Ruote, as persisted by the Ruote Storage
+  engine.
 
   @extends SC.Record
   @version 0.1
@@ -17,11 +18,13 @@ Workr.RuoteExpression = SC.Record.extend(
   name: SC.Record.attr(String),
   tree: SC.Record.attr(String),
   /*
-  * Probably should be a separate resource? This is likely an
-  * array, not a string.
+  * Should this be a separate resource?
   */
-  variables: SC.Record.attr(String),
+  variables: SC.Record.attr(Array),
   appliedWorkitem: SC.Record.attr(String, {key: "applied_workitem"}),
+  /*
+  * This is a JSON tree, but we don't know the structure beforehand.
+  */
   tree: SC.Record.attr(String),
   originalTree: SC.Record.attr(String, {key: "original_tree"}),
   timeoutScheduleId: SC.Record.attr(String, {key: "timeout_schedule_id"})
