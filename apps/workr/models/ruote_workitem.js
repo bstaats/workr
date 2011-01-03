@@ -13,7 +13,10 @@
 */
 Workr.RuoteWorkitem = SC.Record.extend(
 /** @scope Workr.RuoteWorkitem.prototype */ {
-
-  // TODO: Add your own code here.
-
-}) ;
+  /*
+  * TODO: How do we handle the nested arrays?
+  */
+  primaryKey: "id",
+  participantName: SC.Record.attr(String),
+  fields: SC.Record.attr(String),
+});
