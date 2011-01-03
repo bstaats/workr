@@ -33,3 +33,7 @@ tmp/**/*
 .DS_Store
 ehthumbs.db
 Thumbs.db
+
+# Editor files #
+################
+*.swp
