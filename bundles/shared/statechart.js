@@ -2,18 +2,39 @@ Workr.statechart = Ki.Statechart.create({
 
   rootState: Ki.State.design({
 
-    initialSubstate: 'loadingLoginBundle',
-    
-    loadingLoginBundle: Ki.State.design({
-      
+    initialSubstate: 'loadingBundles',
+
+    loadingBundles: Ki.State.design({
+
       enterState: function() {
         var self = this ;
+/*      Login not complete. Dont load
         SC.loadBundle('login', function() {
           self.gotoState('loggedOut');
         });
+*/
+        self.gotoState('studio')
       }
-      
+
     }),
+
+    studio: Ki.State.design({
+      enterState: function() {
+        // do nothing yet
+        Workr.getPath('mainPage.mainPane').append();
+      },
+
+      openAppMenu: function(view){
+
+        appMenu: Workr.AppMenu.create({
+          layout: { width: 200, top: 30 },
+          classNames: ['app-menu']
+        }).popup(view)
+
+      }
+
+    }),
+
 
     loggedOut: Ki.State.design({
 

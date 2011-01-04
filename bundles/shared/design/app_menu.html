@@ -1,0 +1,63 @@
+<html>
+<head>
+<style type="text/css" media="screen">
+  .app-menu{
+    background-color:#333;
+    color:#e5e5e5;
+  }
+
+  .app-menu > ul{
+    list-style:none;
+    padding:10px;
+    margin:0;
+  }
+
+  .app-menu > ul > li{
+    display:block;
+    padding: 5px 0 5px 0;
+  }
+
+  .app-menu > ul > li.search{
+
+  }
+
+  .app-menu > ul > li.login{
+
+  }
+
+  .app-menu > ul > li.new{
+
+  }
+
+  .app-menu > ul > li.load{
+
+  }
+
+  .app-menu > ul > li.clear{
+
+  }
+
+</style>
+</head>
+<body>
+  <div class="sc-base sc-view sc-pane sc-panel sc-palette sc-picker app-menu">
+    <!--
+      How to mix rendering HTML with SC.Views? This is just a copy/paste
+    -->
+    <div role="button" class="sc-base square sc-view sc-button-view menu-item appNavButton sc-regular-size" style="width: 200px; left: 40px; height: 30px; top: 0px">
+      <span class="sc-button-inner">
+        <label class="sc-button-label">Studio</label>
+      </span>
+    </div>
+    
+    <ul>
+      <li class='search'><input type='text' value='Search'></li>
+      <li>&nbsp;</li>
+      <li class='login'>Login</li>
+      <li class='new'>New Workr</li>
+      <li class='load'>Load Workr</li>
+      <li class='clear'>Clear Canvas</li>
+    </ul>
+  </div>
+</body>
+</html>
