@@ -1,10 +1,18 @@
 Workr.AppMenu = SC.PickerPane.extend({
-  init: function(){
-    sc_super();
-  },
+  layout: {width: 200},
 
-  render: function(context, firstTime){
-    // How to mix rendering HTML with SC.Views?
-    if (firstTime) context.push("<ul><li class='search'><input type='text' value='Search'></li><li>&nbsp;</li><li class='login'>Login</li><li class='new'>New Workr</li><li class='load'>Load Workr</li><li class='clear'>Clear Canvas</li></ul>");
-  }
+  contentView: SC.View.design({
+    layout: {top: 0, left: 0, bottom: 0, right: 0 },
+    classNames: 'app-menu',
+    childViews: 'appNavButton'.w(),
+
+    appNavButton: SC.ButtonView.design({
+      layout: {top:0, left:0, width: 200, height: 30 },
+      classNames: ['menu-item appNavButton open'],
+      title:'Studio',
+      action: 'closeAppMenu'
+    })
+
+  })
+
 })

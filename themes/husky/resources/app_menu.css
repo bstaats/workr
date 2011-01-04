@@ -1,0 +1,66 @@
+/* ==========================================================================
+*  AppMenu
+*  ==========================================================================
+*/
+.app-menu{
+  background-color:#333 !important; /* how the heck do I keep SC from overriding my styles other than using !important?*/
+  color:#e5e5e5;
+}
+
+.app-menu > ul{
+  list-style:none;
+  padding:10px;
+  margin:0;
+}
+
+.app-menu > ul > li{
+  display:block;
+  padding: 5px 0 5px 0;
+}
+
+.app-menu > .open{
+  color: #fff;
+  text-shadow:    0px -1px 0px #000;
+  border-right: 1px ridge #ddd;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+}
+
+.app-menu > .open label{
+  border-right: none;
+}
+
+
+.app-menu > ul > li.search{
+
+}
+
+.app-menu > ul > li.login{
+
+}
+
+.app-menu > ul > li.new{
+
+}
+
+.app-menu > ul > li.load{
+
+}
+
+.app-menu > ul > li.clear{
+
+}

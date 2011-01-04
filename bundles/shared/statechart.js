@@ -19,18 +19,20 @@ Workr.statechart = Ki.Statechart.create({
     }),
 
     studio: Ki.State.design({
+
+      appMenu: null,
+
       enterState: function() {
         // do nothing yet
         Workr.getPath('mainPage.mainPane').append();
       },
 
       openAppMenu: function(view){
+        appMenu = Workr.AppMenu.create({}).popup(view);
+      },
 
-        appMenu: Workr.AppMenu.create({
-          layout: { width: 200, top: 30 },
-          classNames: ['app-menu']
-        }).popup(view)
-
+      cloaseAppMenu: function(view){
+        appMenu.remove();
       }
 
     }),

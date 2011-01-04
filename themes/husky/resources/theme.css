@@ -1,4 +1,27 @@
 /* ==========================================================================
+*  Sproutcore style resets
+*  ==========================================================================
+*/
+.sc-button-view{
+  border: none;
+}
+
+.sc-button-view span{
+  padding-top: 5px;
+}
+
+
+/* ==========================================================================
+*  Sproutcore style overrides
+*  ==========================================================================
+*/
+.sc-base{
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+
+
+/* ==========================================================================
 *  Workr specific styles: Husky theme
 *  Copyright: ©2010 Brian Staats and contributors
 *  ==========================================================================
@@ -21,7 +44,7 @@
   -webkit-box-shadow: 0px 2px 2px #666;
   box-shadow: 0px 2px 2px #666;
 }
-.menu > .sc-button-view{
+.sc-button-view{
   border: none;
 }
 
@@ -29,7 +52,7 @@
   padding-top: 5px;
 }
 
-.menu > .menu-item{
+.menu-item{
   text-shadow:    0px 1px 0px rgba(255,255,255,1);
   color:          #464646;
   font-size:      18px;
@@ -37,7 +60,7 @@
   border-radius:  0;
 }
 
-.menu > .menu-item:hover{
+.menu-item:hover{
   color: #fff;
   text-shadow:    0px -1px 0px #000;
   border-right: 1px ridge #ddd;
@@ -59,11 +82,11 @@
   );
 }
 
-.menu > .menu-item label{
+.menu-item label{
   border-right: 1px ridge #aaa;
 }
 
-.menu > .menu-item:hover label{
+.menu-item:hover label{
   border-right: none;
 }
 
@@ -92,52 +115,3 @@
 }
 
 
-/* ==========================================================================
-*  AppMenu
-*  ==========================================================================
-*/
-.app-menu{
-  background-color:#333;
-  color:#e5e5e5;
-}
-
-.app-menu > ul{
-  list-style:none;
-  padding:10px;
-  margin:0;
-}
-
-.app-menu > ul > li{
-  display:block;
-  padding: 5px 0 5px 0;
-}
-
-.app-menu > ul > li.search{
-
-}
-
-.app-menu > ul > li.login{
-
-}
-
-.app-menu > ul > li.new{
-
-}
-
-.app-menu > ul > li.load{
-
-}
-
-.app-menu > ul > li.clear{
-
-}
-
-
-/* ==========================================================================
-*  Sproutcore styles
-*  Copyright: ©2010 Brian Staats and contributors
-*  ==========================================================================
-*/
-.sc-base{
-  font-family: Helvetica, Arial, sans-serif;
-}
