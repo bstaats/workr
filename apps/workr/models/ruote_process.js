@@ -28,7 +28,7 @@ Workr.RuoteProcess = SC.Record.extend(
   definitionName: SC.Record.attr(String, {key: "definition_name"}),
   definitionRevision: SC.Record.attr(String, {key: "definition_revision"}),
   currentTree: SC.Record.attr(String, {key: "current_tree"}),
-  launchedTime: SC.Record.attr(Date, {key: "launched_time"),
+  launchedTime: SC.Record.attr(Date, {key: "launched_time"}),
   lastActive: SC.Record.attr(Date, {key: "last_active"}),
   tags: SC.Record.attr(String),
   originalTree: SC.Record.attr(String, {key: "original_tree"}),
