@@ -101,7 +101,7 @@
 
 #menu label, #appmenu label{
   display:  inline-block;
-  padding:  4px 10px 0 40 px;
+  padding:  4px 10px 0 45px;
 }
 
 
@@ -204,11 +204,15 @@
 
 
 #appmenu ul.menuitems > li > label{
-  padding:  8px 10px 0 6px;
+  padding:  8px 10px 0 5px;
 }
 
 #appmenu_search{
   margin:15px 0;
+}
+
+#appmenu_search_results{
+  display:none;
 }
 
 /*
@@ -230,24 +234,24 @@
 #appmenu_search input{
   margin:                 10px 0px 0 10px;
   border:                 none;
-  padding-left:           30px;
+  padding-left:           34px;
   line-height:            30px;
   width:                  229px;
   -webkit-border-radius:  25px;
   -moz-border-radius:     25px;
   border-radius:          25px;
-  background:             #fff url('images/search.png') no-repeat left center;
+  background:             #fff url('images/search.png') no-repeat 5px center;
   cursor:                 pointer;
   color:                  #ccc;
 }
 
-#appmenu_search input:hover{
+#appmenu_search input:hover, #appmenu.searching #appmenu_search input{
   color:        #000;
   background:   #fff url('images/search_on.png') no-repeat left center;
 }
 
-#appmenu ul.menuitems > li > span{
-  margin: 6px 0 0 10px;
+#appmenu ul.menuitems li span{
+  margin: 6px 0 0 15px;
 }
 
 #appmenu_login span{
@@ -280,4 +284,50 @@
 
 #appmenu_clear:hover span{
   background:   url('images/sprites.png') no-repeat -144px -96px;
+}
+
+
+/* ==========================================================================
+*  APPMENU MODE: searching
+*  ==========================================================================
+*/
+
+#appmenu.searching #appmenu_search_results{
+  background:             #fff;
+  display:                block;
+  width:                  229px;
+  margin:                 10px 0px 0 10px;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
+}
+
+#appmenu.searching #appmenu_search_results li:hover{
+/*  background: #e5e5e5;*/
+}
+
+#appmenu.searching #appmenu_search_results li label{
+  padding:      5px 10px 0 6px;
+  color:        #464646;
+  text-shadow:  none;
+}
+
+#appmenu.searching #appmenu_search_results li:hover label{
+  color:#000;
+}
+
+#appmenu.searching #appmenu_search_results li span{
+  margin: 6px 0 0 5px;
+}
+
+
+#appmenu.searching #appmenu_search_results li:not(:last-child){
+  border-bottom:   1px ridge #ddd;
+}
+
+#appmenu_search_results li span{
+  background:   url('images/sprites.png') no-repeat -168px 0px;
+}
+#appmenu_search_results li:hover span{
+  background:   url('images/sprites.png') no-repeat -168px -24px;
 }
