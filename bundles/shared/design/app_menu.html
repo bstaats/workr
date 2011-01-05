@@ -36,15 +36,25 @@
   .app-menu > ul > li.clear{
 
   }
+  
+/* this is going in layout */
+#my-id {
+  top: 0px;
+}
+
+#my-id .new-mode {
+  
+}
 
 </style>
 </head>
+
 <body>
-  <div class="sc-base sc-view sc-pane sc-panel sc-palette sc-picker app-menu">
+  <div id="my-id" class="new-mode login-mode">
     <!--
       How to mix rendering HTML with SC.Views? This is just a copy/paste
     -->
-    <div role="button" class="sc-base square sc-view sc-button-view menu-item appNavButton sc-regular-size" style="width: 200px; left: 40px; height: 30px; top: 0px">
+    <div id="my-button" role="button" class="sc-base square sc-view sc-button-view menu-item appNavButton sc-regular-size" style="width: 200px; left: 40px; height: 30px; top: 0px">
       <span class="sc-button-inner">
         <label class="sc-button-label">Studio</label>
       </span>
@@ -53,11 +63,12 @@
     <ul>
       <li class='search'><input type='text' value='Search'></li>
       <li>&nbsp;</li>
-      <li class='login'>Login</li>
-      <li class='new'>New Workr</li>
+      <li id="login" class='login'>Login</li>
+      <li id="new" class='new'>New Workr</li>
       <li class='load'>Load Workr</li>
       <li class='clear'>Clear Canvas</li>
     </ul>
   </div>
 </body>
+
 </html>

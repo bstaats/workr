@@ -10,7 +10,7 @@ Workr.statechart = Ki.Statechart.create({
         var self = this ;
 /*      Login not complete. Dont load
         SC.loadBundle('login', function() {
-          self.gotoState('loggedOut');
+          self.gotoState('loggedOut'); // next run loop...
         });
 */
         self.gotoState('studio')
@@ -28,11 +28,19 @@ Workr.statechart = Ki.Statechart.create({
       },
 
       openAppMenu: function(view){
-        appMenu = Workr.AppMenu.create({}).popup(view);
+        appMenu = Workr.AppMenu.create().popup(view);
       },
 
       cloaseAppMenu: function(view){
         appMenu.remove();
+      },
+      
+      gotoXXXmode: function(view) {
+        appMenu.remove();
+      }
+      
+      isVisibleDidChange: function() {
+        this.gotoState(history);
       }
 
     }),

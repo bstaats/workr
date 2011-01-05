@@ -15,4 +15,4 @@ Workr.AppMenu = SC.PickerPane.extend({
 
   })
 
-})
+});
