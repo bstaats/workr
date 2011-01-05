@@ -1,27 +1,83 @@
 /* ==========================================================================
-*  AppMenu
+*  TOP MENU
 *  ==========================================================================
 */
-.app-menu{
-  background-color:#333 !important; /* how the heck do I keep SC from overriding my styles other than using !important?*/
-  color:#e5e5e5;
+
+/*
+  LAYOUT
+*/
+#menu{
+  position: absolute;
+  top:      0px;
+  height:   30px;
+  width:    100%;
 }
 
-.app-menu > ul{
-  list-style:none;
-  padding:10px;
-  margin:0;
+#menu > ul.left{
+  position: absolute;
+  left:     0px;
+  top:      0px;
 }
 
-.app-menu > ul > li{
-  display:block;
-  padding: 5px 0 5px 0;
+#menu > ul.right{
+  position: absolute;
+  right:    0px;
+  top:      0px;
 }
 
-.app-menu > .open{
-  color: #fff;
+
+/*
+  GENERAL
+*/
+#menu, #appmenu, #appmenu_search input{
+  font-size:      18px;
+  font-weight:    bolder;
+  line-height:    24px;
+}
+
+#menu{
+  text-shadow:    0px 1px 0px rgba(255,255,255,1);
+  color:          #464646;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.38, #C2C2C2),
+      color-stop(0.85, #ECECEC)
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      #C2C2C2 38%,
+      #ECECEC 85%
+  );
+  -moz-box-shadow:    0px 2px 2px #666;
+  -webkit-box-shadow: 0px 2px 2px #666;
+  box-shadow:         0px 2px 2px #666;
+}
+
+#menu li, #menu label, #appmenu li, #appmenu label{
+  cursor:         pointer;
+}
+
+#menu ul{
+  list-style: none;
+  padding:    0px;
+  margin:     0px;
+}
+
+#menu li{
+  display:        inline-block;
+  height:         30px;
+}
+
+#menu ul.left li{
+  border-right:   1px ridge #aaa;
+}
+
+#menu ul.left li:hover, #appmenu > ul.menuitems > li[id]:hover, #appmenu_studio_btn{
+  color:          #fff;
   text-shadow:    0px -1px 0px #000;
-  border-right: 1px ridge #ddd;
+  border-right:   1px ridge #ddd;
   background: -webkit-gradient(
       linear,
       left bottom,
@@ -38,29 +94,190 @@
       rgb(34,34,34) 51%,
       rgb(88,88,88) 100%
   );
+  -moz-box-shadow:    0px 2px 2px #000;
+  -webkit-box-shadow: 0px 2px 2px #000;
+  box-shadow:         0px 2px 2px #000;
 }
 
-.app-menu > .open label{
-  border-right: none;
+#menu label, #appmenu label{
+  display:  inline-block;
+  padding:  4px 10px 0 40 px;
 }
 
 
-.app-menu > ul > li.search{
+/*
+  MENU ITEMS
+*/
 
+/*
+  LAYOUT
+*/
+#menu_studio_btn,#appmenu_studio_btn {
+  width: 249px;
 }
 
-.app-menu > ul > li.login{
-
+#menu span, #appmenu span{
+  width:        24px;
+  height:       24px;
+  margin:       3px 10px 0 0;
 }
 
-.app-menu > ul > li.new{
-
+#menu span{
+  float:        right;
+}
+#appmenu span{
+  float:        left;
 }
 
-.app-menu > ul > li.load{
 
+#menu_studio_btn span{
+  background:   url('images/sprites.png') no-repeat 0px 0px;
 }
 
-.app-menu > ul > li.clear{
+#menu_studio_btn:hover span, #appmenu_studio_btn span{
+  background:   url('images/sprites.png') no-repeat 0px -96px;
+}
 
+#menu #menu_library_btn label{
+  display:none;
+}
+
+#menu_library_btn span{
+  background:   url('images/sprites.png') no-repeat -24px 0px;
+}
+
+#menu_library_btn:hover span{
+  background:   url('images/sprites.png') no-repeat -24px -24px;
+}
+
+#menu #menu_properties_btn label{
+  display:none;
+}
+
+#menu_properties_btn span{
+  background:   url('images/sprites.png') no-repeat -48px 0px;
+}
+
+#menu_properties_btn:hover span{
+  background:   url('images/sprites.png') no-repeat -48px -25px;
+}
+
+
+/* ==========================================================================
+*  APPMENU
+*  ==========================================================================
+*/
+
+/*
+  LAYOUT
+*/
+#appmenu{
+  position: absolute;
+  top:      0px;
+  width:    249px;
+  height:   100%;
+}
+
+
+/*
+  GENERAL
+*/
+#appmenu{
+  background-color:   #333;
+  color:              #e5e5e5;
+  text-shadow:        0px -1px 0px #000;
+  -moz-box-shadow:    2px 0px 2px #666;
+  -webkit-box-shadow: 2px 0px 2px #666;
+  box-shadow:         2px 0px 2px #666;
+}
+
+#appmenu ul{
+  list-style: none;
+  padding:    0;
+  margin:     0;
+}
+
+#appmenu li{
+  display:    block;
+  height:     30px;
+}
+
+
+#appmenu ul.menuitems > li > label{
+  padding:  8px 10px 0 6px;
+}
+
+#appmenu_search{
+  margin:15px 0;
+}
+
+/*
+  APPMENU ITEMS
+*/
+#appmenu ul.menuitems li{
+  margin: 10px 0;
+  height: 36px;
+}
+
+#appmenu > ul.menuitems > li[id]:hover{
+  border:none;
+}
+
+#appmenu_studio_btn span{
+  float: right;
+}
+
+#appmenu_search input{
+  margin:                 10px 0px 0 10px;
+  border:                 none;
+  padding-left:           30px;
+  line-height:            30px;
+  width:                  229px;
+  -webkit-border-radius:  25px;
+  -moz-border-radius:     25px;
+  border-radius:          25px;
+  background:             #fff url('images/search.png') no-repeat left center;
+  cursor:                 pointer;
+  color:                  #ccc;
+}
+
+#appmenu_search input:hover{
+  color:        #000;
+  background:   #fff url('images/search_on.png') no-repeat left center;
+}
+
+#appmenu ul.menuitems > li > span{
+  margin: 6px 0 0 10px;
+}
+
+#appmenu_login span{
+  background:   url('images/sprites.png') no-repeat -72px -72px;
+}
+
+#appmenu_new span{
+  background:   url('images/sprites.png') no-repeat -96px -72px;
+}
+
+#appmenu_load span{
+  background:   url('images/sprites.png') no-repeat -120px -72px;
+}
+
+#appmenu_clear span{
+  background:   url('images/sprites.png') no-repeat -144px -72px;
+}
+
+#appmenu_login:hover span{
+  background:   url('images/sprites.png') no-repeat -72px -96px;
+}
+
+#appmenu_new:hover span{
+  background:   url('images/sprites.png') no-repeat -96px -96px;
+}
+
+#appmenu_load:hover span{
+  background:   url('images/sprites.png') no-repeat -120px -96px;
+}
+
+#appmenu_clear:hover span{
+  background:   url('images/sprites.png') no-repeat -144px -96px;
 }
