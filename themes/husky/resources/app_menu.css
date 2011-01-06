@@ -70,11 +70,7 @@
   height:         30px;
 }
 
-#menu ul.left li{
-  border-right:   1px ridge #aaa;
-}
-
-#menu ul.left li:hover, #appmenu > ul.menuitems > li[id]:hover, #appmenu_studio_btn{
+#appmenu > ul.menuitems > li[id]:hover, #appmenu_studio_btn{
   color:          #fff;
   text-shadow:    0px -1px 0px #000;
   border-right:   1px ridge #ddd;
@@ -106,7 +102,7 @@
 
 #menu label, #appmenu label{
   display:  inline-block;
-  padding:  4px 10px 0 45px;
+  padding:  4px 10px 0 0px;
 }
 
 
@@ -117,42 +113,42 @@
 /*
   LAYOUT
 */
-#menu_studio_btn,#appmenu_studio_btn {
+#appmenu_studio_btn {
   width: 249px;
 }
 
 #menu span, #appmenu span{
   width:        24px;
   height:       24px;
-  margin:       3px 10px 0 0;
-}
-
-#menu span{
-  float:        right;
-}
-#appmenu span{
+  margin:       3px 5px 0 15px;
   float:        left;
 }
 
 
+#menu #menu_studio_btn label{
+  display:none;
+}
+
 #menu_studio_btn span{
-  background:   url('images/sprites.png') no-repeat 0px 0px;
+  margin-left:  10px;
+  background:   sc_static('images/sprites.png') no-repeat 0px 0px;
 }
 
-#menu_studio_btn:hover span, #appmenu_studio_btn span{
-  background:   url('images/sprites.png') no-repeat 0px -96px;
+#menu_studio_btn:hover span{
+  margin-left:  10px;
+  background:   sc_static('images/sprites.png') no-repeat 0px -24px;
 }
 
-#menu #menu_library_btn label{
+#menu li#menu_library_btn > label{
   display:none;
 }
 
 #menu_library_btn span{
-  background:   url('images/sprites.png') no-repeat -24px 0px;
+  background:   sc_static('images/sprites.png') no-repeat -24px 0px;
 }
 
 #menu_library_btn:hover span{
-  background:   url('images/sprites.png') no-repeat -24px -24px;
+  background:   sc_static('images/sprites.png') no-repeat -24px -24px;
 }
 
 #menu #menu_properties_btn label{
@@ -160,11 +156,11 @@
 }
 
 #menu_properties_btn span{
-  background:   url('images/sprites.png') no-repeat -48px 0px;
+  background:   sc_static('images/sprites.png') no-repeat -48px 0px;
 }
 
 #menu_properties_btn:hover span{
-  background:   url('images/sprites.png') no-repeat -48px -25px;
+  background:   sc_static('images/sprites.png') no-repeat -48px -25px;
 }
 
 
@@ -233,7 +229,7 @@
 }
 
 #appmenu_studio_btn span{
-  float: right;
+  background:   sc_static('images/sprites.png') no-repeat 0px -96px;
 }
 
 #appmenu_search input{
@@ -391,7 +387,7 @@
 
 #appmenu.searching #appmenu_search_results li:hover > div > span{
   width: 12px;
-  background: sc_static('images/sprites.png') no-repeat -200px -96px;
+  background: sc_static('images/sprites.png') no-repeat -218px -96px;
 }
 
 /*
