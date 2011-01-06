@@ -24,16 +24,17 @@ Workr.statechart = Ki.Statechart.create({
 
       enterState: function() {
         // do nothing yet
-        Workr.getPath('mainPage.mainPane').append();
+        Workr.mainPage.get('mainPane').append();
+        Workr.mainPage.get('appMenu').append();
       },
 
-      openAppMenu: function(view){
-        appMenu = Workr.AppMenu.create({}).popup(view);
-      },
-
-      cloaseAppMenu: function(view){
-        appMenu.remove();
-      }
+      // openAppMenu: function(view){
+      //   appMenu = Workr.AppMenu.create({}).popup(view);
+      // },
+      // 
+      // cloaseAppMenu: function(view){
+      //   appMenu.remove();
+      // }
 
     }),
 

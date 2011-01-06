@@ -30,6 +30,10 @@ Workr.mainPage = SC.Page.design({
 
     }) // header
 
-  }) //mainPane
+  }), //mainPane
+  
+  appMenu: Workr.AppMenu.design({
+    layout: { top: 0, left: 0, bottom: 0 , width: 249 }
+  })
 
 });
