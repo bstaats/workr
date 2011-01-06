@@ -5,6 +5,7 @@ Workr.AppMenu = SC.Pane.extend({
   tagName: 'div',
   layerId: 'appmenu',
   classNames: 'searching'.w(),
+  classNamesReset: YES,
 
   render: function (context, firstTime) {
     if (firstTime) {
