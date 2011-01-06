@@ -50,9 +50,9 @@
       #C2C2C2 38%,
       #ECECEC 85%
   );
-  -moz-box-shadow:    0px 2px 2px #666;
-  -webkit-box-shadow: 0px 2px 2px #666;
-  box-shadow:         0px 2px 2px #666;
+  -moz-box-shadow:    0px 2px 4px #666;
+  -webkit-box-shadow: 0px 2px 4px #666;
+  box-shadow:         0px 2px 4px #666;
 }
 
 #menu li, #menu label, #appmenu li, #appmenu label{
@@ -94,9 +94,14 @@
       rgb(34,34,34) 51%,
       rgb(88,88,88) 100%
   );
-  -moz-box-shadow:    0px 2px 2px #000;
-  -webkit-box-shadow: 0px 2px 2px #000;
-  box-shadow:         0px 2px 2px #000;
+  -moz-box-shadow:    0px 2px 4px #000;
+  -webkit-box-shadow: 0px 2px 4px #000;
+  box-shadow:         0px 2px 4px #000;
+}
+
+#appmenu_studio_btn{
+  border-right:none;
+  border-bottom:1px ridge #000;
 }
 
 #menu label, #appmenu label{
@@ -186,9 +191,9 @@
   background-color:   #333;
   color:              #e5e5e5;
   text-shadow:        0px -1px 0px #000;
-  -moz-box-shadow:    2px 0px 2px #666;
-  -webkit-box-shadow: 2px 0px 2px #666;
-  box-shadow:         2px 0px 2px #666;
+  -moz-box-shadow:    2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow:         2px 0px 4px #666;
 }
 
 #appmenu ul{
@@ -199,7 +204,6 @@
 
 #appmenu li{
   display:    block;
-  height:     30px;
 }
 
 
@@ -220,11 +224,12 @@
 */
 #appmenu ul.menuitems li{
   margin: 10px 0;
-  height: 36px;
+  padding: 5px 0;
 }
 
 #appmenu > ul.menuitems > li[id]:hover{
-  border:none;
+  border: 1px ridge #000;
+  height: 30px;
 }
 
 #appmenu_studio_btn span{
@@ -233,7 +238,7 @@
 
 #appmenu_search input{
   margin:                 10px 0px 0 10px;
-  border:                 none;
+  border:                 1px solid #000;
   padding-left:           34px;
   line-height:            30px;
   width:                  229px;
@@ -241,13 +246,16 @@
   -moz-border-radius:     25px;
   border-radius:          25px;
   background:             #fff url('images/search.png') no-repeat 5px center;
-  cursor:                 pointer;
   color:                  #ccc;
 }
 
-#appmenu_search input:hover, #appmenu.searching #appmenu_search input{
+#appmenu_search input:focus{
+ outline: none;
+}
+
+#appmenu_search input:hover, #appmenu_search input:focus, #appmenu.searching #appmenu_search input{
   color:        #000;
-  background:   #fff url('images/search_on.png') no-repeat left center;
+  background:   #fff url('images/search_on.png') no-repeat 5px center;
 }
 
 #appmenu ul.menuitems li span{
@@ -302,32 +310,96 @@
   border-radius:          10px;
 }
 
-#appmenu.searching #appmenu_search_results li:hover{
-/*  background: #e5e5e5;*/
-}
-
-#appmenu.searching #appmenu_search_results li label{
-  padding:      5px 10px 0 6px;
+#appmenu.searching #appmenu_search_results li{
+  height:       42px;
   color:        #464646;
   text-shadow:  none;
+  cursor:       move;
 }
 
-#appmenu.searching #appmenu_search_results li:hover label{
-  color:#000;
+#appmenu.searching #appmenu_search_results li{
+  border-bottom: 1px ridge #ddd;
+}
+
+#appmenu.searching #appmenu_search_results li:hover{
+  border:   2px ridge #333;
+  height:   39px;
+}
+
+#appmenu.searching #appmenu_search_results li:hover{
+  color:          #fff;
+  text-shadow:    0px -1px 0px #000;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+  -moz-box-shadow:    4px 4px 4px #000;
+  -webkit-box-shadow: 4px 4px 4px #000;
+  box-shadow:         4px 4px 4px #000;
+}
+
+#appmenu.searching #appmenu_search_results li:first-child{
+  -webkit-border-top-right-radius:  10px;
+  -webkit-border-top-left-radius:   10px;
+  -moz-border-radius-topright:      10px;
+  -moz-border-radius-topleft:       10px;
+  border-top-right-radius:          10px;
+  border-top-left-radius:           10px;
+}
+
+#appmenu.searching #appmenu_search_results li:last-child{
+  -webkit-border-bottom-right-radius:  10px;
+  -webkit-border-bottom-left-radius:   10px;
+  -moz-border-radius-bottomright:      10px;
+  -moz-border-radius-bottomleft:       10px;
+  border-bottom-right-radius:          10px;
+  border-bottom-left-radius:           10px;
+}
+
+
+#appmenu.searching #appmenu_search_results li label{
+  padding:  8px 0 0 6px;
+  cursor:   move;
 }
 
 #appmenu.searching #appmenu_search_results li span{
-  margin: 6px 0 0 5px;
+  margin: 8px 0 0 5px;
 }
 
-
-#appmenu.searching #appmenu_search_results li:not(:last-child){
-  border-bottom:   1px ridge #ddd;
+#appmenu.searching #appmenu_search_results li > div{
+  height:         39px;
+  margin:         0;
+  float:          right;
 }
 
-#appmenu_search_results li span{
+#appmenu.searching #appmenu_search_results li:hover > div{
+  border-left:    1px ridge #ddd;
+  border-width:   2px;
+}
+
+#appmenu.searching #appmenu_search_results li:hover > div > span{
+  width: 12px;
+  background: url('images/sprites.png') no-repeat -200px -96px;
+}
+
+/*
+  TEMP ICONS
+*/
+#appmenu.searching #appmenu_search_results li > span:first-child{
   background:   url('images/sprites.png') no-repeat -168px 0px;
 }
-#appmenu_search_results li:hover span{
-  background:   url('images/sprites.png') no-repeat -168px -24px;
+#appmenu.searching #appmenu_search_results li:hover > span:first-child{
+  background:   url('images/sprites.png') no-repeat -168px -96px;
 }
