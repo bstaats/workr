@@ -9,8 +9,8 @@ html,body{
   margin:       0px;
 }
 
-#studio_page{
+#studio{
   height:100%;
   width:100%;
-  background:   url('images/grid.png') repeat 0px 0px;
+  background:   sc_static('images/grid.png') repeat 0px 0px;
 }

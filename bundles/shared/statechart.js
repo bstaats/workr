@@ -25,13 +25,13 @@ Workr.statechart = Ki.Statechart.create({
       enterState: function() {
         // do nothing yet
         Workr.mainPage.get('mainPane').append();
-        Workr.mainPage.get('appMenu').append();
+        //Workr.mainPage.get('appMenu').append();
       },
 
       // openAppMenu: function(view){
       //   appMenu = Workr.AppMenu.create({}).popup(view);
       // },
-      // 
+      //
       // cloaseAppMenu: function(view){
       //   appMenu.remove();
       // }
