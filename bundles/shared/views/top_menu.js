@@ -6,6 +6,20 @@ Workr.TopMenu = SC.View.extend({
   layerId: 'menu',
   classNamesReset: YES,
 
+  mouseDown: function(evt){
+    var target = evt.target;
+    var state = Workr.statechart.get('currentStates')[0];
+
+    // there has to be a better way than this
+    if(state.name=='appMenu'){
+      Workr.statechart.sendEvent('closeAppMenu');
+    }else{
+      if(target.id=='menu_studio_btn' || target.parentNode.id=='menu_studio_btn'){
+        Workr.statechart.sendEvent('openAppMenu');
+      }
+    }
+  },
+
   render: function (context, firstTime) {
     if (firstTime) {
       context.push(

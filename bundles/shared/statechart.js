@@ -25,23 +25,41 @@ Workr.statechart = Ki.Statechart.create({
     }),
 
     studio: Ki.State.design({
-
-      appMenu: null,
+      initialSubstate: 'wait',
 
       enterState: function() {
-        // do nothing yet
         Workr.mainPage.get('mainPane').append();
-        
       },
 
-      // openAppMenu: function(view){
-      //   appMenu = Workr.AppMenu.create({}).popup(view);
-      // },
-      //
-      // cloaseAppMenu: function(view){
-      //   appMenu.remove();
-      // }
+      openAppMenu: function(){
+        this.gotoState('appMenu');
+      },
 
+      closeAppMenu: function(){
+        this.gotoState('wait');
+      },
+
+
+      wait: Ki.State.design(),
+
+      appMenu: Ki.State.design({
+        enterState: function() {
+          Workr.mainPage.get('appMenu').append();
+
+          // this animation doesnt work, why?
+          $('#appmenu').css("-webkit-transform","translate(249px, 0)");
+        },
+
+        // why does this not fire when I call closeAppMenu???
+        exitState: function() {
+
+          // this animation doesnt work, why?
+          $('#appmenu').css("-webkit-transform","translate(-249px, 0)");
+
+          Workr.mainPage.get('appMenu').remove();
+        }
+
+      })
     }),
 
 
