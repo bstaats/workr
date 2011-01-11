@@ -1,2 +1,12 @@
 Sproutcore workflow engine
 
+=== Installation ===
+
+  git clone git@github.com:bstaats/workr.git
+  cd workr
+  mkdir frameworks
+  cd frameworks
+  git clone git@github.com:erichocean/sproutcore.git
+  git clone git@github.com/etgryphon/sproutcore-ui.git scui
+  git clone git@github.com/FrozenCanuck/Ki.git
+

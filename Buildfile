@@ -10,10 +10,14 @@ config 'husky',
   :debug_required => ['sproutcore/debug']
 
 # BUNDLES
-config :workr_bundles, :required => [:shared, :login]
+config :workr_bundles,
+  :required => [:shared, :family_tree]
+
+config :scui,
+  :required => [:sproutcore, :'scui/drawing', :'scui/linkit']
 
 config :all,
-  :required => [:sproutcore, :ki, :husky, :workr_bundles],
+  :required => [:sproutcore, :ki, :husky, :scui, :workr_bundles],
   :theme => 'husky'
 
 #proxy "/", :to => "localhost:3000"
