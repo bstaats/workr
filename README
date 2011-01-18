@@ -7,6 +7,15 @@ Sproutcore workflow engine
   mkdir frameworks
   cd frameworks
   git clone git@github.com:erichocean/sproutcore.git
-  git clone git@github.com/etgryphon/sproutcore-ui.git scui
-  git clone git@github.com/FrozenCanuck/Ki.git
+  cd sproutcore
+  git checkout origin/gem
+  cd ..
+  git clone git@github.com:etgryphon/sproutcore-ui.git scui
+  git clone git@github.com:FrozenCanuck/Ki.git
 
+
+== To Update Sproutcore ==
+
+cd workr/frameworks/sproutcore
+git fetch
+git merge origin/gem

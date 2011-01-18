@@ -13,11 +13,10 @@ Workr.statechart = Ki.Statechart.create({
           self.gotoState('loggedOut');
         });
 */
-//Workr.familiesController.set('selection', fc.get('content').objectAt(1));
-//Workr.getPath('mainPage.mainPane.canvas').displayDidChange();
+
         var store = FamilyTree.get('store');
         var fc = FamilyTree.familiesController.set('content', store.find(FamilyTree.Family));
-
+        FamilyTree.familiesController.set('selection', fc.get('content').objectAt(1));
         self.gotoState('studio');
 
       }
@@ -29,6 +28,7 @@ Workr.statechart = Ki.Statechart.create({
 
       enterState: function() {
         Workr.mainPage.get('mainPane').append();
+        Workr.mainPage.get('mainPane').appendChild(FamilyTree.CanvasView.create());
       },
 
       openAppMenu: function(){
