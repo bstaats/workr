@@ -28,7 +28,7 @@ Workr.statechart = Ki.Statechart.create({
 
       enterState: function() {
         Workr.mainPage.get('mainPane').append();
-        Workr.mainPage.get('mainPane').appendChild(FamilyTree.CanvasView.create());
+        Workr.mainPage.get('mainPane').appendChild( FamilyTree.CanvasView.create() );
       },
 
       openAppMenu: function(){
@@ -43,20 +43,23 @@ Workr.statechart = Ki.Statechart.create({
       wait: Ki.State.design(),
 
       appMenu: Ki.State.design({
-        enterState: function() {
-          Workr.mainPage.get('appMenu').append();
 
+        appMenu: undefined,
+
+        enterState: function() {
+          appMenu =  Workr.AppMenu.create();
+          Workr.mainPage.get('mainPane').appendChild( appMenu );
           // this animation doesnt work, why?
-          $('#appmenu').css("-webkit-transform","translate(249px, 0)");
+          //$('#appmenu').css("-webkit-transform","translate(249px, 0)");
         },
 
         // why does this not fire when I call closeAppMenu???
         exitState: function() {
 
           // this animation doesnt work, why?
-          $('#appmenu').css("-webkit-transform","translate(-249px, 0)");
+          //$('#appmenu').css("-webkit-transform","translate(-249px, 0)");
 
-          Workr.mainPage.get('appMenu').remove();
+          Workr.mainPage.get('mainPane').removeChild( appMenu );
         }
 
       })

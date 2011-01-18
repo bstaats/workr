@@ -1,11 +1,20 @@
-/*globals SC Workr */
-
-Workr.AppMenu = SC.Pane.extend({
-
+Workr.AppMenu = SC.View.extend({
+  layout: { top: 0, left: -248, bottom: 0 , width: 249 },
   tagName: 'div',
   layerId: 'appmenu',
   classNames: 'searching'.w(),
   classNamesReset: YES,
+
+  mouseDown: function(evt){
+    var target = evt.target;
+    var state = Workr.statechart.get('currentStates')[0];
+
+    // there has to be a better way than this
+    if(state.name=='appMenu'){
+      Workr.statechart.sendEvent('closeAppMenu');
+    }
+  },
+
 
   render: function (context, firstTime) {
     if (firstTime) {

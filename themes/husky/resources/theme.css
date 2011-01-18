@@ -10,9 +10,10 @@ html,body{
 }
 
 #studio{
-  height:100%;
-  width:100%;
+  height:       100%;
+  width:        100%;
   background:   sc_static('images/grid.png') repeat 0px 0px;
+  z-index:      -999;
 }
 
 
@@ -34,7 +35,7 @@ html,body{
    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, .3);
    opacity: 0.7;
-   overflow:visible; 
+   overflow:visible;
    -moz-transition: border .1s linear;
    -webkit-transition: border .1s linear;
  }
