@@ -173,8 +173,8 @@
 */
 
 #appmenu{
-  position: absolute; /* why do we need to set position. Thought SC did that for us. Maybe cause of classNamesReset: YES */
-/*  top:      0px;
+/*  position: absolute;
+  top:      0px;
   width:    249px;
   height:   100%;
 */
