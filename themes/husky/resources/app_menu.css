@@ -130,12 +130,11 @@
 }
 
 #menu_studio_btn span{
-  margin-left:  10px;
+  margin-left:  16px;
   background:   sc_static('images/sprites.png') no-repeat 0px 0px;
 }
 
 #menu_studio_btn:hover span{
-  margin-left:  10px;
   background:   sc_static('images/sprites.png') no-repeat 0px -24px;
 }
 
