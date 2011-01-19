@@ -24,13 +24,16 @@ Workr.statechart = Ki.Statechart.create({
     }),
 
     studio: Ki.State.design({
-      initialSubstate: 'wait',
+      initialSubstate: 'studioWait',
       canvas: undefined,
 
       enterState: function() {
         canvas = FamilyTree.CanvasView.create();
 
         Workr.mainPage.get('mainPane').append();
+        /*
+          I have to set the z-index on canvas so it renders behind things, but then cant access user behavior on canvas (e.g. mouseDown).
+        */
         Workr.mainPage.get('mainPane').appendChild( canvas );
       },
 
@@ -39,14 +42,14 @@ Workr.statechart = Ki.Statechart.create({
       },
 
       closeAppMenu: function(){
-        this.gotoState('wait');
+        this.gotoState('studioWait');
       },
 
 
-      wait: Ki.State.design(),
+      studioWait: Ki.State.design(),
 
       appMenu: Ki.State.design({
-
+        initialSubstate: 'appMenuWait',
         appMenu: undefined,
 
         enterState: function() {
@@ -60,14 +63,26 @@ Workr.statechart = Ki.Statechart.create({
           //$('#appmenu').css("-webkit-transform","translate(249px, 0)");
         },
 
-        // why does this not fire when I call closeAppMenu???
         exitState: function() {
-
           // this animation doesnt work, why?
           //$('#appmenu').css("-webkit-transform","translate(-249px, 0)");
 
           Workr.mainPage.get('mainPane').removeChild( appMenu );
-        }
+        },
+
+
+        appMenuWait: Ki.State.design(),
+
+        searching: Ki.State.design({
+          enterState: function(){
+
+           // console.log(view.get('id'));
+          },
+
+          exitState: function(){
+          }
+
+        })
 
       })
     }),
