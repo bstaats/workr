@@ -17,7 +17,7 @@ config :scui,
   :required => [:sproutcore, :'scui/drawing', :'scui/linkit']
 
 config :all,
-  :required => [:sproutcore, :ki, :husky, :scui, :workr_bundles],
+  :required => [:sproutcore, :'sproutcore/animation', :ki, :husky, :scui, :workr_bundles],
   :theme => 'husky'
 
 #proxy "/", :to => "localhost:3000"

@@ -172,14 +172,15 @@
 /*
   LAYOUT
 */
-/*
+
 #appmenu{
-  position: absolute;
-  top:      0px;
+  position: absolute; /* why do we need to set position. Thought SC did that for us. Maybe cause of classNamesReset: YES */
+/*  top:      0px;
   width:    249px;
   height:   100%;
-}
 */
+}
+
 
 
 /*
@@ -192,10 +193,12 @@
   -moz-box-shadow:    2px 0px 4px #666;
   -webkit-box-shadow: 2px 0px 4px #666;
   box-shadow:         2px 0px 4px #666;
+/*
   -webkit-transition:all 1.0s ease-in-out;
   -moz-transition:all 1.0s ease-in-out;
   -o-transition:all 1.0s ease-in-out;
   -transition:all 1.0s ease-in-out;
+*/
 }
 
 #appmenu ul{
@@ -243,7 +246,7 @@
   border:                 1px solid #000;
   padding-left:           34px;
   line-height:            30px;
-  width:                  229px;
+  width:                  195px;
   -webkit-border-radius:  25px;
   -moz-border-radius:     25px;
   border-radius:          25px;

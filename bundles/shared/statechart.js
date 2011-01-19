@@ -25,10 +25,13 @@ Workr.statechart = Ki.Statechart.create({
 
     studio: Ki.State.design({
       initialSubstate: 'wait',
+      canvas: undefined,
 
       enterState: function() {
+        canvas = FamilyTree.CanvasView.create();
+
         Workr.mainPage.get('mainPane').append();
-        Workr.mainPage.get('mainPane').appendChild( FamilyTree.CanvasView.create() );
+        Workr.mainPage.get('mainPane').appendChild( canvas );
       },
 
       openAppMenu: function(){
@@ -49,7 +52,11 @@ Workr.statechart = Ki.Statechart.create({
         enterState: function() {
           appMenu =  Workr.AppMenu.create();
           Workr.mainPage.get('mainPane').appendChild( appMenu );
-          // this animation doesnt work, why?
+
+          /*
+            Animation wont work.. why? How to use transform3d when available?
+          */
+          appMenu.adjust('left',0).updateStyle();
           //$('#appmenu').css("-webkit-transform","translate(249px, 0)");
         },
 

@@ -1,16 +1,19 @@
-Workr.AppMenu = SC.View.extend({
+Workr.AppMenu = SC.View.extend(SC.Animatable, {
   layout: { top: 0, left: -248, bottom: 0 , width: 249 },
   tagName: 'div',
   layerId: 'appmenu',
   classNames: 'searching'.w(),
   classNamesReset: YES,
+  transitions: {
+    left:{duration:5.0, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
+  },
 
   mouseDown: function(evt){
     var target = evt.target;
     var state = Workr.statechart.get('currentStates')[0];
 
     // there has to be a better way than this
-    if(state.name=='appMenu'){
+    if(state.name=='appMenu' && target.id!='appmenu'){
       Workr.statechart.sendEvent('closeAppMenu');
     }
   },
