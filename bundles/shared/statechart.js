@@ -24,62 +24,71 @@ Workr.statechart = Ki.Statechart.create({
     }),
 
     studio: Ki.State.design({
-      initialSubstate: 'studioWait',
-      canvas: undefined,
+      initialSubstate:        'root',
+
+      root: Ki.State.design(),
 
       enterState: function() {
-        canvas = FamilyTree.CanvasView.create();
-
         Workr.mainPage.get('mainPane').append();
         /*
           I have to set the z-index on canvas so it renders behind things, but then cant access user behavior on canvas (e.g. mouseDown).
         */
-        Workr.mainPage.get('mainPane').appendChild( canvas );
+        Workr.mainPage.get('mainPane').appendChild( FamilyTree.CanvasView.create() );
       },
 
       openAppMenu: function(){
         this.gotoState('appMenu');
       },
 
-      closeAppMenu: function(){
-        this.gotoState('studioWait');
+      openLibMenu: function(){
+        this.gotoState('libMenu');
       },
 
+      openPropMenu: function(){
+        this.gotoState('propMenu');
+      },
 
-      studioWait: Ki.State.design(),
+      closeMenus: function(){
+        this.gotoState('root');
+      },
+
+      libMenu: Ki.State.design({
+        enterState: function(){
+          console.log(this.name);
+        }
+      }),
+
+      propMenu: Ki.State.design({
+        enterState: function(){
+          console.log(this.name);
+        }
+      }),
 
       appMenu: Ki.State.design({
-        initialSubstate: 'appMenuWait',
-        appMenu: undefined,
+        initialSubstate: 'appMenuOpen',
+
+        appMenuOpen: Ki.State.design(),
 
         enterState: function() {
-          appMenu =  Workr.AppMenu.create();
-          Workr.mainPage.get('mainPane').appendChild( appMenu );
-
-          /*
-            Animation wont work.. why? How to use transform3d when available?
-          */
-          appMenu.adjust('left',0).updateStyle();
-          //$('#appmenu').css("-webkit-transform","translate(249px, 0)");
+          Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', YES);
         },
 
         exitState: function() {
-          // this animation doesnt work, why?
-          //$('#appmenu').css("-webkit-transform","translate(-249px, 0)");
-
-          Workr.mainPage.get('mainPane').removeChild( appMenu );
+          Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', NO);
         },
 
 
-        appMenuWait: Ki.State.design(),
+        openAppMenuSearching: function(){
+          this.gotoState('searching');
+        },
 
         searching: Ki.State.design({
           enterState: function(){
-
-           // console.log(view.get('id'));
+            Workr.getPath('mainPage.mainPane.appMenu').set('isSearching', YES);
           },
 
           exitState: function(){
+            Workr.getPath('mainPage.mainPane.appMenu').set('isSearching', NO);
           }
 
         })

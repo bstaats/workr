@@ -1,12 +1,12 @@
 Workr.AppMenu = SC.View.extend(SC.Animatable, {
-  layout: { top: 0, left: -248, bottom: 0 , width: 249 },
+  layout: { top: 0, left: -249, bottom: 0 , width: 249 },
   tagName: 'div',
   layerId: 'appmenu',
   classNamesReset: YES,
-  displayProperties: 'isSearching'.w(),
+  displayProperties: 'isSearching isOpen'.w(),
   //childViews: 'searchInput searchResults'.w(),
   transitions: {
-    left:{duration:5.0, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
+    left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
 
   searchInput: SCUI.ComboBoxView.design({
@@ -36,36 +36,46 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
 
 
   mouseDown: function(evt){
-    var target = evt.target;
-    var state = Workr.statechart.get('currentStates')[0];
+    var id = evt.target.id || evt.target.parentNode.id;
 
-    // there has to be a better way than this
-    if(state.name=='appMenuWait' && target.parentNode.id=='appmenu_search'){
+    if(id=='appmenu_search'){
+      Workr.statechart.sendEvent('openAppMenuSearching');
+    }else{
+      // maybe do something
+    }
+  },
 
-      if(target.value=='Search'){
-        target.value='';
+
+  update: function(context) {
+
+    if(this.didChangeFor('update', 'isOpen')){
+
+      if(this.get('isOpen')){
+        this.adjust('left',0).updateStyle();
+      }else{
+        this.adjust('left',-249).updateStyle();
       }
-      target.focus();
-      this.set('isSearching', YES);
-
-    }else if(state.name=='appMenuWait' && target.id!='appmenu'){
-      Workr.statechart.sendEvent('closeAppMenu');
     }
-  },
 
-
-  update: function(dataSource, jquery) {
     if(this.didChangeFor('update', 'isSearching')){
-      jquery.addClass('searching');
-      Workr.statechart.gotoState('searching');
-      console.log(this.get('searchInput'));
-    }
+
+        if(this.get('isSearching')){
+          context.addClass('searching');
+
+          var input = this.$('#appmenu_search input');
+          if(input.attr('value')=='Search'){
+            input.attr('value', '');
+          }
+          input[0].focus();
+        }
+
+      }
   },
 
-  render: function (dataSource, context) {
+  render: function (context, firstTime) {
     sc_super();
-    if(context){
-      dataSource.push(
+    if(firstTime){
+      context.push(
         '<ul class="left">',
           '<li id="appmenu_studio_btn">     <label>Studio</label><span></span></li>',
         '</ul>',
@@ -88,9 +98,9 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
           '<li id="appmenu_clear">   <span></span><label>Clear Canvas</label></li>',
         '</ul>'
       );
-      this.didChangeFor('update', 'isSearching');
+
     }else{
-      this.update(null, dataSource);
+      this.update(context);
     }
   }
 
