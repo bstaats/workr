@@ -1,4 +1,6 @@
-FamilyTree.CanvasView = LinkIt.CanvasView.design(SC.Animatable, {
+sc_require('core');
+
+FamilyTree.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
   layerId: 'studio',
   displayProperties: 'isMoved'.w(),
   transitions: {
@@ -7,9 +9,21 @@ FamilyTree.CanvasView = LinkIt.CanvasView.design(SC.Animatable, {
 
   contentBinding: SC.Binding.from('FamilyTree.membersController').oneWay(),
   selectionBinding: 'FamilyTree.membersController.selection',
-  nodeViewDelegate: FamilyTree.familyController,
+  nodeViewDelegate: 'FamilyTree.familyController',
   exampleView: FamilyTree.NodeView,
-  delegate: FamilyTree.familyController,
+  delegate: 'FamilyTree.familyController',
+
+
+  mouseDown: function(evt) {
+    var id = evt.target.id || evt.target.parentNode.id;
+
+    sc_super();
+
+    if(id=='studio'){
+      Workr.statechart.sendEvent('closeMenus');
+    }
+
+  },
 
   update: function(context) {
     if(this.didChangeFor('update', 'isMoved')){
