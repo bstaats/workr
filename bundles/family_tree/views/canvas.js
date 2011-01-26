@@ -1,4 +1,4 @@
-sc_require('core');
+sc_require('views/node');
 
 FamilyTree.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
   layerId: 'studio',
