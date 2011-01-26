@@ -17,6 +17,9 @@ Workr.statechart = Ki.Statechart.create({
         var store = FamilyTree.get('store');
         var fc = FamilyTree.familiesController.set('content', store.find(FamilyTree.Family));
         FamilyTree.familiesController.set('selection', fc.get('content').objectAt(1));
+
+        Workr.workrController.set('content', store.find(Workr.Workr).objectAt(0));
+
         self.gotoState('studio');
 
       }
@@ -68,11 +71,13 @@ Workr.statechart = Ki.Statechart.create({
         enterState: function() {
           Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', YES);
           Workr.getPath('mainPage.mainPane.canvas').set('isMoved', YES);
+          Workr.getPath('mainPage.mainPane.topMenu').set('isMoved', YES);
         },
 
         exitState: function() {
           Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', NO);
           Workr.getPath('mainPage.mainPane.canvas').set('isMoved', NO);
+          Workr.getPath('mainPage.mainPane.topMenu').set('isMoved', NO);
         },
 
 
