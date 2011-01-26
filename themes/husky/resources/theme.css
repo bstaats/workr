@@ -13,7 +13,6 @@ html,body{
   height:       100%;
   width:        100%;
   background:   sc_static('images/grid.png') repeat 0px 0px;
-  z-index:      -999;
 }
 
 

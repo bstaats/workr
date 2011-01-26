@@ -30,10 +30,6 @@ Workr.statechart = Ki.Statechart.create({
 
       enterState: function() {
         Workr.mainPage.get('mainPane').append();
-        /*
-          I have to set the z-index on canvas so it renders behind things, but then cant access user behavior on canvas (e.g. mouseDown).
-        */
-        Workr.mainPage.get('mainPane').appendChild( FamilyTree.CanvasView.create() );
       },
 
       openAppMenu: function(){
@@ -71,10 +67,12 @@ Workr.statechart = Ki.Statechart.create({
 
         enterState: function() {
           Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', YES);
+          Workr.getPath('mainPage.mainPane.canvas').set('isMoved', YES);
         },
 
         exitState: function() {
           Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', NO);
+          Workr.getPath('mainPage.mainPane.canvas').set('isMoved', NO);
         },
 
 

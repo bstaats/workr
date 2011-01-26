@@ -1,5 +1,4 @@
 Workr.AppMenu = SC.View.extend(SC.Animatable, {
-  layout: { top: 0, left: -249, bottom: 0 , width: 249 },
   tagName: 'div',
   layerId: 'appmenu',
   classNamesReset: YES,
