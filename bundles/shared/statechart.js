@@ -69,15 +69,15 @@ Workr.statechart = Ki.Statechart.create({
         appMenuOpen: Ki.State.design(),
 
         enterState: function() {
-          Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', YES);
-          Workr.getPath('mainPage.mainPane.canvas').set('isMoved', YES);
-          Workr.getPath('mainPage.mainPane.topMenu').set('isMoved', YES);
+          Workr.mainPage.get('appMenu').set('isOpen', YES);
+          Workr.mainPage.get('canvas').set('isMoved', YES);
+          Workr.mainPage.get('topMenu').set('isMoved', YES);
         },
 
         exitState: function() {
-          Workr.getPath('mainPage.mainPane.appMenu').set('isOpen', NO);
-          Workr.getPath('mainPage.mainPane.canvas').set('isMoved', NO);
-          Workr.getPath('mainPage.mainPane.topMenu').set('isMoved', NO);
+          Workr.mainPage.get('appMenu').set('isOpen', NO);
+          Workr.mainPage.get('canvas').set('isMoved', NO);
+          Workr.mainPage.get('topMenu').set('isMoved', NO);
         },
 
 
@@ -87,11 +87,11 @@ Workr.statechart = Ki.Statechart.create({
 
         searching: Ki.State.design({
           enterState: function(){
-            Workr.getPath('mainPage.mainPane.appMenu').set('isSearching', YES);
+            Workr.mainPage.get('appMenu').set('isSearching', YES);
           },
 
           exitState: function(){
-            Workr.getPath('mainPage.mainPane.appMenu').set('isSearching', NO);
+            Workr.mainPage.get('appMenu').set('isSearching', NO);
           }
 
         })
