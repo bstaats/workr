@@ -14,11 +14,15 @@ Workr.statechart = Ki.Statechart.create({
         });
 */
 
+/*
         var store = FamilyTree.get('store');
         var fc = FamilyTree.familiesController.set('content', store.find(FamilyTree.Family));
         FamilyTree.familiesController.set('selection', fc.get('content').objectAt(1));
+*/
 
-        Workr.workrController.set('content', store.find(Workr.Workr).objectAt(0));
+        var store = Workr.get('store');
+        var wc = Workr.workrsController.set('content', store.find(Workr.Workr));
+        wc.set('selection', wc.get('content').objectAt(0));
 
         self.gotoState('studio');
 

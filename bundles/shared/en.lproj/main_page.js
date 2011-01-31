@@ -8,7 +8,7 @@ Workr.mainPage = SC.Page.design({
     defaultResponder: 'Workr.statechart',
     childViews: 'canvas topMenu appMenu'.w(),
 
-    canvas: FamilyTree.CanvasView.extend({
+    canvas: Workr.CanvasView.extend({
       layout: {left: 0, top: 30, right: 0, bottom:0}
     }),
 
