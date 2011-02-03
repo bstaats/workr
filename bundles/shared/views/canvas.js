@@ -1,4 +1,4 @@
-sc_require('views/workr');
+sc_require('views/workr_node');
 
 Workr.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
   layerId: 'studio',
@@ -10,7 +10,7 @@ Workr.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
   contentBinding:   SC.Binding.from('Workr.workrsController').oneWay(),
   selectionBinding: 'Workr.workrsController.selection',
   nodeViewDelegate: Workr.workrController,
-  exampleView:      Workr.WorkrView,
+  exampleView:      Workr.WorkrNodeView,
   delegate:         Workr.workrController,
 
 

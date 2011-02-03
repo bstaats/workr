@@ -1,10 +1,11 @@
 sc_require('core');
 
-Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
+Workr.WorkrNodeView = SC.View.extend( LinkIt.NodeView, {
   layout: { top: 0, left: 0, width: 65, height: 65 },
   displayProperties: ['content', 'isSelected'],
 
   doubleClick: function(evt){
+    // need to add Workr.WorkrPanelView
     console.log('boom');
   },
 
@@ -50,7 +51,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
     this._term_input = this.createChildView(
       SC.View.extend(LinkIt.Terminal, {
         classNames: ['workr-terminal'],
-        layout: { left: -6, top: 25, width: 3, height: 13 },
+        layout: { left: 0, top: 25, width: 3, height: 13 },
         linkStyle: { lineStyle: LinkIt.HORIZONTAL_CURVED, width: 2, color: '#ccc', cap: LinkIt.ROUND},
         node: content,
         terminal: 'input',
@@ -63,7 +64,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
     this._term_output = this.createChildView(
       SC.View.extend(LinkIt.Terminal, {
         classNames: ['workr-terminal'],
-        layout: { right: -6, top: 25, width: 3, height: 13 },
+        layout: { right: 0, top: 25, width: 3, height: 13 },
         linkStyle: { lineStyle: LinkIt.HORIZONTAL_CURVED, width: 2, color: '#ccc', cap: LinkIt.ROUND},
         node: content,
         terminal: 'output',
