@@ -4,7 +4,9 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
   layout: { top: 0, left: 0, width: 65, height: 65 },
   displayProperties: ['content', 'isSelected'],
 
-  content: null,
+  doubleClick: function(evt){
+    console.log('boom');
+  },
 
   render: function(context){
     var c = this.get('content');
@@ -23,7 +25,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
       SC.View.extend({
         classNames: ['icon'],
         content: content,
-        layout: { centerY: 0, left: 5, width: 25, height: 25},
+        layout: { centerY: 0, centerX: 0, width: 35, height: 35},
         render: function(context, firstTime){
           sc_super();
         }

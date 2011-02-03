@@ -55,3 +55,7 @@ html,body{
   -webkit-box-shadow:    2px 2px 5px rgba(0,0,0,.5);
   -webkit-border-radius: 2px;
 }
+
+.icon{
+  background: sc_static('images/workr_sprites.png') repeat 0px -105px;
+}
