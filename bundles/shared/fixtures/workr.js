@@ -9,7 +9,7 @@ sc_require('models/workr');
 Workr.Workr.FIXTURES = [
 
   { id:         '1',
-    title:      "Beef Cake Workr",
+    title:      "The Overlord",
     desc:       "Work it babe!",
     master:     true,
     parent:     null,
@@ -20,7 +20,7 @@ Workr.Workr.FIXTURES = [
   },
 
   { id:         '2',
-    title:      "Cup cake",
+    title:      "Water Minion",
     desc:       "Work it babe again!",
     parent:     '1',
     input:      null,
@@ -30,7 +30,7 @@ Workr.Workr.FIXTURES = [
   },
 
   { id:         '3',
-    title:      "Poo cake",
+    title:      "Fire Minion",
     desc:       "Work it babe again!",
     parent:     '1',
     input:      '2',
@@ -40,7 +40,7 @@ Workr.Workr.FIXTURES = [
   },
 
   { id:         '4',
-    title:      "Pork cake",
+    title:      "Earth Minion",
     desc:       "Work it babe!",
     parent:     '1',
     input:      '3',
@@ -50,7 +50,7 @@ Workr.Workr.FIXTURES = [
   },
 
   { id:         '5',
-    title:      "real cake",
+    title:      "Air Minion",
     desc:       "Work it babe again!",
     parent:     '1',
     input:      '4',
@@ -60,7 +60,7 @@ Workr.Workr.FIXTURES = [
   },
 
   { id:         '6',
-    title:      "No cake, Cake is a lie",
+    title:      "Dark Minion",
     desc:       "Work it babe again!",
     parent:     '1',
     input:      '5',
