@@ -7,11 +7,11 @@ Workr.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
 
-  contentBinding: SC.Binding.from('Workr.membersController').oneWay(),
-  selectionBinding: 'Workr.membersController.selection',
-  nodeViewDelegate: 'Workr.workrController',
-  exampleView: Workr.WorkrView,
-  delegate: 'Workr.workrController',
+  contentBinding:   SC.Binding.from('Workr.workrsController').oneWay(),
+  selectionBinding: 'Workr.workrsController.selection',
+  nodeViewDelegate: Workr.workrController,
+  exampleView:      Workr.WorkrView,
+  delegate:         Workr.workrController,
 
 
   mouseDown: function(evt) {

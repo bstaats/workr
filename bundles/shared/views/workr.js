@@ -3,13 +3,13 @@ sc_require('core');
 Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
   layout: { top: 0, left: 0, width: 60, height: 60 },
   displayProperties: ['content', 'isSelected'],
-  
+
   content: null,
-  
+
   render: function(context){
     var c = this.get('content');
-    context.addClass('human');
-    context.addClass('male');
+    context.addClass('human');  // temp... need to style
+    context.addClass('male');   // temp... need to style
 
     sc_super();
     if (this.get("isSelected")) context.addClass("selected");
@@ -26,6 +26,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
         content: content,
         layout: { centerY: 0, left: 5, width: 25, height: 25},
         render: function(context, firstTime){
+          context = context.addClass('male'); // temp... need to style
           sc_super();
         }
       })
@@ -50,7 +51,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
       SC.View.extend(LinkIt.Terminal, {
         classNames: ['father-terminal'],
         layout: { left: -5, top: 25, width: 10, height: 10 },
-        linkStyle: { lineStyle: LinkIt.STRAIGHT, width: 3, color: '#A5C0DC', cap: LinkIt.ROUND},
+        linkStyle: { lineStyle: LinkIt.HORIZONTAL_CURVED, width: 3, color: '#A5C0DC', cap: LinkIt.ROUND},
         node: content,
         terminal: 'input',
         direction: LinkIt.INPUT_TERMINAL
@@ -63,7 +64,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
       SC.View.extend(LinkIt.Terminal, {
         classNames: ['mother-terminal'],
         layout: { right: -5, top: 25, width: 10, height: 10 },
-        linkStyle: { lineStyle: LinkIt.STRAIGHT, width: 3, color: '#E08CDF', cap: LinkIt.ROUND},
+        linkStyle: { lineStyle: LinkIt.HORIZONTAL_CURVED, width: 3, color: '#E08CDF', cap: LinkIt.ROUND},
         node: content,
         terminal: 'output',
         direction: LinkIt.OUTPUT_TERMINAL
@@ -82,7 +83,7 @@ Workr.WorkrView = SC.View.extend( LinkIt.NodeView, {
     Implements LinkIt.NodeView.terminalViewFor()
   */
   terminalViewFor: function(terminalKey) {
-    console.log(this,terminalKey, this['_term_' + terminalKey])
+    //console.log(this,terminalKey, this['_term_' + terminalKey])
     return this['_term_' + terminalKey];
   }
 });

@@ -16,26 +16,22 @@ Workr.Workr = SC.Record.extend(LinkIt.Node, {
   title:      SC.Record.attr(String, { isRequired: YES, defaultValue: 'Untitled Workr' }),
   desc:       SC.Record.attr(String),
   parent:     SC.Record.toOne('Workr.Workr'),
-  inputs:     SC.Record.toMany('Workr.Workr', {
-    inverse: 'workr',
-    isMaster: YES
-  }),
-  outputs:    SC.Record.toMany('Workr.Workr', {
-    inverse: 'workr',
-    isMaster: YES
-  }),
+  master:     SC.Record.attr(Boolean),
+  input:      SC.Record.toOne('Workr.Workr'),
+  output:     SC.Record.toOne('Workr.Workr'),
   subworkrs:  SC.Record.toMany('Workr.Workr', {
-    inverse: 'workr',
+    inverse: 'parent',
     isMaster: YES
   }),
 
 
-  members: function(){
-    var workrs = this.get('subworkrs');
+  minions: function(){
 
-    var i, len, members = [];
-    len = workrs.get('length');
-    for(i = 0; i < len; i++ ){
+    var members = [],
+        workrs  = this.get('subworkrs'),
+        len     = workrs.get('length');
+
+    for(var i = 0; i < len; i++ ){
       members.push(workrs.objectAt(i));
     }
 
@@ -50,33 +46,30 @@ Workr.Workr = SC.Record.extend(LinkIt.Node, {
   position:  SC.Record.attr(Object),
 
   links: function(){
-    var links   = [],
-        inputs  = this.get('inputs'),
-        outputs = this.get('outputs');
+    var links       = [],
+        startNode   = this.get('input'),
+        endNode     = this.get('output');
 
-//console.log('==',this,'==')
-    inputs.forEach(function(input){
-//      console.log(input);
+    if(startNode){
       links.push( SC.Object.create( LinkIt.Link, {
-        startNode:      input,
+        startNode:      startNode,
         startTerminal:  'output',
         endNode:        this,
-        endTerminal:    'unput'
+        endTerminal:    'input'
       }));
-    });
+    }
 
-    outputs.forEach(function(output){
+    if(endNode){
       links.push( SC.Object.create( LinkIt.Link, {
         startNode:      this,
         startTerminal: 'output',
-        endNode:        output,
+        endNode:        endNode,
         endTerminal:   'input'
       }));
-    });
-
+    }
 
     return links;
-  }.property('inputs', 'outputs').cacheable(),
+  }.property('input', 'output').cacheable(),
 
 
   canLink: function(link) {

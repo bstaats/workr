@@ -20,9 +20,16 @@ Workr.statechart = Ki.Statechart.create({
         FamilyTree.familiesController.set('selection', fc.get('content').objectAt(1));
 */
 
-        var store = Workr.get('store');
+        var store = Workr.get('store'),
+            query = SC.Query.local(Workr.Workr,{conditions: 'master = true'})
+            master = store.find(query);
+        
+        Workr.workrsController.set('masterWorkr', master);
+        Workr.workrsController.set('content', master);
+/*        
         var wc = Workr.workrsController.set('content', store.find(Workr.Workr));
-        wc.set('selection', wc.get('content').objectAt(0));
+        wc.set('masterWorkr', wc.get('content').objectAt(0));
+*/
 
         self.gotoState('studio');
 

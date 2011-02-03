@@ -56,7 +56,7 @@ Workr.TopMenu = SC.View.extend({
           classNames: ['title'],
           isEditable: YES,
           fontWeight: SC.BOLD_WEIGHT,
-          contentBinding: 'Workr.workrController',
+          contentBinding: 'Workr.masterWorkrController',
           contentValueKey: 'title',
           displayProperties: ['isMoved'],
           transitions: {

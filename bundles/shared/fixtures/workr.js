@@ -11,61 +11,62 @@ Workr.Workr.FIXTURES = [
   { id:         '1',
     title:      "Beef Cake Workr",
     desc:       "Work it babe!",
+    master:     true,
     parent:     null,
-    inputs:     [],
-    outputs:    [],
+    input:      null,
+    output:     null,
     subworkrs:  ['2','3','4','5','6'],
-    position:   {y: 35, x: 300}
+    position:   {y: 0, x: 0}
   },
 
   { id:         '2',
     title:      "Cup cake",
     desc:       "Work it babe again!",
     parent:     '1',
-    inputs:     [],
-    outputs:    ['3'],
+    input:      null,
+    output:     '3',
     subworkrs:  [],
-    position:   {y: 35, x: 300}  
+    position:   {y: 30, x: 30}
   },
 
   { id:         '3',
     title:      "Poo cake",
     desc:       "Work it babe again!",
     parent:     '1',
-    inputs:     ['2'],
-    outputs:    ['4'],
+    input:      '2',
+    output:     '4',
     subworkrs:  [],
-    position:   {y: 300, x: 10}
+    position:   {y: 140, x: 160}
   },
 
   { id:         '4',
     title:      "Pork cake",
     desc:       "Work it babe!",
     parent:     '1',
-    inputs:     ['3'],
-    outputs:    ['5'],
+    input:      '3',
+    output:     '5',
     subworkrs:  [],
-    position:   {y: 300, x: 300}
+    position:   {y: 250, x: 290}
   },
 
   { id:         '5',
     title:      "real cake",
     desc:       "Work it babe again!",
     parent:     '1',
-    inputs:     ['4'],
-    outputs:    ['6'],
+    input:      '4',
+    output:     '6',
     subworkrs:  [],
-    position:   {y: 200, x: 300}
+    position:   {y: 250, x: 420}
   },
 
   { id:         '6',
     title:      "No cake, Cake is a lie",
     desc:       "Work it babe again!",
     parent:     '1',
-    inputs:     ['5'],
-    outputs:    [],
+    input:      '5',
+    output:     null,
     subworkrs:  [],
-    position:   {y: 100, x: 100}
+    position:   {y: 250, x: 650}
   },
 
 ];
