@@ -1,17 +1,17 @@
-sc_require('views/node');
+sc_require('views/workr');
 
-FamilyTree.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
+Workr.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
   layerId: 'studio',
   displayProperties: 'isMoved'.w(),
   transitions: {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
 
-  contentBinding: SC.Binding.from('FamilyTree.membersController').oneWay(),
-  selectionBinding: 'FamilyTree.membersController.selection',
-  nodeViewDelegate: 'FamilyTree.familyController',
-  exampleView: FamilyTree.NodeView,
-  delegate: 'FamilyTree.familyController',
+  contentBinding: SC.Binding.from('Workr.membersController').oneWay(),
+  selectionBinding: 'Workr.membersController.selection',
+  nodeViewDelegate: 'Workr.workrController',
+  exampleView: Workr.WorkrView,
+  delegate: 'Workr.workrController',
 
 
   mouseDown: function(evt) {

@@ -1,12 +1,12 @@
 /*globals SC Workr */
 
-Workr.TopMenu = SC.View.extend(SC.ContentDisplay, {
+Workr.TopMenu = SC.View.extend({
 
   tagName: 'div',
   layerId: 'menu',
   classNamesReset: YES,
   displayProperties: ['isMoved'],
-          
+
   mouseDown: function(evt){
     var id = evt.target.id || evt.target.parentNode.id;
 
@@ -51,12 +51,13 @@ Workr.TopMenu = SC.View.extend(SC.ContentDisplay, {
     this.set('childViews', [
       this.createChildView(
         SC.LabelView.extend(SC.Animatable, {
-          layout: { top: 5, left: 60, width:400, height: 22},
+          layout: { top: 5, left: 60, width:600, height: 22},
           classNamesReset: YES,
           classNames: ['title'],
           isEditable: YES,
           fontWeight: SC.BOLD_WEIGHT,
-          valueBinding: 'Workr.workrController.content.title',
+          contentBinding: 'Workr.workrController',
+          contentValueKey: 'title',
           displayProperties: ['isMoved'],
           transitions: {
             left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
@@ -77,8 +78,8 @@ Workr.TopMenu = SC.View.extend(SC.ContentDisplay, {
               this.update(context);
             }
           }
-          
-          
+
+
         })
       )
     ]);
