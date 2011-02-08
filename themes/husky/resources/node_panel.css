@@ -1,0 +1,100 @@
+/*
+  Position
+*/
+/*
+.nodepanel{
+  position: absolute;
+  top:      100px;
+  left:     100px;
+  width:    250px;
+  height:   250px;
+}
+*/
+.nodepanel > .content{
+  position: absolute; /* resetting classes.. need this  */
+/*
+  top:      0px;
+  left:     10px;
+  width:    230px;
+  height:   210px;
+*/
+}
+
+
+
+
+
+
+/*
+  Style
+*/
+.nodepanel{
+  text-shadow:          0px -1px 0px #000;
+  background:           #000 sc_static('images/workr_title_bg.png') repeat-x;
+  color:                #e5e5e5;
+  -moz-border-radius:    7px;
+  -webkit-border-radius: 7px;
+  -moz-box-shadow:       3px 3px 8px rgba(0, 0, 0, .75);
+  -webkit-box-shadow:    3px 3px 8px rgba(0, 0, 0, .75);
+
+}
+
+.nodepanel > .content{
+  background-color:     #fff;
+  -moz-border-radius:    7px;
+  -webkit-border-radius: 7px;
+}
+
+.nodepanel > .info{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  padding:  3px 10px;
+
+}
+
+.nodepanel > .info >  span{
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: sc_static('images/sprites.png') no-repeat -240px -48px;
+}
+
+
+.nodepanel > div.info:hover > span{
+  background: sc_static('images/sprites.png') no-repeat -240px -72px;
+}
+
+.nodepanel > div.info:active > span{
+  background: sc_static('images/sprites.png') no-repeat -240px -96px;
+}
+
+.nodepanel > .title{
+  padding:  5px;
+  font-size: 20px;
+  line-height:20px;
+}
+
+.nodepanel > .edit{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  padding:  3px 10px;
+}
+
+.nodepanel > .edit >  span{
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: sc_static('images/sprites.png') no-repeat -264px -48px;
+}
+
+.nodepanel > div.edit:hover > span{
+  background: sc_static('images/sprites.png') no-repeat -264px -72px;
+}
+
+.nodepanel > div.edit:active > span{
+  background: url('images/sprites.png') no-repeat -264px -96px;
+}

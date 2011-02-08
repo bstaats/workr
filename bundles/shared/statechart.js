@@ -23,10 +23,10 @@ Workr.statechart = Ki.Statechart.create({
         var store = Workr.get('store'),
             query = SC.Query.local(Workr.Workr,{conditions: 'master = true'})
             master = store.find(query);
-        
+
         Workr.workrsController.set('masterWorkr', master);
         Workr.workrsController.set('content', master);
-/*        
+/*
         var wc = Workr.workrsController.set('content', store.find(Workr.Workr));
         wc.set('masterWorkr', wc.get('content').objectAt(0));
 */
@@ -61,6 +61,53 @@ Workr.statechart = Ki.Statechart.create({
       closeMenus: function(){
         this.gotoState('root');
       },
+
+      workrPanelOpened: function(){
+        this.gotoState('workrPanelOpen');
+      },
+
+
+      workrPanelOpen: Ki.State.design({
+        initialSubstate: 'main',
+
+        enterState: function(){
+          console.log('panel open');
+        },
+
+        exitState: function(){
+          console.log('panel closed')
+        },
+
+        workrPanelClosed: function(){
+          this.gotoState('studio');
+        },
+
+        main: Ki.State.design({
+          enterState: function(){
+            console.log('main view');
+          },
+
+          exitState: function(){
+          }
+        }),
+
+        info: Ki.State.design({
+          enterState: function(){
+          },
+
+          exitState: function(){
+          }
+        }),
+
+        edit: Ki.State.design({
+          enterState: function(){
+          },
+
+          exitState: function(){
+          }
+        }),
+
+      }),
 
       libMenu: Ki.State.design({
         enterState: function(){

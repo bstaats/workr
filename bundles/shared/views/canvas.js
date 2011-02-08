@@ -9,8 +9,8 @@ Workr.CanvasView = LinkIt.CanvasView.extend(SC.Animatable, {
 
   contentBinding:   SC.Binding.from('Workr.workrsController').oneWay(),
   selectionBinding: 'Workr.workrsController.selection',
-  nodeViewDelegate: Workr.workrController,
-  exampleView:      Workr.WorkrNodeView,
+ // nodeViewDelegate: Workr.workrController,
+  exampleView:      Workr.WorkrNode,
   delegate:         Workr.workrController,
 
 

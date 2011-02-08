@@ -1,12 +1,19 @@
 sc_require('core');
 
-Workr.WorkrNodeView = SC.View.extend( LinkIt.NodeView, {
+
+Workr.WorkrNode = SC.View.extend( LinkIt.NodeView, Workr.WorkrNodeDelegate,{
   layout: { top: 0, left: 0, width: 65, height: 65 },
   displayProperties: ['content', 'isSelected'],
+  delegate: null,
+
+  workrNodeDelegate: function() {
+      var del = this.get('delegate');
+      return this.delegateFor('isWorkrNodeDelegate', del);
+    }.property('delegate').cacheable(),
 
   doubleClick: function(evt){
-    // need to add Workr.WorkrPanelView
-    console.log('boom');
+    var del = this.get('workrNodeDelegate');
+    del.workrNodeOpenPanel(this);
   },
 
   render: function(context){
