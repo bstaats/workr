@@ -60,5 +60,15 @@ html,body{
 }
 
 .icon{
-  background: sc_static('images/workr_sprites.png') repeat 0px -105px;
+  background: sc_static('images/workr_sprites.png') no-repeat 0px -105px;
+}
+
+.handle{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px 0px;
+}
+
+.handle:hover{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px -72px;
 }

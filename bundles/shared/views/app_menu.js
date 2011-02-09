@@ -8,32 +8,10 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
 
-  searchInput: SCUI.ComboBoxView.design({
-/*  Replacing the divs in this view with real components
-    layout: { top: 200, left: 20, width: 70, height: 18 },
-    objectsBinding: 'Workr.AppMenuController.searchResults',
-    nameKey: "name",
-    valueKey : "id"
-*/
-  }),
 
-
-  searchResults: SC.ListView.design({
-/*  Replacing the divs in this view with real components
-    layerId: 'appmenu_search_results',
-    layout: { left: 0, top: 156, width: 195},
-    rowHeight: 43,
-    rowSpacing: 2,
-    exampleView: Workr.SearchResultView,
-    selectionBinding: 'Workr.AppMenuController.selection',
-    contentBinding: 'Workr.AppMenuController',
-    contentValueKey: 'name',
-    actOnSelect: YES,
-    action: 'changedSelection'
-*/
-  }),
-
-
+  /*
+    INTERACTION
+  */
   mouseDown: function(evt){
     var id = evt.target.id || evt.target.parentNode.id;
 
@@ -45,19 +23,19 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
   },
 
 
+  /*
+    RENDERING
+  */
   update: function(context) {
-
     if(this.didChangeFor('update', 'isOpen')){
-
       if(this.get('isOpen')){
-        this.adjust('left',0).updateStyle();
+        this.adjust('left',0);
       }else{
-        this.adjust('left',-249).updateStyle();
+        this.adjust('left',-249);
       }
     }
 
     if(this.didChangeFor('update', 'isSearching')){
-
         if(this.get('isSearching')){
           context.addClass('searching');
 
@@ -67,7 +45,6 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
           }
           input[0].focus();
         }
-
       }
   },
 
@@ -101,6 +78,40 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, {
     }else{
       this.update(context);
     }
+  },
+  
+  createChildViews: function(){
+    var content = this.get('content');
+
+    this.set('childViews', [
+      this.createChildView(
+        SCUI.ComboBoxView.design({
+          layerId: 'appmenu_search',
+          layout: { top: 200, left: 20, width: 70, height: 18 },
+          //objectsBinding: 'Workr.AppMenuController.searchResults',
+          //nameKey: "name",
+          //valueKey : "id"
+        })
+      )
+
+/*
+      this.createChildView(
+        SC.ListView.design({
+          layerId: 'appmenu_search_results',
+          layout: { left: 0, top: 156, width: 195},
+          //rowHeight: 43,
+          //rowSpacing: 2,
+          //exampleView: Workr.SearchResultView,
+          //selectionBinding: 'Workr.AppMenuController.selection',
+          //contentBinding: 'Workr.AppMenuController',
+          //contentValueKey: 'name',
+          //actOnSelect: YES,
+          //action: 'changedSelection'
+        })
+      )
+*/
+    ]);
   }
+
 
 });

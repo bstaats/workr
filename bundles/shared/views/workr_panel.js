@@ -79,6 +79,14 @@ Workr.WorkrPanel = SC.PalettePane.extend( Workr.WorkrPanelDelegate,{
           classNamesReset: YES,
           classNames: ['content'],
         })
+      ),
+
+      this.createChildView(
+        SC.View.design(SCUI.Resizable,{
+          layout: { right: 0, bottom: 0, width:20, height:20 },
+          classNamesReset: YES,
+          classNames: ['handle']
+        })
       )
 
     ]);
