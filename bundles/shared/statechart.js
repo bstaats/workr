@@ -71,11 +71,11 @@ Workr.statechart = Ki.Statechart.create({
         initialSubstate: 'main',
 
         enterState: function(){
-          console.log('panel open');
+         // console.log('panel open');
         },
 
         exitState: function(){
-          console.log('panel closed')
+         // console.log('panel closed')
         },
 
         workrPanelClosed: function(){
@@ -84,7 +84,7 @@ Workr.statechart = Ki.Statechart.create({
 
         main: Ki.State.design({
           enterState: function(){
-            console.log('main view');
+            //console.log('main view');
           },
 
           exitState: function(){

@@ -14,16 +14,6 @@ Workr.WorkrNodeDelegate = {
     panel.append();
 
     panel.get('workrPanelDelegate').selectWorkrPanel();
-
-/*
-    var sel =  Workr.workrPanelController.get('selection');
-    if(sel) sel.set('isSelected', NO);
-
-    Workr.workrPanelController.set('selection', panel)
-*/
-
-
-
     Workr.statechart.sendAction('workrPanelOpened');
   },
 

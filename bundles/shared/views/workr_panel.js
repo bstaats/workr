@@ -49,8 +49,8 @@ Workr.WorkrPanel = SC.PalettePane.extend( Workr.WorkrPanelDelegate,{
     sc_super();
     if (firstTime) {
       context.push(
-        '  <div class="info"><span></span></div>',
-        '  <div class="edit"><span></span></div>'
+        '<div class="info"><span></span></div>',
+        '<div class="edit"><span></span></div>'
       );
       this.set('isSelected', YES);
     }else{
