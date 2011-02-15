@@ -57,7 +57,7 @@
   box-shadow:         0px 2px 4px #666;
 }
 
-#menu li, #menu label, #appmenu li, #appmenu label{
+#menu li, #menu label, #appmenu li #appmenu label{
   cursor:         pointer;
 }
 
@@ -75,7 +75,6 @@
 #appmenu > ul.menuitems > li[id]:hover, #appmenu_studio_btn{
   color:          #fff;
   text-shadow:    0px -1px 0px #000;
-  border-right:   1px ridge #ddd;
   background: -webkit-gradient(
       linear,
       left bottom,

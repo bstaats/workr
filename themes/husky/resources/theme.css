@@ -3,7 +3,7 @@
 *  Copyright: ©2010 Brian Staats and contributors
 *  ==========================================================================
 */
-html,body{
+html,body, .sc-view{
   font-family:  Helvetica, Arial, sans-serif;
   padding:      0px;
   margin:       0px;

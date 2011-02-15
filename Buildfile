@@ -11,7 +11,7 @@ config 'husky',
 
 # BUNDLES
 config :workr_bundles,
-  :required => [:family_tree, :shared]
+  :required => [:shared]
 
 config :scui,
   :required => [:sproutcore, :'scui/drawing', :'scui/linkit']
