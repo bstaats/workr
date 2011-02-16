@@ -61,7 +61,7 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
   render: function (context, firstTime) {
     if(firstTime){
       context.push(
-        '<ul>',
+        '<ul class="tabs">',
           '<li id="appmenu_studio_btn" class="selected_menu"><span></span><label>Studio</label></li>',
         '</ul>',
         '<div class="search_field">  <input type="text" value="Search" ></div>'

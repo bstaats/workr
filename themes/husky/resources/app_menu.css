@@ -29,7 +29,6 @@
 
 #appmenu > ul.menuitems > li[id]:hover{
   border: 1px ridge #000;
-  height: 30px;
 }
 
 #appmenu_studio_btn span{

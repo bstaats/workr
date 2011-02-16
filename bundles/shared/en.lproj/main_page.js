@@ -5,8 +5,6 @@ Workr.mainPage = SC.Page.design({
   topMenu: SC.outlet('mainPane.topMenu'),
 
   mainPane: SC.MainPane.design({
-    classNamesReset: YES,
-    classNames: [''],
     defaultResponder: 'Workr.statechart',
     childViews: 'canvas topMenu appMenu'.w(),
 

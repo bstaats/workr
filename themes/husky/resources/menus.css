@@ -21,7 +21,7 @@
   display:inline-block;
 }
 
-ul.tabs{
+ul.tabs, ul.tabs > li{
   height: 30px;
 }
 
@@ -70,11 +70,11 @@ ul.tabs{
 *  ==========================================================================
 */
 
-.search_field{
+.menu .search_field{
   margin:15px 0;
 }
 
-.search_field > input{
+.menu .search_field > input{
   margin:                 0px 0px 0 10px;
   border:                 1px solid #000;
   padding-left:           34px;
@@ -87,11 +87,11 @@ ul.tabs{
   color:                  #ccc;
 }
 
-.search_field > input:focus{
+.menu .search_field > input:focus{
  outline: none;
 }
 
-.search_field > input:hover, .search_field > input:focus, .searching .search_field > input{
+.menu .search_field > input:hover, .menu .search_field > input:focus, .searching .menu .search_field > input{
   color:        #000;
   background:   #fff url('images/search_on.png') no-repeat 5px center;
   background:   #fff sc_static('images/search_on.png') no-repeat 5px center;
@@ -108,23 +108,23 @@ ul.tabs{
   border-radius:          10px;
 }
 
-.search_results li{
+.menu .search_results li{
   height:       42px;
   color:        #464646;
   text-shadow:  none;
   cursor:       move;
 }
 
-.search_results li{
+.menu .search_results li{
   border-bottom: 1px ridge #ddd;
 }
 
-.search_results li:hover{
+.menu .search_results li:hover{
   border:   2px ridge #333;
   height:   39px;
 }
 
-.search_results li:hover{
+.menu .search_results li:hover{
   color:          #fff;
   text-shadow:    0px -1px 0px #000;
   background: -webkit-gradient(
@@ -148,7 +148,7 @@ ul.tabs{
   box-shadow:         4px 4px 4px #000;
 }
 
-.search_results li:first-child{
+.menu .search_results li:first-child{
   -webkit-border-top-right-radius:  10px;
   -webkit-border-top-left-radius:   10px;
   -moz-border-radius-topright:      10px;
@@ -157,7 +157,7 @@ ul.tabs{
   border-top-left-radius:           10px;
 }
 
-.search_results li:last-child{
+.menu .search_results li:last-child{
   -webkit-border-bottom-right-radius:  10px;
   -webkit-border-bottom-left-radius:   10px;
   -moz-border-radius-bottomright:      10px;
@@ -166,13 +166,13 @@ ul.tabs{
   border-bottom-left-radius:           10px;
 }
 
-.search_results li span{
+.menu .search_results li span{
   width:        24px;
   height:       24px;
   margin:       8px 0 0 5px;
 }
 
-.search_results li label{
+.menu .search_results li label{
   margin:   8px 0 0 5px;
   cursor:   move;
 }

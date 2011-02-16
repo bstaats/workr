@@ -52,7 +52,7 @@ Workr.TopMenu = SC.View.extend({
     this.set('childViews', [
       this.createChildView(
         SC.LabelView.extend(SC.Animatable, {
-          layout: { top: 5, left: 60, width:600, height: 22},
+          layout: { top: 7, left: 60, width:600, height: 22},
           classNamesReset: YES,
           classNames: ['title'],
           isEditable: YES,
