@@ -38,7 +38,7 @@ Workr.mainPage = SC.Page.design({
 
     }), // header
 
-    button: ButtonView.design({
+    button: ButtonViewStatechart.design({
       layout: { top: 50, left: 50, width: 100, height: 50 }
     })
 
