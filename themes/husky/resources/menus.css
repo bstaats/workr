@@ -1,0 +1,207 @@
+/*
+  SHARED CSS FOR MENUS
+*/
+.menu label{
+  display:  inline-block;
+  position:relative;
+  top:-5px;
+}
+
+.menu ul{
+  list-style: none;
+  padding:    0;
+  margin:     0;
+}
+
+.menu li{
+  display: block;
+}
+
+#appmenu_studio_btn div{
+  display:inline-block;
+}
+
+ul.tabs{
+  height: 30px;
+}
+
+#appmenu > ul.menuitems > li[id]:hover, ul.tabs{
+  color:          #fff;
+  text-shadow:    0px -1px 0px #000;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+  -moz-box-shadow:    0px 2px 4px #000;
+  -webkit-box-shadow: 0px 2px 4px #000;
+  box-shadow:         0px 2px 4px #000;
+}
+
+.menu li, .menu label{
+  cursor:         pointer;
+}
+
+.menu, .search_field input, .search_results{
+  font-size:      18px;
+}
+
+.menu span{
+  display:  inline-block;
+  width:    24px;
+  height:   24px;
+  margin:   3px 5px 0 15px;
+}
+
+
+/* ==========================================================================
+*  MENU MODE: searching
+*  ==========================================================================
+*/
+
+.search_field{
+  margin:15px 0;
+}
+
+.search_field > input{
+  margin:                 0px 0px 0 10px;
+  border:                 1px solid #000;
+  padding-left:           34px;
+  width:                  185px; /* why is padding and margin effecting SC and not html mockup? */
+  -webkit-border-radius:  25px;  /* width:185 for SC, width 229px for mockup */
+  -moz-border-radius:     25px;
+  border-radius:          25px;
+  background:             #fff url('images/search.png') no-repeat 5px center;
+  background:             #fff sc_static('images/search.png') no-repeat 5px center;
+  color:                  #ccc;
+}
+
+.search_field > input:focus{
+ outline: none;
+}
+
+.search_field > input:hover, .search_field > input:focus, .searching .search_field > input{
+  color:        #000;
+  background:   #fff url('images/search_on.png') no-repeat 5px center;
+  background:   #fff sc_static('images/search_on.png') no-repeat 5px center;
+}
+
+
+.search_results{
+  background:             #fff;
+  display:                block;
+  width:                  229px;
+  margin:                 10px 10px;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
+}
+
+.search_results li{
+  height:       42px;
+  color:        #464646;
+  text-shadow:  none;
+  cursor:       move;
+}
+
+.search_results li{
+  border-bottom: 1px ridge #ddd;
+}
+
+.search_results li:hover{
+  border:   2px ridge #333;
+  height:   39px;
+}
+
+.search_results li:hover{
+  color:          #fff;
+  text-shadow:    0px -1px 0px #000;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+  -moz-box-shadow:    4px 4px 4px #000;
+  -webkit-box-shadow: 4px 4px 4px #000;
+  box-shadow:         4px 4px 4px #000;
+}
+
+.search_results li:first-child{
+  -webkit-border-top-right-radius:  10px;
+  -webkit-border-top-left-radius:   10px;
+  -moz-border-radius-topright:      10px;
+  -moz-border-radius-topleft:       10px;
+  border-top-right-radius:          10px;
+  border-top-left-radius:           10px;
+}
+
+.search_results li:last-child{
+  -webkit-border-bottom-right-radius:  10px;
+  -webkit-border-bottom-left-radius:   10px;
+  -moz-border-radius-bottomright:      10px;
+  -moz-border-radius-bottomleft:       10px;
+  border-bottom-right-radius:          10px;
+  border-bottom-left-radius:           10px;
+}
+
+.search_results li span{
+  width:        24px;
+  height:       24px;
+  margin:       8px 0 0 5px;
+}
+
+.search_results li label{
+  margin:   8px 0 0 5px;
+  cursor:   move;
+}
+
+.search_results li > div{
+  height:         39px;
+  margin:         0;
+  float:          right;
+}
+
+.search_results li:hover > div{
+  border-left:    1px ridge #ddd;
+  border-width:   2px;
+}
+
+.search_results li:hover > div > span{
+  width: 12px;
+  background: url('images/sprites.png') no-repeat -218px -96px;
+  background: sc_static('images/sprites.png') no-repeat -218px -96px;
+}
+
+/*
+  TEMP ICONS
+*/
+.search_results li > span:first-child{
+  background:   url('images/sprites.png') no-repeat -168px 0px;
+  background:   sc_static('images/sprites.png') no-repeat -168px 0px;
+}
+.search_results li:hover > span:first-child{
+  background:   url('images/sprites.png') no-repeat -168px -96px;
+  background:   sc_static('images/sprites.png') no-repeat -168px -96px;
+}

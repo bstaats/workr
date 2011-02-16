@@ -5,6 +5,7 @@ Workr.TopMenu = SC.View.extend({
   tagName: 'div',
   layerId: 'menu',
   classNamesReset: YES,
+  classNames: ['menu'],
   displayProperties: ['isMoved'],
 
   mouseDown: function(evt){

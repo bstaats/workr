@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="../../../themes/husky/resources/theme.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../../../themes/husky/resources/menus.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <link rel="stylesheet" href="../../../themes/husky/resources/top_menu.css" type="text/css" media="screen" title="no title" charset="utf-8">
-<link rel="stylesheet" href="../../../themes/husky/resources/app_menu.css" type="text/css" media="screen" title="no title" charset="utf-8">
+<link rel="stylesheet" href="../../../themes/husky/resources/tools_menu.css" type="text/css" media="screen" title="no title" charset="utf-8">
 <style type="text/css" media="screen">
   /*
     Positions for mockup
@@ -13,25 +13,23 @@
     height:   30px;
     width:    100%;
   }
-  #appmenu{
+  #toolsmenu{
     top:      0px;
+    right:    0px;
     width:    249px;
     height:   100%;
   }
-  #appmenu ul.menuitems{
-    position: absolute;
-    top: 230px;
-    width:100%;
-  }
-  .search_results{
-    position: absolute;
-    top: 75px;
+  #libcontent{
+    width:  200px;
+    height: 200px;
+    left:   10px;
   }
 </style>
 
 </head>
 <body>
   <div id="studio">
+
   <div id="menu" class='menu'>
     <ul class="left">
       <li id="menu_studio_btn">     <span></span><label>Studio</label></li>
@@ -42,27 +40,10 @@
     </ul>
   </div>
 
-<!--
-  <div id="appmenu">
-    <ul class="left">
-      <li id="appmenu_studio_btn">     <label>Studio</label><span></span></li>
-    </ul>
-    <div class="search_field">  <input type="text" value="wor"></div>
-    <div class="search_results">
-    <ul class="menuitems">
-      <li id="appmenu_login">   <span></span><label>Login</label></li>
-      <li></li>
-      <li id="appmenu_new">     <span></span><label>New Workr</label></li>
-      <li id="appmenu_load">    <span></span><label>Load Workr</label></li>
-      <li></li>
-      <li id="appmenu_clear">   <span></span><label>Clear Canvas</label></li>
-    </ul>
-  </div>
--->
-
-  <div id="appmenu" class="menu">
+  <div id="toolsmenu" class='menu'>
     <ul class='tabs'>
-      <li id="appmenu_studio_btn" class='selected_menu'><span></span><label>Studio</label></li>
+      <li id="libmenu_btn" class='selected_menu'><span></span><label>Library</label></li>
+      <li id="propmenu_btn"> <span></span><label>Properties</label></li>
     </ul>
     <div class="search_field">  <input type="text" value="wor"></div>
     <div class="search_results">
@@ -72,14 +53,9 @@
         <li id="search_result3" class="workrc"><span></span><label>Workr C</label><div><span></span></div></li>
       </ul>
     </div>
-    <ul class="menuitems">
-      <li id="appmenu_login">   <span></span><label>Login</label></li>
-      <li></li>
-      <li id="appmenu_new">     <span></span><label>New Workr</label></li>
-      <li id="appmenu_load">    <span></span><label>Load Workr</label></li>
-      <li></li>
-      <li id="appmenu_clear">   <span></span><label>Clear Canvas</label></li>
-    </ul>
+    <div id='libcontent'>
+      
+    </div>
   </div>
 
 

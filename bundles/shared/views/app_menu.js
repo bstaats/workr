@@ -1,7 +1,8 @@
 Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
   tagName: 'div',
   layerId: 'appmenu',
-
+  classNamesReset: YES,
+  classNames: ['menu'],
   displayProperties: 'isSearching isOpen'.w(),
   transitions: {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
@@ -60,12 +61,13 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
   render: function (context, firstTime) {
     if(firstTime){
       context.push(
-        '<ul class="left">',
-          '<li id="appmenu_studio_btn">     <label>Studio</label><span></span></li>',
+        '<ul>',
+          '<li id="appmenu_studio_btn" class="selected_menu"><span></span><label>Studio</label></li>',
         '</ul>',
-        '<div id="appmenu_search">  <input type="text" value="Search"></div>'
+        '<div class="search_field">  <input type="text" value="Search" ></div>'
 /*        '<div id="appmenu_search_results">',
           '<ul>',
+
 
             '<li id="search_result1" class="workra"><span></span><label>Workr A</label><div><span></span></div></li>',
             '<li id="search_result2" class="workrb"><span></span><label>Workr B</label><div><span></span></div></li>',

@@ -1,0 +1,56 @@
+#toolsmenu{
+  position:           absolute;
+  background-color:   #333;
+  color:              #e5e5e5;
+  text-shadow:        0px -1px 0px #000;
+  -moz-box-shadow:    2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow:         2px 0px 4px #666;
+}
+
+#toolsmenu ul.tabs label{
+  display:none;
+}
+
+#toolsmenu ul.tabs span{
+  margin-left: 9px;
+}
+
+
+#toolsmenu ul.tabs li.selected_menu label{
+  display:inline-block;
+}
+
+#toolsmenu ul.tabs li{
+  width:40px;
+  display:inline-block;
+  border-left: 2px ridge #111;
+  opacity: 0.4;
+}
+
+#toolsmenu ul.tabs li.selected_menu{
+  width:199px;
+  border-left: #000;
+  opacity: 1;
+}
+
+#toolsmenu ul.tabs li.selected_menu span{
+  margin-left: 15px;
+}
+
+li#libmenu_btn span{
+  background:   url('images/sprites.png') no-repeat -24px -96px;
+  background:   sc_static('images/sprites.png') no-repeat -24px -96px;
+}
+
+li#propmenu_btn span{
+  background:   url('images/sprites.png') no-repeat -48px -48px;
+  background:   sc_static('images/sprites.png') no-repeat -48px -48px;
+}
+
+#libcontent{
+  position:             absolute;
+  background-color:     #fff;
+  -moz-border-radius:    7px;
+  -webkit-border-radius: 7px;
+}

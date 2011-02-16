@@ -3,24 +3,8 @@
 *  ==========================================================================
 */
 
-/*
-  LAYOUT
-*/
-
 #appmenu{
-/*  position: absolute;
-  top:      0px;
-  width:    249px;
-  height:   100%;
-*/
-}
-
-
-
-/*
-  GENERAL
-*/
-#appmenu{
+  position: absolute;
   background-color:   #333;
   color:              #e5e5e5;
   text-shadow:        0px -1px 0px #000;
@@ -29,34 +13,10 @@
   box-shadow:         2px 0px 4px #666;
 }
 
-#appmenu ul{
-  list-style: none;
-  padding:    0;
-  margin:     0;
+#appmenu > ul.menuitems > li > label{
+  padding:  0px 10px 0 5px;
 }
 
-#appmenu li{
-  display:    block;
-}
-
-
-#appmenu ul.menuitems{
-  position:absolute;
-}
-
-#appmenu ul.menuitems > li > label{
-  padding:  8px 10px 0 5px;
-}
-
-#appmenu_search{
-  margin:15px 0;
-  position:absolute;
-}
-
-#appmenu_search_results{
-  display:none;
-  position:absolute;
-}
 
 /*
   APPMENU ITEMS
@@ -64,6 +24,7 @@
 #appmenu > ul.menuitems > li{
   margin: 10px 0;
   padding: 5px 0;
+  border: 1px ridge #333;
 }
 
 #appmenu > ul.menuitems > li[id]:hover{
@@ -72,29 +33,8 @@
 }
 
 #appmenu_studio_btn span{
+  background:   url('images/sprites.png') no-repeat 0px -96px;
   background:   sc_static('images/sprites.png') no-repeat 0px -96px;
-}
-
-#appmenu_search > input{
-  margin:                 10px 0px 0 10px;
-  border:                 1px solid #000;
-  padding-left:           34px;
-  line-height:            30px;
-  width:                  195px;
-  -webkit-border-radius:  25px;
-  -moz-border-radius:     25px;
-  border-radius:          25px;
-  background:             #fff sc_static('images/search.png') no-repeat 5px center;
-  color:                  #ccc;
-}
-
-#appmenu_search > input:focus{
- outline: none;
-}
-
-#appmenu_search > input:hover, #appmenu_search > input:focus, #appmenu.searching #appmenu_search > input{
-  color:        #000;
-  background:   #fff sc_static('images/search_on.png') no-repeat 5px center;
 }
 
 #appmenu ul.menuitems > li > span{
@@ -102,143 +42,43 @@
 }
 
 #appmenu_login span{
+  background:   url('images/sprites.png') no-repeat -72px -72px;
   background:   sc_static('images/sprites.png') no-repeat -72px -72px;
 }
 
 #appmenu_new span{
+  background:   url('images/sprites.png') no-repeat -96px -72px;
   background:   sc_static('images/sprites.png') no-repeat -96px -72px;
 }
 
 #appmenu_load span{
+  background:   url('images/sprites.png') no-repeat -120px -72px;
   background:   sc_static('images/sprites.png') no-repeat -120px -72px;
 }
 
 #appmenu_clear span{
+  background:   url('images/sprites.png') no-repeat -144px -72px;
   background:   sc_static('images/sprites.png') no-repeat -144px -72px;
 }
 
 #appmenu_login:hover span{
+  background:   url('images/sprites.png') no-repeat -72px -96px;
   background:   sc_static('images/sprites.png') no-repeat -72px -96px;
 }
 
 #appmenu_new:hover span{
+  background:   url('images/sprites.png') no-repeat -96px -96px;
   background:   sc_static('images/sprites.png') no-repeat -96px -96px;
 }
 
 #appmenu_load:hover span{
+  background:   url('images/sprites.png') no-repeat -120px -96px;
   background:   sc_static('images/sprites.png') no-repeat -120px -96px;
 }
 
 #appmenu_clear:hover span{
+  background:   url('images/sprites.png') no-repeat -144px -96px;
   background:   sc_static('images/sprites.png') no-repeat -144px -96px;
 }
 
 
-/* ==========================================================================
-*  APPMENU MODE: searching
-*  ==========================================================================
-*/
-
-#appmenu.searching #appmenu_search_results{
-  background:             #fff;
-  display:                block;
-  width:                  229px;
-  margin:                 10px 0px 0 10px;
-  -webkit-border-radius:  10px;
-  -moz-border-radius:     10px;
-  border-radius:          10px;
-}
-
-#appmenu.searching #appmenu_search_results li{
-  height:       42px;
-  color:        #464646;
-  text-shadow:  none;
-  cursor:       move;
-}
-
-#appmenu.searching #appmenu_search_results li{
-  border-bottom: 1px ridge #ddd;
-}
-
-#appmenu.searching #appmenu_search_results li:hover{
-  border:   2px ridge #333;
-  height:   39px;
-}
-
-#appmenu.searching #appmenu_search_results li:hover{
-  color:          #fff;
-  text-shadow:    0px -1px 0px #000;
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0, rgb(0,0,0)),
-      color-stop(0.5, rgb(0,0,0)),
-      color-stop(0.51, rgb(34,34,34)),
-      color-stop(1, rgb(88,88,88))
-  );
-  background: -moz-linear-gradient(
-      center bottom,
-      rgb(0,0,0) 0%,
-      rgb(0,0,0) 50%,
-      rgb(34,34,34) 51%,
-      rgb(88,88,88) 100%
-  );
-  -moz-box-shadow:    4px 4px 4px #000;
-  -webkit-box-shadow: 4px 4px 4px #000;
-  box-shadow:         4px 4px 4px #000;
-}
-
-#appmenu.searching #appmenu_search_results li:first-child{
-  -webkit-border-top-right-radius:  10px;
-  -webkit-border-top-left-radius:   10px;
-  -moz-border-radius-topright:      10px;
-  -moz-border-radius-topleft:       10px;
-  border-top-right-radius:          10px;
-  border-top-left-radius:           10px;
-}
-
-#appmenu.searching #appmenu_search_results li:last-child{
-  -webkit-border-bottom-right-radius:  10px;
-  -webkit-border-bottom-left-radius:   10px;
-  -moz-border-radius-bottomright:      10px;
-  -moz-border-radius-bottomleft:       10px;
-  border-bottom-right-radius:          10px;
-  border-bottom-left-radius:           10px;
-}
-
-
-#appmenu.searching #appmenu_search_results li label{
-  padding:  8px 0 0 6px;
-  cursor:   move;
-}
-
-#appmenu.searching #appmenu_search_results li span{
-  margin: 8px 0 0 5px;
-}
-
-#appmenu.searching #appmenu_search_results li > div{
-  height:         39px;
-  margin:         0;
-  float:          right;
-}
-
-#appmenu.searching #appmenu_search_results li:hover > div{
-  border-left:    1px ridge #ddd;
-  border-width:   2px;
-}
-
-#appmenu.searching #appmenu_search_results li:hover > div > span{
-  width: 12px;
-  background: sc_static('images/sprites.png') no-repeat -218px -96px;
-}
-
-/*
-  TEMP ICONS
-*/
-#appmenu.searching #appmenu_search_results li > span:first-child{
-  background:   sc_static('images/sprites.png') no-repeat -168px 0px;
-}
-#appmenu.searching #appmenu_search_results li:hover > span:first-child{
-  background:   sc_static('images/sprites.png') no-repeat -168px -96px;
-}
