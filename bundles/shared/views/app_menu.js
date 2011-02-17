@@ -59,7 +59,7 @@ Workr.AppMenu = SC.View.extend(
         '<div class="search_field">  <input type="text" value="Search" ></div>'
       );
 
-      this.set('owner', this) // why should I have to do this? the owner is this objects parent by default
+      this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
       sc_super();             // call here so childViews are added last
     }else{
       this.invokeStateMethod('render', context, firstTime);

@@ -1,37 +1,55 @@
 /*globals SC Workr */
 
-Workr.TopMenu = SC.View.extend({
+Workr.TopMenu = SC.View.extend(
+  Workr.TopMenuDelegate,
+  Ki.StatechartManager,{
+
 
   tagName: 'div',
   layerId: 'menu',
+  childViews: ['workrTitle'],
   classNamesReset: YES,
   classNames: ['menu'],
-  displayProperties: ['isMoved'],
+  delegate: null,
 
-  mouseDown: function(evt){
-    var id = evt.target.id || evt.target.parentNode.id;
+  topMenuDelegate: function() {
+      var del = this.get('delegate');
+      return this.delegateFor('isTopMenuDelegate', del);
+    }.property('delegate').cacheable(),
 
-    if(id=='menu_studio_btn'){
-      Workr.statechart.sendEvent('openAppMenu');
-    }else if(id=='menu_library_btn'){
-      Workr.statechart.sendEvent('openLibMenu');
-    }else if(id=='menu_properties_btn'){
-      Workr.statechart.sendEvent('openPropMenu');
-    }else{
-      Workr.statechart.sendEvent('closeMenus');
+/*
+  STATES
+*/
+  initialState: 'base',
+
+  base: Ki.State.design({
+    /* Cannot use enterState since this is the initialState (this obj has not been created yet)  */
+
+    mouseDown: function(evt){
+      var id = evt.target.id || evt.target.parentNode.id,
+          del = this.get('owner').get('topMenuDelegate');
+
+      if(id=='menu_studio_btn'){
+        del.appMenuClicked();
+        this.get('owner').get('workrTitle').adjust('left',274);
+
+      }else if(id=='menu_library_btn'){
+        del.libMenuClicked();
+      }else if(id=='menu_properties_btn'){
+        del.propMenuClicked();
+      }else{
+        del.nothingClicked();
+      }
+    },
+
+    appMenuClosed: function(){
+      this.get('owner').get('workrTitle').adjust('left',60);
     }
 
-  },
-
-  update: function(context) {
-    if(this.didChangeFor('update', 'isMoved')){
-      this.childViews[0].set('isMoved', this.get('isMoved'));
-    }
-  },
+  }),
 
 
-  render: function (context, firstTime) {
-    sc_super();
+  render: function(context, firstTime){
     if (firstTime) {
       context.push(
         '<ul class="left">',
@@ -42,50 +60,29 @@ Workr.TopMenu = SC.View.extend({
           '<li id="menu_properties_btn"> <span></span><label>Properties</label></li>',
         '</ul>'
       );
+      this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
+      sc_super();
     }else{
-      this.update(context);
+      this.invokeStateMethod('render', context, firstTime);
     }
   },
 
-  createChildViews: function(){
 
-    this.set('childViews', [
-      this.createChildView(
-        SC.LabelView.extend(SC.Animatable, {
-          layout: { top: 7, left: 60, width:600, height: 22},
-          classNamesReset: YES,
-          classNames: ['title'],
-          isEditable: YES,
-          fontWeight: SC.BOLD_WEIGHT,
-          contentBinding: 'Workr.masterWorkrController',
-          contentValueKey: 'title',
-          displayProperties: ['isMoved'],
-          transitions: {
-            left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
-          },
-          update: function(context) {
-            if(this.didChangeFor('update', 'isMoved')){
-
-              if(this.get('isMoved')){
-                this.adjust('left',274).updateStyle();
-              }else{
-                this.adjust('left',60).updateStyle();
-              }
-            }
-          },
-          render: function (context, firstTime) {
-            sc_super();
-            if(!firstTime){
-              this.update(context);
-            }
-          }
-
-
-        })
-      )
-    ]);
-
-  }
+/*
+  CHILDREN VIEWS
+*/
+  workrTitle: SC.LabelView.extend(SC.Animatable, {
+    layout: { top: 7, left: 60, width:600, height: 22},
+    classNamesReset: YES,
+    classNames: ['title'],
+    isEditable: YES,
+    fontWeight: SC.BOLD_WEIGHT,
+    contentBinding: 'Workr.masterWorkrController',
+    contentValueKey: 'title',
+    transitions: {
+      left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
+    }
+  })
 
 
 });

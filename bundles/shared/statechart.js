@@ -1,194 +1,94 @@
 Workr.statechart = Ki.Statechart.create({
 
-  rootState: Ki.State.design({
+  initialState: 'loadingBundles',
 
-    initialSubstate: 'loadingBundles',
+  loadingBundles: Ki.State.design({
 
-    loadingBundles: Ki.State.design({
-
-      enterState: function() {
-        var self = this ;
+    enterState: function() {
 /*      Login not complete. Dont load
-        SC.loadBundle('login', function() {
-          self.gotoState('loggedOut');
-        });
+      SC.loadBundle('login', function() {
+        self.gotoState('loggedOut');
+      });
 */
 
-/*
-        var store = FamilyTree.get('store');
-        var fc = FamilyTree.familiesController.set('content', store.find(FamilyTree.Family));
-        FamilyTree.familiesController.set('selection', fc.get('content').objectAt(1));
-*/
+      var store = Workr.get('store'),
+          query = SC.Query.local(Workr.Workr,{conditions: 'master = true'})
+          master = store.find(query);
 
-        var store = Workr.get('store'),
-            query = SC.Query.local(Workr.Workr,{conditions: 'master = true'})
-            master = store.find(query);
+      Workr.workrsController.set('masterWorkr', master);
+      Workr.workrsController.set('content', master);
 
-        Workr.workrsController.set('masterWorkr', master);
-        Workr.workrsController.set('content', master);
-/*
-        var wc = Workr.workrsController.set('content', store.find(Workr.Workr));
-        wc.set('masterWorkr', wc.get('content').objectAt(0));
-*/
+      this.gotoState('base');
+    }
 
-        self.gotoState('studio');
-
-      }
-
-    }),
-
-    studio: Ki.State.design({
-      initialSubstate:        'root',
-
-      root: Ki.State.design(),
-
-      enterState: function() {
-        Workr.mainPage.get('mainPane').append();
-      },
-
-      openAppMenu: function(){
-        this.gotoState('appMenuOpened');
-      },
-
-      openLibMenu: function(){
-        this.gotoState('libMenu');
-      },
-
-      openPropMenu: function(){
-        this.gotoState('propMenu');
-      },
-
-      closeMenus: function(){
-        this.gotoState('root');
-      },
-
-      workrPanelOpened: function(){
-        this.gotoState('workrPanelOpen');
-      },
+  }),
 
 
-      workrPanelOpen: Ki.State.design({
-        initialSubstate: 'main',
+  base: Ki.State.design({
 
-        enterState: function(){
-         // console.log('panel open');
-        },
+    enterState: function() {
+      Workr.mainPage.get('mainPane').append();
+    },
 
-        exitState: function(){
-         // console.log('panel closed')
-        },
+    openAppMenu: function(){
+      this.gotoState('appMenuOpened');
+    },
 
-        workrPanelClosed: function(){
-          this.gotoState('studio');
-        },
+    openLibMenu: function(){
+      this.gotoState('libMenuOpened');
+    },
 
-        main: Ki.State.design({
-          enterState: function(){
-            //console.log('main view');
-          },
-
-          exitState: function(){
-          }
-        }),
-
-        info: Ki.State.design({
-          enterState: function(){
-          },
-
-          exitState: function(){
-          }
-        }),
-
-        edit: Ki.State.design({
-          enterState: function(){
-          },
-
-          exitState: function(){
-          }
-        }),
-
-      }),
-
-      libMenu: Ki.State.design({
-        enterState: function(){
-          console.log(this.name);
-        }
-      }),
-
-      propMenu: Ki.State.design({
-        enterState: function(){
-          console.log(this.name);
-        }
-      }),
-
-      appMenuOpened: Ki.State.design({
-
-        enterState: function() {
-          Workr.mainPage.get('appMenu').sendAction('open');
-          Workr.mainPage.get('canvas').set('isMoved', YES);
-          Workr.mainPage.get('topMenu').set('isMoved', YES);
-        },
-
-        exitState: function() {
-          Workr.mainPage.get('appMenu').sendAction('close');
-          Workr.mainPage.get('canvas').set('isMoved', NO);
-          Workr.mainPage.get('topMenu').set('isMoved', NO);
-        },
-
-      })
-    }),
+    openPropMenu: function(){
+      this.gotoState('propMenuOpened');
+    },
+  }),
 
 
-    loggedOut: Ki.State.design({
+  appMenuOpened: Ki.State.design({
+    enterState: function() {
+      Workr.mainPage.get('appMenu').sendAction('open');
+      Workr.mainPage.get('canvas').sendAction('move');
+    },
 
-      enterState: function() {
-        Workr.getPath('loginPage.loginPane').append();
-      },
+    exitState: function() {
+      Workr.mainPage.get('appMenu').sendAction('close');
+      Workr.mainPage.get('canvas').sendAction('move');
+      Workr.mainPage.get('topMenu').sendAction('appMenuClosed');
+    },
 
-      exitState: function() {
-        Workr.getPath('loginPage.loginPane').remove();
-      },
+    closeAppMenu: function(){
+      this.gotoState('base');
+    }
 
-      logIn: function() {
-        Workr.loginController.action('logIn')
-      },
-
-      loginSuccess: function(){
-        this.gotoState('loggedIn');
-      },
-
-      loginFailure: function(a,b,c){
-        errorMessage = 'Could not login.. Need to pass a param here to find out why. yell at Brian';
-        Workr.loginController.set('loginErrorMessage', errorMessage);
-        console.log('We need a login failure state',a,b,c);
-      }
-
-    }),
-
-    loggedIn: Ki.State.design({
-      initialSubstate:        'main',
-
-      main: Ki.State.design({
-        initialSubstate: "ready",
-        ready: Ki.State.design({
-          enterState: function() {
-            Workr.getPath('mainPage.mainPane').append();
-          },
-
-          exitState: function() {
-            Workr.getPath('mainPage.mainPane').remove();
-          },
-
-          logOut: function() {
-            this.gotoState('loggedOut');
-          }
-
-        })
-      })
+  }),
 
 
-    })
+  libMenuOpened: Ki.State.design({
+    enterState: function() {
+    },
 
-  })  // rootState
+    exitState: function() {
+    },
+
+    closeLibMenu: function(){
+      this.gotoState('base');
+    }
+
+  }),
+
+
+  propMenuOpened: Ki.State.design({
+    enterState: function() {
+    },
+
+    exitState: function() {
+    },
+
+    closePropMenu: function(){
+      this.gotoState('base');
+    }
+
+  }),
+
 
 })
