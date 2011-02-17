@@ -47,7 +47,7 @@ Workr.statechart = Ki.Statechart.create({
       },
 
       openAppMenu: function(){
-        this.gotoState('appMenu');
+        this.gotoState('appMenuOpened');
       },
 
       openLibMenu: function(){
@@ -121,38 +121,19 @@ Workr.statechart = Ki.Statechart.create({
         }
       }),
 
-      appMenu: Ki.State.design({
-        initialSubstate: 'appMenuOpen',
-
-        appMenuOpen: Ki.State.design(),
+      appMenuOpened: Ki.State.design({
 
         enterState: function() {
-          Workr.mainPage.get('appMenu').set('isOpen', YES);
+          Workr.mainPage.get('appMenu').sendAction('open');
           Workr.mainPage.get('canvas').set('isMoved', YES);
           Workr.mainPage.get('topMenu').set('isMoved', YES);
         },
 
         exitState: function() {
-          Workr.mainPage.get('appMenu').set('isOpen', NO);
+          Workr.mainPage.get('appMenu').sendAction('close');
           Workr.mainPage.get('canvas').set('isMoved', NO);
           Workr.mainPage.get('topMenu').set('isMoved', NO);
         },
-
-
-        openAppMenuSearching: function(){
-          this.gotoState('searching');
-        },
-
-        searching: Ki.State.design({
-          enterState: function(){
-            Workr.mainPage.get('appMenu').set('isSearching', YES);
-          },
-
-          exitState: function(){
-            Workr.mainPage.get('appMenu').set('isSearching', NO);
-          }
-
-        })
 
       })
     }),

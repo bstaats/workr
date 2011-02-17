@@ -1,9 +1,13 @@
-Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
+Workr.AppMenu = SC.View.extend(
+  SC.Animatable,
+  Workr.AppMenuDelegate,
+  Ki.StatechartManager,{
+
+
   tagName: 'div',
   layerId: 'appmenu',
   classNamesReset: YES,
   classNames: ['menu'],
-  displayProperties: 'isSearching isOpen'.w(),
   transitions: {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
@@ -15,48 +19,36 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
     }.property('delegate').cacheable(),
 
 
-  /*
-    INTERACTION
-  */
 /*
-  mouseDown: function(evt){
-    var id = evt.target.id || evt.target.parentNode.id;
-
-    if(id=='appmenu_search'){
-      Workr.statechart.sendEvent('openAppMenuSearching');
-    }else{
-      // maybe do something
-    }
-  },
+  STATES
 */
+  initialState: 'closed',
 
+  closed: Ki.State.design({
+    /* Cannot use enterState since this is the initialState (this obj has not been created yet)  */
 
-  /*
-    RENDERING
-  */
-  update: function(context) {
-    if(this.didChangeFor('update', 'isOpen')){
-      if(this.get('isOpen')){
-        this.adjust('left',0);
-      }else{
-        this.adjust('left',-249);
-      }
-    }
+    open: function(){
+      this.gotoState('opened')
+    },
 
-/*
-    if(this.didChangeFor('update', 'isSearching')){
-        if(this.get('isSearching')){
-          context.addClass('searching');
+  }),
 
-          var input = this.$('#appmenu_search input');
-          if(input.attr('value')=='Search'){
-            input.attr('value', '');
-          }
-          input[0].focus();
-        }
-      }
-*/
-  },
+  opened: Ki.State.design({
+
+    enterState: function(){
+      this.get('owner').adjust('left',0);
+    },
+
+    exitState: function(){
+      this.get('owner').adjust('left',-249);
+    },
+
+    close: function(){
+      this.gotoState('closed')
+    },
+
+  }),
+
 
   render: function (context, firstTime) {
     if(firstTime){
@@ -65,23 +57,14 @@ Workr.AppMenu = SC.View.extend(SC.Animatable, Workr.AppMenuDelegate,{
           '<li id="appmenu_studio_btn" class="selected_menu"><span></span><label>Studio</label></li>',
         '</ul>',
         '<div class="search_field">  <input type="text" value="Search" ></div>'
-/*        '<div id="appmenu_search_results">',
-          '<ul>',
-
-
-            '<li id="search_result1" class="workra"><span></span><label>Workr A</label><div><span></span></div></li>',
-            '<li id="search_result2" class="workrb"><span></span><label>Workr B</label><div><span></span></div></li>',
-            '<li id="search_result3" class="workrc"><span></span><label>Workr C</label><div><span></span></div></li>',
-
-          '</ul>',
-        '</div>',
-*/
       );
 
+      this.set('owner', this) // why should I have to do this? the owner is this objects parent by default
+      sc_super();             // call here so childViews are added last
     }else{
-      this.update(context);
+      this.invokeStateMethod('render', context, firstTime);
     }
-    sc_super(); // call here so childViews are added last
+
   },
 
   createChildViews: function(){
