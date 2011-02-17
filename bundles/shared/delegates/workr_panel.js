@@ -15,7 +15,6 @@ Workr.WorkrPanelDelegate = {
 
   workrPanelClose: function(){
     this.remove();
-    Workr.statechart.sendAction('workrPanelClosed');
   },
 
 }

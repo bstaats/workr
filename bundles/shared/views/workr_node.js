@@ -1,9 +1,15 @@
 sc_require('core');
 
 
-Workr.WorkrNode = SC.View.extend( LinkIt.NodeView, Workr.WorkrNodeDelegate,{
+Workr.WorkrNode = SC.View.extend(
+  LinkIt.NodeView,
+  Workr.WorkrNodeDelegate,
+  Ki.StatechartManager,{
+
+
   layout: { top: 0, left: 0, width: 65, height: 65 },
   displayProperties: ['content', 'isSelected'],
+  classNames: ['workr'],
   delegate: null,
 
   workrNodeDelegate: function() {
@@ -11,18 +17,37 @@ Workr.WorkrNode = SC.View.extend( LinkIt.NodeView, Workr.WorkrNodeDelegate,{
       return this.delegateFor('isWorkrNodeDelegate', del);
     }.property('delegate').cacheable(),
 
-  doubleClick: function(evt){
-    var del = this.get('workrNodeDelegate');
-    del.workrNodeOpenPanel(this);
+
+/*
+  STATES
+*/
+  initialState: 'base',
+
+  base: Ki.State.design({
+    /* Cannot use enterState since this is the initialState (this obj has not been created yet)  */
+
+    doubleClick: function(evt){
+      var del = this.get('owner').get('workrNodeDelegate');
+      del.workrNodeOpenPanel(this.get('owner'));
+    },
+
+    render: function(context, firstTime){
+      // maybe there should be a selected state
+      if (this.get('owner').get("isSelected")) context.addClass("selected");
+    }
+
+  }),
+
+
+  render: function(context, firstTime){
+    if(firstTime){
+      this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
+      sc_super();
+    }else{
+      this.invokeStateMethod('render', context, firstTime);
+    }
   },
 
-  render: function(context){
-    var c = this.get('content');
-    context.addClass('workr');
-
-    sc_super();
-    if (this.get("isSelected")) context.addClass("selected");
-  },
 
   createChildViews: function(){
     var childViews = [], contentView;

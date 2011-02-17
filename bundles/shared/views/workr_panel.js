@@ -1,5 +1,8 @@
 sc_require('core');
 
+/*
+  SC.PalettePane doesnt play well with Ki state charts... try with SC 1.5
+*/
 Workr.WorkrPanel = SC.PalettePane.extend( Workr.WorkrPanelDelegate,{
   classNames:         ['nodepanel'],
   delegate:           null,

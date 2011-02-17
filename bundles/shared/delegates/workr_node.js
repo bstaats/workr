@@ -14,11 +14,6 @@ Workr.WorkrNodeDelegate = {
     panel.append();
 
     panel.get('workrPanelDelegate').selectWorkrPanel();
-    Workr.statechart.sendAction('workrPanelOpened');
-  },
-
-  workrNodeClosePanel: function(){
-
   },
 
 }
