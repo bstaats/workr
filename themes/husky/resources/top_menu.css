@@ -11,7 +11,7 @@
 
 #menu > ul.right{
   position: absolute;
-  right:    0px;
+  right:    15px;
   top:      0px;
 }
 
@@ -104,10 +104,12 @@ li#menu_properties_btn span{
   background:   sc_static('images/sprites.png') no-repeat -48px 0px;
 }
 
+/*
 li#menu_properties_btn:hover span{
   background:   url('images/sprites.png') no-repeat -48px -25px;
   background:   sc_static('images/sprites.png') no-repeat -48px -25px;
 }
+*/
 
 #menu > .title{
   position:absolute; /* This is neded since classNamesReset: YES eliminates ALL SC css  */

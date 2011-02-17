@@ -57,7 +57,7 @@ Workr.TopMenu = SC.View.extend(
         '</ul>',
         '<ul class="right">',
           '<li id="menu_library_btn">    <span></span><label>Library</label></li>',
-          '<li id="menu_properties_btn"> <span></span><label>Properties</label></li>',
+/*  no properties menu for awhile        '<li id="menu_properties_btn"> <span></span><label>Properties</label></li>',*/
         '</ul>'
       );
       this.set('owner', this); // why should I have to do this? the owner is this objects parent by default

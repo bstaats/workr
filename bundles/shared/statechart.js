@@ -56,7 +56,7 @@ Workr.statechart = Ki.Statechart.create({
       Workr.mainPage.get('topMenu').sendAction('appMenuClosed');
     },
 
-    closeAppMenu: function(){
+    canvasClicked: function(){
       this.gotoState('base');
     }
 
@@ -64,13 +64,15 @@ Workr.statechart = Ki.Statechart.create({
 
 
   libMenuOpened: Ki.State.design({
-    enterState: function() {
+    enterState: function(){
+      Workr.mainPage.get('libMenu').sendAction('open');
     },
 
-    exitState: function() {
+    exitState: function(){
+      Workr.mainPage.get('libMenu').sendAction('close');
     },
 
-    closeLibMenu: function(){
+    canvasClicked: function(){
       this.gotoState('base');
     }
 

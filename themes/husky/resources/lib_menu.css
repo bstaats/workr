@@ -1,4 +1,4 @@
-#toolsmenu{
+#libmenu{
   position:           absolute;
   background-color:   #333;
   color:              #e5e5e5;
@@ -8,33 +8,32 @@
   box-shadow:         2px 0px 4px #666;
 }
 
-#toolsmenu ul.tabs label{
+#libmenu ul.tabs label{
   display:none;
 }
 
-#toolsmenu ul.tabs span{
+#libmenu ul.tabs span{
   margin-left: 9px;
 }
 
 
-#toolsmenu ul.tabs li.selected_menu label{
+#libmenu ul.tabs li.selected_menu label{
   display:inline-block;
 }
 
-#toolsmenu ul.tabs li{
+#libmenu ul.tabs li{
   width:40px;
   display:inline-block;
   border-left: 2px ridge #111;
-  opacity: 0.4;
 }
 
-#toolsmenu ul.tabs li.selected_menu{
+#libmenu ul.tabs li.selected_menu{
   width:199px;
   border-left: #000;
   opacity: 1;
 }
 
-#toolsmenu ul.tabs li.selected_menu span{
+#libmenu ul.tabs li.selected_menu span{
   margin-left: 15px;
 }
 

@@ -8,6 +8,7 @@ Workr.AppMenu = SC.View.extend(
   layerId: 'appmenu',
   classNamesReset: YES,
   classNames: ['menu'],
+  displayProperties:  ['viewClasses'],
   transitions: {
     left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
@@ -36,10 +37,12 @@ Workr.AppMenu = SC.View.extend(
   opened: Ki.State.design({
 
     enterState: function(){
+      this.get('owner').set('viewClasses', 'menu shadow');
       this.get('owner').adjust('left',0);
     },
 
     exitState: function(){
+      this.get('owner').set('viewClasses', 'menu');
       this.get('owner').adjust('left',-249);
     },
 
@@ -62,8 +65,10 @@ Workr.AppMenu = SC.View.extend(
       this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
       sc_super();             // call here so childViews are added last
     }else{
+      this.set('classNames', this.get('viewClasses').w())
       this.invokeStateMethod('render', context, firstTime);
     }
+
 
   },
 

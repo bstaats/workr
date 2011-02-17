@@ -29,6 +29,11 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
   initialState: 'base',
 
   base: Ki.State.design({
+    mouseDown: function(evt) {
+      var del = this.get('owner').get('canvasDelegate');
+      del.canvasClicked();
+    },
+
     move: function(){
       this.gotoState('moved');
     }
@@ -60,8 +65,7 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
   mouseDown out of state due to LinkIt.CanvasView requirements
 */
   mouseDown: function(evt) {
-    var s = this.currentStates()[0];
-    if(s.name=='moved') s.mouseDown(evt);
+    this.currentStates()[0].mouseDown(evt);
     sc_super();
   },
 

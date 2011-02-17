@@ -16,7 +16,7 @@ Workr.TopMenuDelegate = {
   },
 
   nothingClicked: function(){
-    Workr.statechart.sendAction('closeAppMenu');
+    Workr.statechart.sendAction('canvasClicked');
   }
 
 }
