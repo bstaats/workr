@@ -14,6 +14,10 @@ Sproutcore workflow engine
   git clone git@github.com:FrozenCanuck/Ki.git
 
 
+We also use Compass/SASS http://compass-style.org/
+The config.rb file is used to setup Compass. Just have compass watch the project directory during development and make changes to the scss files in themes/husky/src
+
+
 == To Update Sproutcore ==
 
 cd workr/frameworks/sproutcore

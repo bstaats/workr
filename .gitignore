@@ -37,3 +37,5 @@ Thumbs.db
 # Editor files #
 ################
 *.swp
+
+.sass-cache

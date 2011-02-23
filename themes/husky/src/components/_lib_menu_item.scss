@@ -1,0 +1,21 @@
+@mixin corner{
+  -moz-border-radius:    7px;
+  -webkit-border-radius: 7px;
+}
+
+.liblist{
+  position: absolute;
+  background-color: #fff;
+  @include corner;
+
+  .libmenu-item{
+    div{
+      label{
+        color: #000;
+        font-size: 24px;
+        font-weight:normal;
+      }
+    }
+  }  
+}
+
