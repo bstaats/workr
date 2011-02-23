@@ -1,3 +1,5 @@
+sc_require('views/lib_menu_item');
+
 Workr.LibMenu = SC.View.extend(
   SC.Animatable,
   Workr.LibMenuDelegate,
@@ -8,6 +10,7 @@ Workr.LibMenu = SC.View.extend(
   layerId: 'libmenu',
   classNamesReset: YES,
   classNames: ['menu'],
+  childViews: ['list'],
   transitions: {
     right:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
   },
@@ -28,8 +31,8 @@ Workr.LibMenu = SC.View.extend(
     /* Cannot use enterState since this is the initialState (this obj has not been created yet)  */
 
     open: function(){
-      this.gotoState('opened')
-    },
+      this.gotoState('opened');
+    }
 
   }),
 
@@ -44,8 +47,8 @@ Workr.LibMenu = SC.View.extend(
     },
 
     close: function(){
-      this.gotoState('closed')
-    },
+      this.gotoState('closed');
+    }
 
   }),
 
@@ -67,41 +70,21 @@ Workr.LibMenu = SC.View.extend(
     }
 
   },
-/*
 
-  createChildViews: function(){
-    var content = this.get('content');
-
-
-
-      this.createChildView(
-        SC.View.extend({
-          tagName: 'ul',
-          classNamesReset: YES,
-          classNames:'menuitems',
-          layout: { top: 80, left: 0, right:0, bottom:0 },
-          update: function(context) {
-          },
-          render: function (context, firstTime) {
-            if(firstTime){
-              context.push(
-                '<li id="libmenu_login">   <span></span><label>Login</label></li>',
-                '<li></li>',
-                '<li id="libmenu_new">     <span></span><label>New Workr</label></li>',
-                '<li id="libmenu_load">    <span></span><label>Load Workr</label></li>',
-                '<li></li>',
-                '<li id="libmenu_clear">   <span></span><label>Clear Canvas</label></li>'
-              );
-            }else{
-              this.update(context);
-            }
-          }
-
-        })
-      )
-    ]);
-  }
-*/
+  list: SC.ListView.design({
+    classNamesReset: YES,
+    classNames: ['liblist'],
+    layout: { left: 15, top: 90, height:100, right:15},
+    rowHeight: 43,
+    rowSpacing: 2,
+    exampleView: Workr.LibMenuItem,
+    selectionBinding: 'Workr.libMenuController.selection',
+    contentBinding: 'Workr.libMenuController',
+    contentValueKey: 'name',
+    //actOnSelect: YES,
+    //target: FamilyTree.familiesController,
+    //action: 'changedFamily'
+  })
 
 
 });

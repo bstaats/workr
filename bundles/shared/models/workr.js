@@ -15,6 +15,7 @@ Workr.Workr = SC.Record.extend(LinkIt.Node, {
   primaryKey: 'id',
   title:      SC.Record.attr(String, { isRequired: YES, defaultValue: 'Untitled Workr' }),
   desc:       SC.Record.attr(String),
+  type:       SC.Record.attr(String),
   parent:     SC.Record.toOne('Workr.Workr'),
   master:     SC.Record.attr(Boolean),
   input:      SC.Record.toOne('Workr.Workr'),
@@ -175,5 +176,21 @@ Workr.Workr = SC.Record.extend(LinkIt.Node, {
      }*/
 
   }
-
 });
+
+
+
+Workr.WorkrType = SC.Record.extend({
+  primaryKey: 'id',
+  name:       SC.Record.attr(String),
+  desc:       SC.Record.attr(String),
+  type:       SC.Record.attr(String),
+  level:      SC.Record.attr(Number),
+  parent:     SC.Record.toOne('Workr.WorkrTypes'),
+  children:   SC.Record.toMany('Workr.WorkrTypes', {
+    inverse: 'parent',
+    isMaster: YES
+  }),
+  
+});
+

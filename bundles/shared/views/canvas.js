@@ -77,4 +77,4 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
       this.invokeStateMethod('render', context, firstTime);
     }
   }
-})
+});

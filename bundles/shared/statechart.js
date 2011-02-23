@@ -17,6 +17,8 @@ Workr.statechart = Ki.Statechart.create({
 
       Workr.workrsController.set('masterWorkr', master);
       Workr.workrsController.set('content', master);
+      
+      Workr.libMenuController.set('content', Workr.libMenuController.get('levelone'));
 
       this.gotoState('base');
     }
