@@ -9,7 +9,33 @@
 
 // Combine the partials into a single screen stylesheet.
 @import "partials/page";
-@import "partials/form";
-@import "partials/two_col";
+
+@import "compass/utilities/sprites";
+$sprite-default-size: 24px;
+
+@import "compass/css3";
+
+// border-radius vars
+$default-border-radius: 7px;
+
+// box-shadow vars
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 2px;
+$default-box-shadow-blur:     4px;
+
+
+
+/* APP SCSS */
+@import "partials/globals";
+
+@import 'partials/main';
+
+@import 'components/top_menu';
+
+@import 'components/app_menu';
+
+@import 'components/lib_menu';
 
 @import 'components/lib_menu_item';
+
+@import 'components/node_panel';

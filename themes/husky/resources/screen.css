@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 4, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
@@ -441,119 +442,683 @@ body.bp form.inline p {
   margin-bottom: 0;
 }
 
-/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp label {
-  font-weight: bold;
+/* APP SCSS */
+/* Hack to get around SC's sc_static BS
+---------------------------------------- */
+/*
+
+  NEED TO REFACTOR ALL THIS INTO SCSS
+
+*/
+/* line 7, ../src/partials/_main.scss */
+html, body, .sc-view {
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 0px;
+  margin: 0px;
+  line-height: 1;
 }
-/* line 19, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  padding: 1.4em;
-  margin: 0 0 1.5em 0;
+
+/* line 14, ../src/partials/_main.scss */
+#studio {
+  height: 100%;
+  width: 100%;
+  background: url("images/grid.png") repeat 0px 0px;
+  background: sc_static("images/grid.png") repeat 0px 0px;
 }
-/* line 20, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp legend {
-  font-weight: bold;
-  font-size: 1.2em;
+
+/*
+  WORKRS
+*/
+/* Nodes */
+/* line 27, ../src/partials/_main.scss */
+.workr {
+  background: #231f20 sc_static("images/workr_icon.png") no-repeat 0px 0px;
+  color: #333333;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
+  border: 1px solid #000;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  overflow: visible;
+  -moz-transition: border .1s linear;
+  -webkit-transition: border .1s linear;
 }
-/* line 26, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
-  margin: 0.5em 0;
-  background-color: white;
-  padding: 5px;
+
+/* line 42, ../src/partials/_main.scss */
+.workr.selected {
+  border: 2px solid white;
+  -moz-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
 }
-/* line 27, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.title {
-  font-size: 1.5em;
+
+/* Terminal colors*/
+/* line 49, ../src/partials/_main.scss */
+.workr-terminal {
+  border: 1px solid     #666;
+  -moz-transition: border .1s linear;
+  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -moz-border-radius: 1px;
+  -webkit-transition: border .1s linear;
+  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  -webkit-border-radius: 1px;
 }
-/* line 31, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input[type=checkbox], form.bp input.checkbox, form.bp input[type=radio], form.bp input.radio {
+
+/* line 61, ../src/partials/_main.scss */
+.workr-terminal:hover {
+  border: 1px solid     #fff;
+}
+
+/* line 65, ../src/partials/_main.scss */
+.icon {
+  background: sc_static("images/workr_sprites.png") no-repeat 0px -105px;
+}
+
+/* line 69, ../src/partials/_main.scss */
+.handle {
+  position: absolute;
+  background: transparent sc_static("images/sprites.png") no-repeat -288px 0px;
+}
+
+/* line 74, ../src/partials/_main.scss */
+.handle:hover {
+  position: absolute;
+  background: transparent sc_static("images/sprites.png") no-repeat -288px -72px;
+}
+
+/* OLD CSS MENU.css  NEED TO REFACTOR INTO SCSS
+---------------------------------------- */
+/*
+  SHARED CSS FOR MENUS
+*/
+/* line 87, ../src/partials/_main.scss */
+.menu label {
+  display: inline-block;
   position: relative;
-  top: 0.25em;
-}
-/* line 33, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  margin: 0.5em 0;
-  padding: 5px;
-}
-/* line 34, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp select {
-  margin: 0.5em 0;
-}
-/* line 59, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp fieldset {
-  border: 1px solid #cccccc;
-}
-/* line 62, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password],
-form.bp textarea, form.bp select {
-  border: 1px solid #bbbbbb;
-}
-/* line 64, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text:focus, form.bp input.title:focus, form.bp input[type=email]:focus, form.bp input[type=text]:focus, form.bp input[type=password]:focus,
-form.bp textarea:focus, form.bp select:focus {
-  border: 1px solid #666666;
-}
-/* line 48, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp input.text, form.bp input.title, form.bp input[type=email], form.bp input[type=text], form.bp input[type=password] {
-  width: 300px;
-}
-/* line 50, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-form.bp textarea {
-  width: 390px;
-  height: 250px;
+  top: -5px;
 }
 
-/* line 25, ../src/partials/_two_col.scss */
-body.two-col #container {
-  width: 950px;
-  margin: 0 auto;
+/* line 93, ../src/partials/_main.scss */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 99, ../src/partials/_main.scss */
+.menu li {
+  display: block;
+}
+
+/* line 103, ../src/partials/_main.scss */
+#appmenu_studio_btn div {
+  display: inline-block;
+}
+
+/* line 107, ../src/partials/_main.scss */
+ul.tabs, ul.tabs > li {
+  /*  height: 30px;*/
+}
+
+/* line 111, ../src/partials/_main.scss */
+#appmenu > ul.menuitems > li[id]:hover {
+  color: #fff;
+  text-shadow: 0px -1px 0px black;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
+  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
+  -moz-box-shadow: 0px 2px 4px #000;
+  -webkit-box-shadow: 0px 2px 4px #000;
+  box-shadow: 0px 2px 4px #000;
+}
+
+/* line 136, ../src/partials/_main.scss */
+.shadow {
+  -moz-box-shadow: 2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow: 2px 0px 4px #666;
+}
+
+/* line 143, ../src/partials/_main.scss */
+.menu li, .menu label {
+  /*  cursor:         pointer;*/
+}
+
+/* line 147, ../src/partials/_main.scss */
+.menu, .search_field input, .search_results {
+  font-size: 18px;
+}
+
+/* line 151, ../src/partials/_main.scss */
+.menu span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  /*  margin:   3px 5px 0 15px;*/
+}
+
+/* ==========================================================================
+*  MENU MODE: searching
+*  ==========================================================================
+*/
+/* line 164, ../src/partials/_main.scss */
+.menu .search_field {
+  margin: 15px 0;
+}
+
+/* line 168, ../src/partials/_main.scss */
+.menu .search_field > input {
+  margin: 0px 0px 0 10px;
+  border: 1px solid #000;
+  padding-left: 34px;
+  width: 185px;
+  /* why is padding and margin effecting SC and not html mockup? */
+  -webkit-border-radius: 25px;
+  /* width:185 for SC, width 229px for mockup */
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  background: white url("images/search.png") no-repeat 5px center;
+  background: white sc_static("images/search.png") no-repeat 5px center;
+  color: #ccc;
+}
+
+/* line 181, ../src/partials/_main.scss */
+.menu .search_field > input:focus {
+  outline: none;
+}
+
+/* line 185, ../src/partials/_main.scss */
+.menu .search_field > input:hover, .menu .search_field > input:focus, .searching .menu .search_field > input {
+  color: #000;
+  background: white url("images/search_on.png") no-repeat 5px center;
+  background: white sc_static("images/search_on.png") no-repeat 5px center;
+}
+
+/* line 192, ../src/partials/_main.scss */
+.search_results {
+  background: #fff;
+  display: block;
+  width: 229px;
+  margin: 10px 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* line 202, ../src/partials/_main.scss */
+.menu .search_results li {
+  height: 42px;
+  color: #464646;
+  text-shadow: none;
+  cursor: move;
+}
+
+/* line 209, ../src/partials/_main.scss */
+.menu .search_results li {
+  border-bottom: 1px ridge #ddd;
+}
+
+/* line 213, ../src/partials/_main.scss */
+.menu .search_results li:hover {
+  border: 2px ridge #333;
+  height: 39px;
+}
+
+/* line 218, ../src/partials/_main.scss */
+.menu .search_results li:hover {
+  color: #fff;
+  text-shadow: 0px -1px 0px black;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
+  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
+  -moz-box-shadow: 4px 4px 4px #000;
+  -webkit-box-shadow: 4px 4px 4px #000;
+  box-shadow: 4px 4px 4px #000;
+}
+
+/* line 242, ../src/partials/_main.scss */
+.menu .search_results li:first-child {
+  -webkit-border-top-right-radius: 10px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+/* line 251, ../src/partials/_main.scss */
+.menu .search_results li:last-child {
+  -webkit-border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+/* line 260, ../src/partials/_main.scss */
+.menu .search_results li span {
+  width: 24px;
+  height: 24px;
+  margin: 8px 0 0 5px;
+}
+
+/* line 266, ../src/partials/_main.scss */
+.menu .search_results li label {
+  margin: 8px 0 0 5px;
+  cursor: move;
+}
+
+/* line 271, ../src/partials/_main.scss */
+.search_results li > div {
+  height: 39px;
+  margin: 0;
+  float: right;
+}
+
+/* line 277, ../src/partials/_main.scss */
+.search_results li:hover > div {
+  border-left: 1px ridge #ddd;
+  border-width: 2px;
+}
+
+/* line 282, ../src/partials/_main.scss */
+.search_results li:hover > div > span {
+  width: 12px;
+  background: url("images/sprites.png") no-repeat -218px -96px;
+  background: sc_static("images/sprites.png") no-repeat -218px -96px;
+}
+
+/*
+  TEMP ICONS
+*/
+/* line 291, ../src/partials/_main.scss */
+.search_results li > span:first-child {
+  background: url("images/sprites.png") no-repeat -168px 0px;
+  background: sc_static("images/sprites.png") no-repeat -168px 0px;
+}
+
+/* line 295, ../src/partials/_main.scss */
+.search_results li:hover > span:first-child {
+  background: url("images/sprites.png") no-repeat -168px -96px;
+  background: sc_static("images/sprites.png") no-repeat -168px -96px;
+}
+
+/* line 1, ../src/components/_top_menu.scss */
+#menu {
+  position: absolute;
+  text-shadow: white 0px 1px 0px;
+  color: #464646;
+  -moz-box-shadow: #666666 0px 2px 4px 0;
+  -webkit-box-shadow: #666666 0px 2px 4px 0;
+  -o-box-shadow: #666666 0px 2px 4px 0;
+  box-shadow: #666666 0px 2px 4px 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.38, #c2c2c2), color-stop(0.85, #ececec));
+  background: -moz-linear-gradient(center bottom, #c2c2c2 38%, #ececec 85%);
+}
+/* line 20, ../src/components/_top_menu.scss */
+#menu li {
+  cursor: pointer;
+}
+/* line 23, ../src/components/_top_menu.scss */
+#menu ul.left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+/* line 28, ../src/components/_top_menu.scss */
+#menu ul.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 36, ../src/components/_top_menu.scss */
+#menu .studio_btn span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
   overflow: hidden;
-  *zoom: 1;
+  background-position: 0px 0px;
+  margin: 3px 5px 0 15px;
 }
-/* line 27, ../src/partials/_two_col.scss */
-body.two-col #header, body.two-col #footer {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 950px;
+/* line 40, ../src/components/_top_menu.scss */
+#menu .studio_btn span:hover {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px -24px;
 }
-/* line 138, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #header, * html body.two-col #footer {
-  overflow-x: hidden;
+/* line 44, ../src/components/_top_menu.scss */
+#menu .studio_btn label {
+  display: none;
 }
-/* line 29, ../src/partials/_two_col.scss */
-body.two-col #sidebar {
-  display: inline;
-  float: left;
-  margin-right: 10px;
-  width: 310px;
+/* line 51, ../src/components/_top_menu.scss */
+#menu .lib_btn span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -24px 0px;
+  margin: 3px 15px 0 5px;
 }
-/* line 138, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #sidebar {
-  overflow-x: hidden;
+/* line 55, ../src/components/_top_menu.scss */
+#menu .lib_btn span:hover {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -24px -24px;
 }
-/* line 33, ../src/partials/_two_col.scss */
-body.two-col #content {
-  display: inline;
-  float: left;
-  margin-right: 0;
-  width: 630px;
+/* line 59, ../src/components/_top_menu.scss */
+#menu .lib_btn label {
+  display: none;
 }
-/* line 138, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_grid.scss */
-* html body.two-col #content {
-  overflow-x: hidden;
+/* line 65, ../src/components/_top_menu.scss */
+#menu .title {
+  position: absolute;
 }
 
-/* line 6, ../src/components/_lib_menu_item.scss */
-.liblist {
+/* line 1, ../src/components/_app_menu.scss */
+#appmenu {
+  position: absolute;
+  background-color: #333;
+  color: #e5e5e5;
+  text-shadow: 0px -1px 0px black;
+}
+/* line 7, ../src/components/_app_menu.scss */
+#appmenu ul.tabs {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
+  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 10, ../src/components/_app_menu.scss */
+#appmenu ul.tabs li {
+  cursor: pointer;
+}
+/* line 20, ../src/components/_app_menu.scss */
+#appmenu ul.tabs .studio_btn {
+  border-right: none;
+  border-bottom: 1px ridge #000;
+}
+/* line 23, ../src/components/_app_menu.scss */
+#appmenu ul.tabs .studio_btn span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px -72px;
+  margin: 3px 5px 0 15px;
+}
+/* line 31, ../src/components/_app_menu.scss */
+#appmenu ul.menuitems li {
+  margin: 10px 0;
+  padding: 5px 0;
+  border: 1px ridge #333;
+}
+/* line 36, ../src/components/_app_menu.scss */
+#appmenu ul.menuitems li[id]:hover {
+  border: 1px ridge #000;
+}
+/* line 40, ../src/components/_app_menu.scss */
+#appmenu ul.menuitems li label {
+  padding: 0px 10px 0 5px;
+}
+/* line 44, ../src/components/_app_menu.scss */
+#appmenu ul.menuitems li span {
+  margin: 6px 0 0 15px;
+}
+
+/* line 55, ../src/components/_app_menu.scss */
+#appmenu_login span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -72px -72px;
+}
+/* line 59, ../src/components/_app_menu.scss */
+#appmenu_login:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -72px -96px;
+}
+
+/* line 66, ../src/components/_app_menu.scss */
+#appmenu_new span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -96px -72px;
+}
+/* line 70, ../src/components/_app_menu.scss */
+#appmenu_new:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -96px -96px;
+}
+
+/* line 77, ../src/components/_app_menu.scss */
+#appmenu_load span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -120px -72px;
+}
+/* line 81, ../src/components/_app_menu.scss */
+#appmenu_load:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -120px -96px;
+}
+
+/* line 88, ../src/components/_app_menu.scss */
+#appmenu_clear span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -144px -72px;
+}
+/* line 92, ../src/components/_app_menu.scss */
+#appmenu_clear:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -144px -96px;
+}
+
+/*
+
+  NEED TO REFACTOR ALL THIS INTO SCSS
+
+*/
+/* line 6, ../src/components/_lib_menu.scss */
+#libmenu {
+  position: absolute;
+  background-color: #333;
+  color: #e5e5e5;
+  text-shadow: 0px -1px 0px black;
+  -moz-box-shadow: 2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow: 2px 0px 4px #666;
+}
+
+/* line 16, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs label {
+  display: none;
+}
+
+/* line 20, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs span {
+  margin-left: 9px;
+}
+
+/* line 25, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu label {
+  display: inline-block;
+}
+
+/* line 29, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs li {
+  width: 40px;
+  display: inline-block;
+  border-left: 2px ridge #111;
+}
+
+/* line 35, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu {
+  width: 199px;
+  border-left: #000;
+  opacity: 1;
+}
+
+/* line 41, ../src/components/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu span {
+  margin-left: 15px;
+}
+
+/* line 45, ../src/components/_lib_menu.scss */
+li#libmenu_btn span {
+  background: url("images/sprites.png") no-repeat -24px -96px;
+  background: sc_static("images/sprites.png") no-repeat -24px -96px;
+}
+
+/* line 50, ../src/components/_lib_menu.scss */
+li#propmenu_btn span {
+  background: url("images/sprites.png") no-repeat -48px -48px;
+  background: sc_static("images/sprites.png") no-repeat -48px -48px;
+}
+
+/* line 55, ../src/components/_lib_menu.scss */
+#libcontent {
   position: absolute;
   background-color: #fff;
   -moz-border-radius: 7px;
   -webkit-border-radius: 7px;
 }
-/* line 13, ../src/components/_lib_menu_item.scss */
-.liblist .libmenu-item div label {
+
+/* line 1, ../src/components/_lib_menu_item.scss */
+.liblist {
+  position: absolute;
+  background-color: #fff;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 8, ../src/components/_lib_menu_item.scss */
+.liblist .libmenu-item label {
   color: #000;
   font-size: 24px;
   font-weight: normal;
+}
+
+/* line 1, ../src/components/_node_panel.scss */
+.nodepanel {
+  color: #8a8a8a;
+  text-align: center;
+  background: black sc_static("images/workr_title_bg.png") repeat-x;
+  text-shadow: black 0px -1px 0px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 10, ../src/components/_node_panel.scss */
+.nodepanel .title {
+  padding: 5px;
+  font-size: 20px;
+  line-height: 20px;
+}
+/* line 16, ../src/components/_node_panel.scss */
+.nodepanel .content {
+  position: absolute;
+  background-color: #f2f2f2;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 22, ../src/components/_node_panel.scss */
+.nodepanel.selected {
+  color: #e5e5e5;
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 26, ../src/components/_node_panel.scss */
+.nodepanel.selected .content {
+  background-color: #fff;
+}
+/* line 31, ../src/components/_node_panel.scss */
+.nodepanel .info {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  padding: 3px 10px;
+}
+/* line 38, ../src/components/_node_panel.scss */
+.nodepanel .info span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -240px -48px;
+}
+/* line 46, ../src/components/_node_panel.scss */
+.nodepanel .info:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -240px -72px;
+}
+/* line 53, ../src/components/_node_panel.scss */
+.nodepanel .edit {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  padding: 3px 10px;
+}
+/* line 60, ../src/components/_node_panel.scss */
+.nodepanel .edit span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -264px -48px;
+}
+/* line 68, ../src/components/_node_panel.scss */
+.nodepanel .edit:hover span {
+  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -264px -72px;
 }

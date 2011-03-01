@@ -1,0 +1,96 @@
+#appmenu{
+  position:           absolute;
+  background-color:   #333;
+  color:              #e5e5e5;
+  text-shadow:        0px -1px 0px #000;
+
+  ul.tabs{
+    @include dark-grad;
+    @include dark-shadow;
+    li{
+      cursor: pointer;
+      span {
+
+      } //span
+      label {
+
+      } //label
+    } //li
+
+    .studio_btn{
+      border-right: none;
+      border-bottom:1px ridge #000;
+      span{
+        @include sc-sprite('sprites.png', 1, 4);
+        @include icons-left;
+      }
+    }
+  } //ul
+
+  ul.menuitems{
+    li{
+      margin: 10px 0;
+      padding: 5px 0;
+      border: 1px ridge #333;
+
+      &[id]:hover{
+        border: 1px ridge #000;
+      }
+
+      label{
+        padding:  0px 10px 0 5px;
+      }
+
+      span{
+        margin: 6px 0 0 15px;
+      }
+    }
+  }
+
+}
+
+
+
+#appmenu_login{
+  span{
+    @include sc-sprite('sprites.png', 4, 4);
+  }
+  &:hover{
+    span{
+      @include sc-sprite('sprites.png', 4, 5);
+    }
+  }
+}
+
+#appmenu_new{
+  span{
+    @include sc-sprite('sprites.png', 5, 4);
+  }
+  &:hover{
+    span{
+      @include sc-sprite('sprites.png', 5, 5);
+    }
+  }
+}
+
+#appmenu_load{
+  span{
+    @include sc-sprite('sprites.png', 6, 4);
+  }
+  &:hover{
+    span{
+      @include sc-sprite('sprites.png', 6, 5);
+    }
+  }
+}
+
+#appmenu_clear{
+  span{
+    @include sc-sprite('sprites.png', 7, 4);
+  }
+  &:hover{
+    span{
+      @include sc-sprite('sprites.png', 7, 5);
+    }
+  }
+}

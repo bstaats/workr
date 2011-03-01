@@ -1,0 +1,54 @@
+$row-height: 30px;
+$menu-item-margin-left: 32px;
+
+
+
+/* Hack to get around SC's sc_static BS
+---------------------------------------- */
+@mixin sc-sprite($img, $col, $row, $width:$sprite-default-size, $height:$sprite-default-size, $margin:$sprite-default-margin){
+  @include sprite-img('/static/husky/en/current/resources/images/'+$img, $col, $row, $width, $height, $margin)
+}
+
+@mixin icons-left{
+  margin: 3px 5px 0 15px;
+}
+
+@mixin icons-right{
+  margin: 3px 15px 0 5px;
+}
+
+
+@mixin dark-grad{
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+}
+
+@mixin light-shadow{
+  @include box-shadow(#666);
+}
+
+@mixin dark-shadow{
+  @include box-shadow(#000);
+}
+
+@mixin light-text-shadow{
+  @include text-shadow(#000, 0px, -1px, 0px);
+}
+
+@mixin dark-text-shadow{
+  @include text-shadow(#fff, 0px, 1px, 0px);
+}

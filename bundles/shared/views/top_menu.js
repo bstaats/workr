@@ -53,10 +53,10 @@ Workr.TopMenu = SC.View.extend(
     if (firstTime) {
       context.push(
         '<ul class="left">',
-          '<li id="menu_studio_btn">     <span></span><label>Studio</label></li>',
+          '<li id="menu_studio_btn" class="studio_btn">     <span></span><label>Studio</label></li>',
         '</ul>',
         '<ul class="right">',
-          '<li id="menu_library_btn">    <span></span><label>Library</label></li>',
+          '<li id="menu_library_btn" class="lib_btn">    <span></span><label>Library</label></li>',
 /*  no properties menu for awhile        '<li id="menu_properties_btn"> <span></span><label>Properties</label></li>',*/
         '</ul>'
       );

@@ -1,7 +1,7 @@
 sc_require('core');
 
 
-Workr.LibMenuItem = SC.ListItemView.extend(
+Workr.LibMenuItem = SC.View.extend(
   Workr.LibMenuItemDelegate,
   Ki.StatechartManager,{
 
@@ -28,6 +28,10 @@ Workr.LibMenuItem = SC.ListItemView.extend(
 
   render: function(context, firstTime){
     if(firstTime){
+      context.push(
+        '<span></span>',
+        '<label>'+this.get('content').get('name')+'</label>'
+      );
 
       this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
       sc_super();

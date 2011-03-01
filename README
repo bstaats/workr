@@ -15,6 +15,9 @@ Sproutcore workflow engine
 
 
 We also use Compass/SASS http://compass-style.org/
+
+  gem install compass
+
 The config.rb file is used to setup Compass. Just have compass watch the project directory during development and make changes to the scss files in themes/husky/src
 
 

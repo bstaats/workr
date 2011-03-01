@@ -57,7 +57,7 @@ Workr.AppMenu = SC.View.extend(
     if(firstTime){
       context.push(
         '<ul class="tabs">',
-          '<li id="appmenu_studio_btn" class="selected_menu"><span></span><label>Studio</label></li>',
+          '<li id="menu_studio_btn" class="studio_btn"><span></span><label>Studio</label></li>',
         '</ul>',
         '<div class="search_field">  <input type="text" value="Search" ></div>'
       );
