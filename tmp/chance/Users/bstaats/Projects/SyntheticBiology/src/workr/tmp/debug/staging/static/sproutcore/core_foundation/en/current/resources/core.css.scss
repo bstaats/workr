@@ -1,0 +1,331 @@
+
+$theme: '';.sc-view {
+	font-family: "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+	font-size: 12px;
+	line-height: 1.4;
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.ellipsis {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+  -ms-text-overflow: ellipsis;
+}
+
+
+
+body {
+  position: absolute;
+  margin: 0px;
+  top:0px;
+  bottom: 0px;
+  left:0px;
+  right:0px;
+}
+
+.sc-view body,
+.sc-view div,
+.sc-view dl,
+.sc-view dt,
+.sc-view dd,
+.sc-view ul,
+.sc-view ol,
+.sc-view li,
+.sc-view h1,
+.sc-view h2,
+.sc-view h3,
+.sc-view h4,
+.sc-view h5,
+.sc-view h6,
+.sc-view pre,
+.sc-view code,
+.sc-view form,
+.sc-view fieldset,
+.sc-view legend,
+.sc-view input,
+.sc-view button,
+.sc-view textarea,
+.sc-view p,
+.sc-view blockquote,
+.sc-view th,
+.sc-view td {
+	margin: 0;
+	padding: 0;
+}
+
+.sc-view table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.sc-view fieldset,
+.sc-view img {
+	border: 0;
+}
+
+.sc-view address,
+.sc-view caption,
+.sc-view cite,
+.sc-view code,
+.sc-view dfn,
+.sc-view em,
+.sc-view strong,
+.sc-view th,
+.sc-view var,
+.sc-view optgroup {
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+.sc-view del,
+.sc-view ins {
+	text-decoration: none;
+}
+
+.sc-view li {
+	list-style: none;
+}
+
+.sc-view caption,
+.sc-view th {
+	text-align: left;
+}
+
+.sc-view h1,
+.sc-view h2,
+.sc-view h3,
+.sc-view h4,
+.sc-view h5,
+.sc-view h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+
+.sc-view q:before,
+.sc-view q:after {
+	content: '';
+}
+
+.sc-view abbr,
+.sc-view acronym {
+	border: 0;
+	font-variant: normal;
+}
+
+.sc-view sup {
+	vertical-align: baseline;
+}
+
+.sc-view sub {
+	vertical-align: baseline;
+}
+
+
+.sc-view legend {
+	color: #000;
+}
+
+.sc-view input,
+.sc-view button,
+.sc-view textarea,
+.sc-view select,
+.sc-view optgroup,
+.sc-view option {
+	font-family: inherit;
+	font-size: inherit;
+	font-style: inherit;
+	font-weight: inherit;
+}
+
+
+
+.sc-view input,
+.sc-view button,
+.sc-view textarea,
+.sc-view select {
+	font-size: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.sc-view body {
+	font:13px/1.231 "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+	/* for IE6/7 */ 
+	*font-size:small; 
+	/* for IE Quirks Mode */
+	*font:x-small; 
+}
+
+ 
+.sc-view select,
+.sc-view input,
+.sc-view textarea,
+.sc-view button {
+	font:99% "Lucida Sans", "Lucida Grande", Verdana, Arial, sans-serif;
+}
+
+
+.sc-view table {
+	font-size:inherit;
+	font:100%;
+}
+
+
+.sc-view pre,
+.sc-view code,
+.sc-view kbd,
+.sc-view samp,
+.sc-view tt {
+	font-family:monospace;
+	*font-size:108%;
+	line-height:100%;
+}
+
+
+
+
+
+
+
+
+
+.sc-view body {
+	
+	margin:10px;
+}
+
+.sc-view h1 {
+	
+	font-size: 138.5%;
+}
+
+.sc-view h2 {
+	
+	font-size: 123.1%;
+}
+
+.sc-view h3 {
+	
+	font-size: 108%;
+}
+
+.sc-view h1,
+.sc-view h2,
+.sc-view h3 {
+	
+	margin: 0em 0;
+}
+
+.sc-view h1,
+.sc-view h2,
+.sc-view h3,
+.sc-view h4,
+.sc-view h5,
+.sc-view h6,
+.sc-view strong,
+.sc-view dt {
+	
+	font-weight: bold;
+}
+.sc-view optgroup {
+	font-weight:normal;
+}
+
+.sc-view abbr,
+.sc-view acronym {
+	
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+.sc-view em {
+	
+	font-style: italic;
+}
+
+.sc-view del {
+	
+	text-decoration: line-through;
+}
+
+.sc-view blockquote,
+.sc-view ul,
+.sc-view ol,
+.sc-view dl {
+	
+	margin: 1em;
+}
+
+.sc-view ol,
+.sc-view ul,
+.sc-view dl {
+	
+	margin-left: 2em;
+}
+
+.sc-view th,
+.sc-view td {
+	
+	border: 1px solid #000;
+	padding: .5em;
+}
+
+.sc-view th {
+	
+	font-weight: bold;
+	text-align: center;
+}
+
+.sc-view caption {
+	
+	margin-bottom: .5em;
+	/* Centered so it doesn't blend in to other content. */
+	text-align: center;
+}
+
+.sc-view sup {
+	
+	vertical-align: super;
+}
+
+.sc-view sub {
+	
+	vertical-align: sub;
+}
+
+.sc-view p,
+.sc-view fieldset,
+.sc-view table,
+.sc-view pre {
+	
+	margin-bottom: 1em;
+}
+
+.sc-view button,
+.sc-view input[type="checkbox"],
+.sc-view input[type="radio"],
+.sc-view input[type="reset"],
+.sc-view input[type="submit"] {
+	padding:1px;
+}
+
+
+
+
+
+
+
+
