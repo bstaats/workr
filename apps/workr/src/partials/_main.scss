@@ -1,0 +1,299 @@
+/*
+
+  NEED TO REFACTOR ALL THIS INTO SCSS
+
+*/
+
+html,body, .sc-view{
+  font-family:  Helvetica, Arial, sans-serif;
+  padding:      0px;
+  margin:       0px;
+  line-height:  1;
+}
+
+#studio{
+  height:       100%;
+  width:        100%;
+  background:   url('images/grid.png') repeat 0px 0px;
+  background:   sc_static('images/grid.png') repeat 0px 0px;
+}
+
+
+/*
+  WORKRS
+*/
+
+ /* Nodes */
+.workr{
+  background:            #231f20 sc_static('images/workr_icon.png') no-repeat 0px 0px;;
+  color:                 #333333;
+  text-shadow:           0px 1px 0px rgba(0, 0, 0, .5);
+  border:                1px solid #000;
+  -moz-border-radius:    7px;
+  -webkit-border-radius: 7px;
+  -moz-box-shadow:       2px 2px 5px rgba(0, 0, 0, .5);
+  -webkit-box-shadow:    2px 2px 5px rgba(0, 0, 0, .5);
+
+ overflow:              visible;
+  -moz-transition:       border .1s linear;
+  -webkit-transition:    border .1s linear;
+}
+
+.workr.selected{
+  border:                2px solid rgba(255, 255, 255, 1);
+  -moz-box-shadow:       3px 3px 8px rgba(0, 0, 0, .75);
+  -webkit-box-shadow:    3px 3px 8px rgba(0, 0, 0, .75);
+}
+
+/* Terminal colors*/
+.workr-terminal{
+  border: 1px solid     #666;
+
+  -moz-transition:       border .1s linear;
+  -moz-box-shadow:       2px 2px 5px rgba(0,0,0,.5);
+  -moz-border-radius:    1px;
+
+  -webkit-transition:    border .1s linear;
+  -webkit-box-shadow:    2px 2px 5px rgba(0,0,0,.5);
+  -webkit-border-radius: 1px;
+}
+
+.workr-terminal:hover{
+  border: 1px solid     #fff;
+}
+
+.icon{
+  background: sc_static('images/workr_sprites.png') no-repeat 0px -105px;
+}
+
+.handle{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px 0px;
+}
+
+.handle:hover{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px -72px;
+}
+
+
+
+/* OLD CSS MENU.css  NEED TO REFACTOR INTO SCSS
+---------------------------------------- */
+
+/*
+  SHARED CSS FOR MENUS
+*/
+.menu label{
+  display:  inline-block;
+  position:relative;
+  top:-5px;
+}
+
+.menu ul{
+  list-style: none;
+  padding:    0;
+  margin:     0;
+}
+
+.menu li{
+  display: block;
+}
+
+#appmenu_studio_btn div{
+  display:inline-block;
+}
+
+ul.tabs, ul.tabs > li{
+/*  height: 30px;*/
+}
+
+#appmenu > ul.menuitems > li[id]:hover{
+  color:          #fff;
+  text-shadow:    0px -1px 0px #000;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+  -moz-box-shadow:    0px 2px 4px #000;
+  -webkit-box-shadow: 0px 2px 4px #000;
+  box-shadow:         0px 2px 4px #000;
+}
+
+
+.shadow{
+  -moz-box-shadow:    2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow:         2px 0px 4px #666;
+}
+
+
+.menu li, .menu label{
+/*  cursor:         pointer;*/
+}
+
+.menu, .search_field input, .search_results{
+  font-size:      18px;
+}
+
+.menu span{
+  display:  inline-block;
+  width:    24px;
+  height:   24px;
+/*  margin:   3px 5px 0 15px;*/
+}
+
+
+/* ==========================================================================
+*  MENU MODE: searching
+*  ==========================================================================
+*/
+
+.menu .search_field{
+  margin:15px 0;
+}
+
+.menu .search_field > input{
+  margin:                 0px 0px 0 10px;
+  border:                 1px solid #000;
+  padding-left:           34px;
+  width:                  185px; /* why is padding and margin effecting SC and not html mockup? */
+  -webkit-border-radius:  25px;  /* width:185 for SC, width 229px for mockup */
+  -moz-border-radius:     25px;
+  border-radius:          25px;
+  background:             #fff url('images/search.png') no-repeat 5px center;
+  background:             #fff sc_static('images/search.png') no-repeat 5px center;
+  color:                  #ccc;
+}
+
+.menu .search_field > input:focus{
+ outline: none;
+}
+
+.menu .search_field > input:hover, .menu .search_field > input:focus, .searching .menu .search_field > input{
+  color:        #000;
+  background:   #fff url('images/search_on.png') no-repeat 5px center;
+  background:   #fff sc_static('images/search_on.png') no-repeat 5px center;
+}
+
+
+.search_results{
+  background:             #fff;
+  display:                block;
+  width:                  229px;
+  margin:                 10px 10px;
+  -webkit-border-radius:  10px;
+  -moz-border-radius:     10px;
+  border-radius:          10px;
+}
+
+.menu .search_results li{
+  height:       42px;
+  color:        #464646;
+  text-shadow:  none;
+  cursor:       move;
+}
+
+.menu .search_results li{
+  border-bottom: 1px ridge #ddd;
+}
+
+.menu .search_results li:hover{
+  border:   2px ridge #333;
+  height:   39px;
+}
+
+.menu .search_results li:hover{
+  color:          #fff;
+  text-shadow:    0px -1px 0px #000;
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0, rgb(0,0,0)),
+      color-stop(0.5, rgb(0,0,0)),
+      color-stop(0.51, rgb(34,34,34)),
+      color-stop(1, rgb(88,88,88))
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      rgb(0,0,0) 0%,
+      rgb(0,0,0) 50%,
+      rgb(34,34,34) 51%,
+      rgb(88,88,88) 100%
+  );
+  -moz-box-shadow:    4px 4px 4px #000;
+  -webkit-box-shadow: 4px 4px 4px #000;
+  box-shadow:         4px 4px 4px #000;
+}
+
+.menu .search_results li:first-child{
+  -webkit-border-top-right-radius:  10px;
+  -webkit-border-top-left-radius:   10px;
+  -moz-border-radius-topright:      10px;
+  -moz-border-radius-topleft:       10px;
+  border-top-right-radius:          10px;
+  border-top-left-radius:           10px;
+}
+
+.menu .search_results li:last-child{
+  -webkit-border-bottom-right-radius:  10px;
+  -webkit-border-bottom-left-radius:   10px;
+  -moz-border-radius-bottomright:      10px;
+  -moz-border-radius-bottomleft:       10px;
+  border-bottom-right-radius:          10px;
+  border-bottom-left-radius:           10px;
+}
+
+.menu .search_results li span{
+  width:        24px;
+  height:       24px;
+  margin:       8px 0 0 5px;
+}
+
+.menu .search_results li label{
+  margin:   8px 0 0 5px;
+  cursor:   move;
+}
+
+.search_results li > div{
+  height:         39px;
+  margin:         0;
+  float:          right;
+}
+
+.search_results li:hover > div{
+  border-left:    1px ridge #ddd;
+  border-width:   2px;
+}
+
+.search_results li:hover > div > span{
+  width: 12px;
+  background: url('images/sprites.png') no-repeat -218px -96px;
+  background: sc_static('images/sprites.png') no-repeat -218px -96px;
+}
+
+/*
+  TEMP ICONS
+*/
+.search_results li > span:first-child{
+  background:   url('images/sprites.png') no-repeat -168px 0px;
+  background:   sc_static('images/sprites.png') no-repeat -168px 0px;
+}
+.search_results li:hover > span:first-child{
+  background:   url('images/sprites.png') no-repeat -168px -96px;
+  background:   sc_static('images/sprites.png') no-repeat -168px -96px;
+}
+

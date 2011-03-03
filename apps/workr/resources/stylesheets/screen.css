@@ -1,0 +1,476 @@
+/* line 4, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 6, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+html {
+  font-size: 100.01%;
+}
+
+/* line 16, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
+pre, a, abbr, acronym, address, code, del, dfn, em, img,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+/* line 18, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote, q {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  quotes: "" "";
+}
+/* line 45, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+}
+
+/* line 20, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+th, td, caption {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 22, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+table {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 24, ../../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* Hack to get around SC's sc_static BS
+---------------------------------------- */
+/* line 1, ../../src/views/_top_menu.scss */
+.topmenu {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 30px;
+  text-shadow: white 0px 1px 0px;
+  color: #464646;
+  -moz-box-shadow: #666666 0px 2px 4px 0;
+  -webkit-box-shadow: #666666 0px 2px 4px 0;
+  -o-box-shadow: #666666 0px 2px 4px 0;
+  box-shadow: #666666 0px 2px 4px 0;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0.38, #c2c2c2), color-stop(0.85, #ececec));
+  background: -moz-linear-gradient(center bottom, #c2c2c2 38%, #ececec 85%);
+}
+/* line 24, ../../src/views/_top_menu.scss */
+.topmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 30, ../../src/views/_top_menu.scss */
+.topmenu li {
+  cursor: pointer;
+  display: block;
+}
+/* line 34, ../../src/views/_top_menu.scss */
+.topmenu ul.left {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+/* line 39, ../../src/views/_top_menu.scss */
+.topmenu ul.right {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+/* line 47, ../../src/views/_top_menu.scss */
+.topmenu .studio_btn span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px 0px;
+  margin: 3px 5px 0 15px;
+}
+/* line 51, ../../src/views/_top_menu.scss */
+.topmenu .studio_btn span:hover {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px -24px;
+}
+/* line 55, ../../src/views/_top_menu.scss */
+.topmenu .studio_btn label {
+  display: none;
+}
+/* line 62, ../../src/views/_top_menu.scss */
+.topmenu .lib_btn span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -24px 0px;
+  margin: 3px 15px 0 5px;
+}
+/* line 66, ../../src/views/_top_menu.scss */
+.topmenu .lib_btn span:hover {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -24px -24px;
+}
+/* line 70, ../../src/views/_top_menu.scss */
+.topmenu .lib_btn label {
+  display: none;
+}
+/* line 76, ../../src/views/_top_menu.scss */
+.topmenu .title {
+  position: absolute;
+}
+
+/* line 1, ../../src/views/_app_menu.scss */
+#appmenu {
+  position: absolute;
+  background-color: #333;
+  color: #e5e5e5;
+  text-shadow: 0px -1px 0px black;
+}
+/* line 7, ../../src/views/_app_menu.scss */
+#appmenu ul.tabs {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
+  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 10, ../../src/views/_app_menu.scss */
+#appmenu ul.tabs li {
+  cursor: pointer;
+}
+/* line 20, ../../src/views/_app_menu.scss */
+#appmenu ul.tabs .studio_btn {
+  border-right: none;
+  border-bottom: 1px ridge #000;
+}
+/* line 23, ../../src/views/_app_menu.scss */
+#appmenu ul.tabs .studio_btn span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px -72px;
+  margin: 3px 5px 0 15px;
+}
+/* line 31, ../../src/views/_app_menu.scss */
+#appmenu ul.menuitems li {
+  margin: 10px 0;
+  padding: 5px 0;
+  border: 1px ridge #333;
+}
+/* line 36, ../../src/views/_app_menu.scss */
+#appmenu ul.menuitems li[id]:hover {
+  border: 1px ridge #000;
+}
+/* line 40, ../../src/views/_app_menu.scss */
+#appmenu ul.menuitems li label {
+  padding: 0px 10px 0 5px;
+}
+/* line 44, ../../src/views/_app_menu.scss */
+#appmenu ul.menuitems li span {
+  margin: 6px 0 0 15px;
+}
+
+/* line 55, ../../src/views/_app_menu.scss */
+#appmenu_login span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -72px -72px;
+}
+/* line 59, ../../src/views/_app_menu.scss */
+#appmenu_login:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -72px -96px;
+}
+
+/* line 66, ../../src/views/_app_menu.scss */
+#appmenu_new span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -96px -72px;
+}
+/* line 70, ../../src/views/_app_menu.scss */
+#appmenu_new:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -96px -96px;
+}
+
+/* line 77, ../../src/views/_app_menu.scss */
+#appmenu_load span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -120px -72px;
+}
+/* line 81, ../../src/views/_app_menu.scss */
+#appmenu_load:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -120px -96px;
+}
+
+/* line 88, ../../src/views/_app_menu.scss */
+#appmenu_clear span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -144px -72px;
+}
+/* line 92, ../../src/views/_app_menu.scss */
+#appmenu_clear:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -144px -96px;
+}
+
+/*
+
+  NEED TO REFACTOR ALL THIS INTO SCSS
+
+*/
+/* line 6, ../../src/views/_lib_menu.scss */
+#libmenu {
+  position: absolute;
+  background-color: #333;
+  color: #e5e5e5;
+  text-shadow: 0px -1px 0px black;
+  -moz-box-shadow: 2px 0px 4px #666;
+  -webkit-box-shadow: 2px 0px 4px #666;
+  box-shadow: 2px 0px 4px #666;
+}
+
+/* line 16, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs label {
+  display: none;
+}
+
+/* line 20, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs span {
+  margin-left: 9px;
+}
+
+/* line 25, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu label {
+  display: inline-block;
+}
+
+/* line 29, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs li {
+  width: 40px;
+  display: inline-block;
+  border-left: 2px ridge #111;
+}
+
+/* line 35, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu {
+  width: 199px;
+  border-left: #000;
+  opacity: 1;
+}
+
+/* line 41, ../../src/views/_lib_menu.scss */
+#libmenu ul.tabs li.selected_menu span {
+  margin-left: 15px;
+}
+
+/* line 45, ../../src/views/_lib_menu.scss */
+li#libmenu_btn span {
+  background: url("images/sprites.png") no-repeat -24px -96px;
+  background: sc_static("images/sprites.png") no-repeat -24px -96px;
+}
+
+/* line 50, ../../src/views/_lib_menu.scss */
+li#propmenu_btn span {
+  background: url("images/sprites.png") no-repeat -48px -48px;
+  background: sc_static("images/sprites.png") no-repeat -48px -48px;
+}
+
+/* line 55, ../../src/views/_lib_menu.scss */
+#libcontent {
+  position: absolute;
+  background-color: #fff;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+}
+
+/* line 1, ../../src/views/_lib_menu_item.scss */
+.liblist {
+  position: absolute;
+  background-color: #fff;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 8, ../../src/views/_lib_menu_item.scss */
+.liblist .libmenu-item label {
+  color: #000;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+/* line 1, ../../src/views/_node_panel.scss */
+.nodepanel {
+  color: #8a8a8a;
+  text-align: center;
+  background: black sc_static("images/workr_title_bg.png") repeat-x;
+  text-shadow: black 0px -1px 0px;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 10, ../../src/views/_node_panel.scss */
+.nodepanel .title {
+  padding: 5px;
+  font-size: 20px;
+  line-height: 20px;
+}
+/* line 16, ../../src/views/_node_panel.scss */
+.nodepanel .content {
+  position: absolute;
+  background-color: #f2f2f2;
+  -moz-border-radius: 7px;
+  -webkit-border-radius: 7px;
+  -o-border-radius: 7px;
+  -ms-border-radius: 7px;
+  -khtml-border-radius: 7px;
+  border-radius: 7px;
+}
+/* line 22, ../../src/views/_node_panel.scss */
+.nodepanel.selected {
+  color: #e5e5e5;
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 26, ../../src/views/_node_panel.scss */
+.nodepanel.selected .content {
+  background-color: #fff;
+}
+/* line 31, ../../src/views/_node_panel.scss */
+.nodepanel .info {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  display: inline-block;
+  padding: 3px 10px;
+}
+/* line 38, ../../src/views/_node_panel.scss */
+.nodepanel .info span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -240px -48px;
+}
+/* line 46, ../../src/views/_node_panel.scss */
+.nodepanel .info:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -240px -72px;
+}
+/* line 53, ../../src/views/_node_panel.scss */
+.nodepanel .edit {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  display: inline-block;
+  padding: 3px 10px;
+}
+/* line 60, ../../src/views/_node_panel.scss */
+.nodepanel .edit span {
+  display: block;
+  width: 24px;
+  height: 24px;
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -264px -48px;
+}
+/* line 68, ../../src/views/_node_panel.scss */
+.nodepanel .edit:hover span {
+  background: url('../images/sprites.png?1297279682') no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: -264px -72px;
+}

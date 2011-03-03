@@ -1,0 +1,74 @@
+.nodepanel{
+  color:                #8a8a8a;
+  text-align:           center;
+
+  background:           #000 sc_static('images/workr_title_bg.png') repeat-x;
+
+  @include light-text-shadow;
+  @include border-radius;
+
+  .title{
+    padding:  5px;
+    font-size: 20px;
+    line-height:20px;
+  }
+
+  .content{
+    position: absolute;
+    background-color:     #f2f2f2;
+    @include border-radius;
+  }
+
+  &.selected{
+    color:  #e5e5e5;
+    @include dark-shadow;
+
+    .content{
+      background-color:     #fff;
+    }
+  }
+
+  .info{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: inline-block;
+    padding:  3px 10px;
+
+    span{
+      display: block;
+      width: 24px;
+      height: 24px;
+      @include sc-sprite('sprites.png', 11, 3);
+    }
+
+    &:hover{
+      span{
+        @include sc-sprite('sprites.png', 11, 4);
+      }
+    }
+  }
+
+
+  .edit{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: inline-block;
+    padding:  3px 10px;
+
+    span{
+      display: block;
+      width: 24px;
+      height: 24px;
+      @include sc-sprite('sprites.png', 12, 3);
+    }
+
+    &:hover{
+      span{
+        @include sc-sprite('sprites.png', 12, 4);
+      }
+    }
+  }
+
+}

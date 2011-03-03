@@ -1,0 +1,34 @@
+// This import applies a global reset to any page that imports this stylesheet.
+@import "blueprint/reset";
+
+@import "compass/utilities/sprites";
+$sprite-default-size: 24px;
+
+@import "compass/css3";
+
+// border-radius vars
+$default-border-radius: 7px;
+
+// box-shadow vars
+$default-box-shadow-h-offset: 0px;
+$default-box-shadow-v-offset: 2px;
+$default-box-shadow-blur:     4px;
+
+
+// app vars
+$row-height: 30px;
+$menu-item-margin-left: 32px;
+
+
+
+@import "partials/mixins";
+
+@import 'views/top_menu';
+
+@import 'views/app_menu';
+
+@import 'views/lib_menu';
+
+@import 'views/lib_menu_item';
+
+@import 'views/node_panel';
