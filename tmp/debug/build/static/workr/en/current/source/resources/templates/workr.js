@@ -1,1 +1,0 @@
-SC.TEMPLATES["workr"] = SC.Handlebars.compile("<h1>Welcome to SproutCore!</h1>\n")
