@@ -3,9 +3,12 @@
 # Copyright: ©2011 My Company, Inc.
 # ===========================================================================
 
-# Add initial buildfile information here
+
+config :scui,
+  :required => [:sproutcore, :'scui/drawing', :'scui/linkit']
+
 config :all,
-  :required           => ['sproutcore/core_foundation', 'sproutcore/statechart'],
+  :required           => ['sproutcore/core_foundation', 'sproutcore/statechart', :scui],
   :theme              => 'sproutcore/empty_theme'
 
 

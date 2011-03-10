@@ -1,15 +1,17 @@
 /* Hack to get around SC's sc_static BS
 ---------------------------------------- */
 @mixin sc-sprite($img, $col, $row, $width:$sprite-default-size, $height:$sprite-default-size, $margin:$sprite-default-margin){
-  @include sprite-img($img, $col, $row, $width, $height, $margin)
+  @include sprite-img('/static/workr/en/current/source/resources/images/'+$img, $col, $row, $width, $height, $margin);
 }
 
 @mixin icons-left{
-  margin: 3px 5px 0 15px;
+  margin: 0px 5px 0 15px;
+  display:inline-block;
 }
 
 @mixin icons-right{
-  margin: 3px 15px 0 5px;
+  margin: 0px 15px 0 5px;
+  display:inline-block;
 }
 
 @mixin dark-grad{
@@ -31,6 +33,22 @@
   );
 }
 
+@mixin light-grad{
+  background: -webkit-gradient(
+      linear,
+      left bottom,
+      left top,
+      color-stop(0.38, #C2C2C2),
+      color-stop(0.85, #ECECEC)
+  );
+  background: -moz-linear-gradient(
+      center bottom,
+      #C2C2C2 38%,
+      #ECECEC 85%
+  );
+}
+
+
 @mixin light-shadow{
   @include box-shadow(#666);
 }
@@ -45,4 +63,23 @@
 
 @mixin dark-text-shadow{
   @include text-shadow(#fff, 0px, 1px, 0px);
+}
+
+@mixin ul-reset{
+  list-style: none;
+  padding:    0;
+  margin:     0;
+}
+
+@mixin corner{
+  -webkit-border-radius:  25px;
+  -moz-border-radius:     25px;
+  border-radius:          25px;
+}
+
+@mixin transition{
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  -transition:all 0.5s ease-in-out;
 }

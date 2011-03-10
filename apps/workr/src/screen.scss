@@ -19,7 +19,18 @@ $default-box-shadow-blur:     4px;
 $row-height: 30px;
 $menu-item-margin-left: 32px;
 
+.sc-view{
+  font-size: 100%;
+  font: inherit;
+}
 
+#workr{
+  font-family:  Helvetica, Arial, sans-serif;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+}
 
 @import "partials/mixins";
 

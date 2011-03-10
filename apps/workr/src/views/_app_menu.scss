@@ -2,95 +2,135 @@
   position:           absolute;
   background-color:   #333;
   color:              #e5e5e5;
-  text-shadow:        0px -1px 0px #000;
+  font-size:          18px;
+  top:                0;
+  bottom:             0;
+  left:               -241px;
+  @include            transition;
 
-  ul.tabs{
-    @include dark-grad;
-    @include dark-shadow;
-    li{
+  &.open{
+    left:             0px;
+    @include            dark-shadow;
+
+    ul{
+      li.studio_btn{
+        @include dark-shadow;
+      }
+    }
+  }
+
+  ul{
+    @include ul-reset;
+
+    li[class]{
       cursor: pointer;
-      span {
+      position: relative;
+      padding: 3px 0;
+      height: 24px;
 
+      span {
+        @include icons-left;
       } //span
       label {
-
+        cursor: pointer;
+        position: absolute;
+        line-height: 24px;
       } //label
     } //li
 
     .studio_btn{
+      @include dark-grad;
+      @include light-text-shadow;
       border-right: none;
-      border-bottom:1px ridge #000;
+      border-bottom:1px solid #303030;
       span{
         @include sc-sprite('sprites.png', 1, 4);
-        @include icons-left;
       }
     }
   } //ul
+
+  // search
+  input{
+    @include      corner;
+    margin:       10px 10px;
+    border:       1px solid #000;
+    padding-left: 34px;
+    width:        185px;
+    background:   #fff sc_static('images/search.png') no-repeat 5px center;
+
+    &:focus{
+      outline: none;
+    }
+
+    &:hover{
+      background:   #fff sc_static('images/search_on.png') no-repeat 5px center;
+      color: #000;
+    }
+  }
+
 
   ul.menuitems{
     li{
       margin: 10px 0;
       padding: 5px 0;
-      border: 1px ridge #333;
+      border: 1px solid #333;
 
-      &[id]:hover{
+      &[class]:hover{
+        @include light-text-shadow;
+        color:          #fff;
         border: 1px ridge #000;
+        @include dark-grad;
+        @include dark-shadow;
       }
+    }
 
-      label{
-        padding:  0px 10px 0 5px;
-      }
 
+    .login{
       span{
-        margin: 6px 0 0 15px;
+        @include sc-sprite('sprites.png', 4, 4);
+      }
+      &:hover{
+        span{
+          @include sc-sprite('sprites.png', 4, 5);
+        }
       }
     }
-  }
 
-}
-
-
-
-#appmenu_login{
-  span{
-    @include sc-sprite('sprites.png', 4, 4);
-  }
-  &:hover{
-    span{
-      @include sc-sprite('sprites.png', 4, 5);
+    .new{
+      span{
+        @include sc-sprite('sprites.png', 5, 4);
+      }
+      &:hover{
+        span{
+          @include sc-sprite('sprites.png', 5, 5);
+        }
+      }
     }
+
+    .load{
+      span{
+        @include sc-sprite('sprites.png', 6, 4);
+      }
+      &:hover{
+        span{
+          @include sc-sprite('sprites.png', 6, 5);
+        }
+      }
+    }
+
+    .clear{
+      span{
+        @include sc-sprite('sprites.png', 7, 4);
+      }
+      &:hover{
+        span{
+          @include sc-sprite('sprites.png', 7, 5);
+        }
+      }
+    }
+
+
   }
+
 }
 
-#appmenu_new{
-  span{
-    @include sc-sprite('sprites.png', 5, 4);
-  }
-  &:hover{
-    span{
-      @include sc-sprite('sprites.png', 5, 5);
-    }
-  }
-}
-
-#appmenu_load{
-  span{
-    @include sc-sprite('sprites.png', 6, 4);
-  }
-  &:hover{
-    span{
-      @include sc-sprite('sprites.png', 6, 5);
-    }
-  }
-}
-
-#appmenu_clear{
-  span{
-    @include sc-sprite('sprites.png', 7, 4);
-  }
-  &:hover{
-    span{
-      @include sc-sprite('sprites.png', 7, 5);
-    }
-  }
-}
