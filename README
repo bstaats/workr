@@ -3,5 +3,11 @@ Project:   Workr
 Copyright: ©2011 My Company, Inc.
 =============================================================================
 
-TODO: Describe Your Project
+TODO:
 
+Fork scui and make changes:
+
+In CanvasView
+didCreateLayer: function() {
+  //sc_super();
+  if (SC.browser.msie) {

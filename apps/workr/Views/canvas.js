@@ -17,10 +17,12 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
   exampleView:      Workr.WorkrNode,
   delegate: null,
 
+/*
   canvasDelegate: function() {
       var del = this.get('delegate');
       return this.delegateFor('isCanvasDelegate', del);
     }.property('delegate').cacheable(),
+*/
 
 
 /*
@@ -70,6 +72,7 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
   },
 
   render: function (context, firstTime) {
+    console.log(context, firstTime)
     if(firstTime){
       this.set('owner', this);
       sc_super();

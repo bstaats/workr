@@ -5,7 +5,7 @@
 
 
 config :scui,
-  :required => [:sproutcore, :'scui/drawing', :'scui/linkit']
+  :required => 'scui/linkit'
 
 config :all,
   :required           => ['sproutcore/core_foundation', 'sproutcore/statechart', :scui],

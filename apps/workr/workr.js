@@ -42,21 +42,12 @@ Workr.AppMenuView = SC.TemplateView.create({
 });
 
 
-jQuery(document).ready(function() {
+SC.ready(function() {
   Workr.Statechart.initStatechart();
 
   Workr.mainPane = SC.TemplatePane.append({
     layerId: 'workr',
-    templateName: 'workr',
-/*
-    childViews: 'canvas'.w(),
-
-    canvas: Workr.CanvasView.extend({
-      layout: {left: 0, top: 30, right: 0, bottom:0}
-    })
-*/
-
+    templateName: 'workr'
   });
-
 
 });
