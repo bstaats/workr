@@ -13,7 +13,7 @@ config :studio, :required => []
 
 config :workr,
   :required => ['sproutcore', 'sproutcore/statechart', :husky],
-  :prefetched_modules => ['studio'],
+  :deferred_modules => ['studio'],
   :theme => 'husky'
 
 #proxy "/", :to => "localhost:3000"
