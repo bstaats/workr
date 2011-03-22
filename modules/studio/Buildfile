@@ -1,0 +1,6 @@
+config 'modules/studio',
+  :required => ['sproutcore', 'scui/linkit']
+ 
+
+config :all,
+  :required => ['sproutcore', 'scui/linkit']
