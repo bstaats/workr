@@ -5,23 +5,11 @@ Workr.Statechart = SC.Statechart.create({
 
     enterState: function() {
       Workr.set('store', SC.Store.create().from(SC.Record.fixtures));
-      
-
-/*
-      SC.Module.loadModule('modules/studio', function(){
-        console.log(this);
-      })
-*/
-
-      SC.Module.loadModule('workr/studio', function(){
-        console.log(this);
-      })
 
       SC.Module.loadModule('studio', function(){
         console.log(this);
       })
 
-      
 /*      Login not complete. Dont load
       SC.loadBundle('login', function() {
         self.gotoState('loggedOut');
