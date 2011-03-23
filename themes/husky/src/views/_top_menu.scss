@@ -1,24 +1,22 @@
-#menu{
+.topmenu{
   position: absolute;
+  left: 0;
+  right: 0;
+  top:0;
+  height:30px;
   @include dark-text-shadow;
   color:          #464646;
   @include light-shadow;
+  @include light-grad;
 
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      color-stop(0.38, #C2C2C2),
-      color-stop(0.85, #ECECEC)
-  );
-  background: -moz-linear-gradient(
-      center bottom,
-      #C2C2C2 38%,
-      #ECECEC 85%
-  );
+  ul{
+    @include ul-reset;
+  }
 
   li{
     cursor: pointer;
+    display: block;
+    padding: 3px 0;
   }
   ul.left{
     position: absolute;
@@ -63,8 +61,10 @@
 
   // title
   .title{
-    position:absolute;
+    @include transition;
+    &.open{
+      left: $appMenu-width + ($menu-item-margin-left*2) !important;
+    }
+
   }
-
-
 }

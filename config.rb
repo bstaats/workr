@@ -6,3 +6,4 @@ sass_dir = "themes/husky/src"
 images_dir = "themes/husky/resources/images"
 # To enable relative paths to assets via compass helper functions. Uncomment:
 relative_assets = true
+asset_cache_buster :none

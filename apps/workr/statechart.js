@@ -1,47 +1,31 @@
-Workr.Statechart = SC.Statechart.create({
+/*
+  Global Statechart
+*/
+Workr.Statechart = Ki.Statechart.create({
   trace: NO,
-  
-  rootState: SC.State.design({
+
+  rootState: Ki.State.design({
+    initialSubstate: 'setup',
 
     enterState: function() {
-      Workr.set('store', SC.Store.create().from(SC.Record.fixtures));
-      
-
-/*
-      SC.Module.loadModule('modules/studio', function(){
-        console.log(this);
-      })
-*/
-
-      SC.Module.loadModule('workr/studio', function(){
-        console.log(this);
-      })
+      SC.LOG_MODULE_LOADING = NO;
 
       SC.Module.loadModule('studio', function(){
-        console.log(this);
+        Workr.Statechart.gotoState('modulesLoaded');
       })
+    },
 
-      
-/*      Login not complete. Dont load
-      SC.loadBundle('login', function() {
-        self.gotoState('loggedOut');
-      });
-*/
-/*
+    setup : Ki.State.design({
+      enterState: function(){
+        Workr.set('store', SC.Store.create().from(SC.Record.fixtures));
+      }
+    }),
 
-      var store = Workr.get('store'),
-          query = SC.Query.local(Workr.Workr,{conditions: 'master = true'})
-          master = store.find(query);
+    modulesLoaded: Ki.State.design({
+      enterState: function(){
+        Workr.StudioStatechart.initStatechart();
+      }
+    })
 
-      Workr.workrsController.set('masterWorkr', master);
-      Workr.workrsController.set('content', master);
-      
-      Workr.libMenuController.set('content', Workr.libMenuController.get('levelone'));
-
-      this.gotoState('base');*/
-
-    }
-
-  }),
-
+  })
 })

@@ -1,0 +1,2 @@
+Workr.APPMENU_WIDTH = 241;
+Workr.LEFT_MARGIN   = 32;

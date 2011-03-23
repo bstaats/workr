@@ -1,15 +1,6 @@
 // This import applies a global reset to any page that imports this stylesheet.
 @import "blueprint/reset";
 
-// To configure blueprint, edit the partials/base.sass file.
-@import "partials/base";
-
-// Import all the default blueprint modules so that we can access their mixins.
-@import "blueprint";
-
-// Combine the partials into a single screen stylesheet.
-@import "partials/page";
-
 @import "compass/utilities/sprites";
 $sprite-default-size: 24px;
 
@@ -23,19 +14,24 @@ $default-box-shadow-h-offset: 0px;
 $default-box-shadow-v-offset: 2px;
 $default-box-shadow-blur:     4px;
 
+// app vars
+$row-height: 30px;
+$menu-item-margin-left: 32px;
+$appMenu-width: 241px;
 
+.sc-view{
+  font-size:    100%;
+  font-family:  Helvetica, Arial, sans-serif;
+}
 
-/* APP SCSS */
-@import "partials/globals";
+@import "partials/mixins";
 
-@import 'partials/main';
+@import 'views/top_menu';
 
-@import 'components/top_menu';
+@import 'views/app_menu';
 
-@import 'components/app_menu';
+@import 'views/lib_menu';
 
-@import 'components/lib_menu';
+@import 'views/lib_menu_item';
 
-@import 'components/lib_menu_item';
-
-@import 'components/node_panel';
+@import 'views/node_panel';

@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 4, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html, body {
   margin: 0;
   padding: 0;
@@ -11,12 +10,12 @@ html, body {
   vertical-align: baseline;
 }
 
-/* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 6, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 html {
   font-size: 100.01%;
 }
 
-/* line 16, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 16, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 div, span, object, iframe, h1, h2, h3, h4, h5, h6, p,
 pre, a, abbr, acronym, address, code, del, dfn, em, img,
 dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, thead, tr {
@@ -30,7 +29,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend, caption, tbody, tfoot, th
   vertical-align: baseline;
 }
 
-/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 18, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote, q {
   margin: 0;
   padding: 0;
@@ -42,12 +41,12 @@ blockquote, q {
   vertical-align: baseline;
   quotes: "" "";
 }
-/* line 45, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 45, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 blockquote:before, blockquote:after, q:before, q:after {
   content: "";
 }
 
-/* line 20, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 20, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 th, td, caption {
   margin: 0;
   padding: 0;
@@ -62,7 +61,7 @@ th, td, caption {
   vertical-align: middle;
 }
 
-/* line 22, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 22, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 table {
   margin: 0;
   padding: 0;
@@ -77,674 +76,26 @@ table {
   vertical-align: middle;
 }
 
-/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
+/* line 24, ../../../../../../../.rvm/gems/ruby-1.9.2-p180/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 9, ../src/partials/_page.scss */
-body.bp {
-  line-height: 1.5;
-  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-  color: #333333;
-  font-size: 75%;
-}
-/* line 65, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1, body.bp h2, body.bp h3, body.bp h4, body.bp h5, body.bp h6 {
-  font-weight: normal;
-  color: #222222;
-}
-/* line 66, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 img, body.bp h2 img, body.bp h3 img, body.bp h4 img, body.bp h5 img, body.bp h6 img {
-  margin: 0;
-}
-/* line 67, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h1 {
-  font-size: 3em;
-  line-height: 1;
-  margin-bottom: 0.50em;
-}
-/* line 68, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h2 {
-  font-size: 2em;
-  margin-bottom: 0.75em;
-}
-/* line 69, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h3 {
-  font-size: 1.5em;
-  line-height: 1;
-  margin-bottom: 1.00em;
-}
-/* line 70, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h4 {
-  font-size: 1.2em;
-  line-height: 1.25;
-  margin-bottom: 1.25em;
-}
-/* line 71, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h5 {
-  font-size: 1em;
-  font-weight: bold;
-  margin-bottom: 1.50em;
-}
-/* line 72, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp h6 {
-  font-size: 1em;
-  font-weight: bold;
-}
-/* line 73, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p {
-  margin: 0 0 1.5em;
-}
-/* line 74, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p img.left {
-  display: inline;
-  float: left;
-  margin: 1.5em 1.5em 1.5em 0;
-  padding: 0;
-}
-/* line 75, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp p img.right {
-  display: inline;
-  float: right;
-  margin: 1.5em 0 1.5em 1.5em;
-  padding: 0;
-}
-/* line 77, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp a {
-  text-decoration: underline;
-  color: #000099;
-}
-/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:visited {
-  color: #000066;
-}
-/* line 21, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:focus {
-  color: black;
-}
-/* line 24, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:hover {
-  color: black;
-}
-/* line 27, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/utilities/links/_link-colors.scss */
-body.bp a:active {
-  color: #cc0099;
-}
-/* line 78, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp blockquote {
-  margin: 1.5em;
-  color: #666666;
-  font-style: italic;
-}
-/* line 79, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp strong {
-  font-weight: bold;
-}
-/* line 80, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp em {
-  font-style: italic;
-}
-/* line 81, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dfn {
-  font-style: italic;
-  font-weight: bold;
-}
-/* line 82, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp sup, body.bp sub {
-  line-height: 0;
-}
-/* line 83, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp abbr, body.bp acronym {
-  border-bottom: 1px dotted #666666;
-}
-/* line 84, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp address {
-  margin: 0 0 1.5em;
-  font-style: italic;
-}
-/* line 85, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp del {
-  color: #666666;
-}
-/* line 86, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre {
-  margin: 1.5em 0;
-  white-space: pre;
-}
-/* line 87, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp pre, body.bp code, body.bp tt {
-  font: 1em "andale mono", "lucida console", monospace;
-  line-height: 1.5;
-}
-/* line 88, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp li ul, body.bp li ol {
-  margin: 0;
-}
-/* line 89, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul, body.bp ol {
-  margin: 0 1.5em 1.5em 0;
-  padding-left: 3.333em;
-}
-/* line 90, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ul {
-  list-style-type: disc;
-}
-/* line 91, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp ol {
-  list-style-type: decimal;
-}
-/* line 92, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl {
-  margin: 0 0 1.5em 0;
-}
-/* line 93, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dl dt {
-  font-weight: bold;
-}
-/* line 94, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp dd {
-  margin-left: 1.5em;
-}
-/* line 95, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp table {
-  margin-bottom: 1.4em;
-  width: 100%;
-}
-/* line 96, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th {
-  font-weight: bold;
-}
-/* line 97, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp thead th {
-  background: #c3d9ff;
-}
-/* line 98, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp th, body.bp td, body.bp caption {
-  padding: 4px 10px 4px 5px;
-}
-/* line 99, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp tr.even td {
-  background: #e5ecf9;
-}
-/* line 100, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp tfoot {
-  font-style: italic;
-}
-/* line 101, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp caption {
-  background: #eeeeee;
-}
-/* line 102, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .quiet {
-  color: #666666;
-}
-/* line 103, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_typography.scss */
-body.bp .loud {
-  color: #111111;
-}
-/* line 9, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clear {
-  clear: both;
-}
-/* line 12, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .nowrap {
-  white-space: nowrap;
-}
-/* line 16, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .clearfix {
-  overflow: hidden;
-  *zoom: 1;
-}
-/* line 18, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .small {
-  font-size: 0.8em;
-  margin-bottom: 1.875em;
-  line-height: 1.875em;
-}
-/* line 22, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .large {
-  font-size: 1.2em;
-  line-height: 2.5em;
-  margin-bottom: 1.25em;
-}
-/* line 26, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .first {
-  margin-left: 0;
-  padding-left: 0;
-}
-/* line 29, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .last {
-  margin-right: 0;
-  padding-right: 0;
-}
-/* line 32, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .top {
-  margin-top: 0;
-  padding-top: 0;
-}
-/* line 35, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_utilities.scss */
-body.bp .bottom {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-/* line 8, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_debug.scss */
-body.bp .showgrid {
-  background: url('images/grid.png?1294257971');
-}
-/* line 4, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #fbe3e4;
-  color: #8a1f11;
-  border-color: #fbc2c4;
-}
-/* line 29, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .error a {
-  color: #8a1f11;
-}
-/* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #fff6bf;
-  color: #514721;
-  border-color: #ffd324;
-}
-/* line 37, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .notice a {
-  color: #514721;
-}
-/* line 8, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success {
-  padding: 0.8em;
-  margin-bottom: 1em;
-  border: 2px solid #dddddd;
-  background: #e6efc2;
-  color: #264409;
-  border-color: #c6d880;
-}
-/* line 45, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .success a {
-  color: #264409;
-}
-/* line 10, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .hide {
-  display: none;
-}
-/* line 12, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .highlight {
-  background: yellow;
-}
-/* line 14, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .added {
-  background: #006600;
-  color: white;
-}
-/* line 16, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_interaction.scss */
-body.bp .removed {
-  background: #990000;
-  color: white;
+/* line 22, ../src/screen.scss */
+.sc-view {
+  font-size: 100%;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
-/* line 41, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp .box {
-  padding: 1.5em;
-  margin-bottom: 1.5em;
-  background: #e5ecf9;
-}
-/* line 44, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.border {
-  padding-right: 4px;
-  margin-right: 5px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 47, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp div.colborder {
-  padding-right: 24px;
-  margin-right: 25px;
-  border-right: 1px solid #eeeeee;
-}
-/* line 49, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-}
-/* line 51, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp hr.space {
-  background: #dddddd;
-  color: #dddddd;
-  clear: both;
-  float: none;
-  width: 100%;
-  height: 0.1em;
-  margin: 0 0 1.45em;
-  border: none;
-  background: white;
-  color: white;
-  visibility: hidden;
-}
-/* line 53, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_scaffolding.scss */
-body.bp form.inline {
-  line-height: 3;
-}
-/* line 6, ../../../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.10.6/frameworks/blueprint/stylesheets/blueprint/_form.scss */
-body.bp form.inline p {
-  margin-bottom: 0;
-}
-
-/* APP SCSS */
 /* Hack to get around SC's sc_static BS
 ---------------------------------------- */
-/*
-
-  NEED TO REFACTOR ALL THIS INTO SCSS
-
-*/
-/* line 7, ../src/partials/_main.scss */
-html, body, .sc-view {
-  font-family: Helvetica, Arial, sans-serif;
-  padding: 0px;
-  margin: 0px;
-  line-height: 1;
-}
-
-/* line 14, ../src/partials/_main.scss */
-#studio {
-  height: 100%;
-  width: 100%;
-  background: url("images/grid.png") repeat 0px 0px;
-  background: sc_static("images/grid.png") repeat 0px 0px;
-}
-
-/*
-  WORKRS
-*/
-/* Nodes */
-/* line 27, ../src/partials/_main.scss */
-.workr {
-  background: #231f20 sc_static("images/workr_icon.png") no-repeat 0px 0px;
-  color: #333333;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.5);
-  border: 1px solid #000;
-  -moz-border-radius: 7px;
-  -webkit-border-radius: 7px;
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  overflow: visible;
-  -moz-transition: border .1s linear;
-  -webkit-transition: border .1s linear;
-}
-
-/* line 42, ../src/partials/_main.scss */
-.workr.selected {
-  border: 2px solid white;
-  -moz-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
-  -webkit-box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.75);
-}
-
-/* Terminal colors*/
-/* line 49, ../src/partials/_main.scss */
-.workr-terminal {
-  border: 1px solid     #666;
-  -moz-transition: border .1s linear;
-  -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  -moz-border-radius: 1px;
-  -webkit-transition: border .1s linear;
-  -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  -webkit-border-radius: 1px;
-}
-
-/* line 61, ../src/partials/_main.scss */
-.workr-terminal:hover {
-  border: 1px solid     #fff;
-}
-
-/* line 65, ../src/partials/_main.scss */
-.icon {
-  background: sc_static("images/workr_sprites.png") no-repeat 0px -105px;
-}
-
-/* line 69, ../src/partials/_main.scss */
-.handle {
+/* line 1, ../src/views/_top_menu.scss */
+.topmenu {
   position: absolute;
-  background: transparent sc_static("images/sprites.png") no-repeat -288px 0px;
-}
-
-/* line 74, ../src/partials/_main.scss */
-.handle:hover {
-  position: absolute;
-  background: transparent sc_static("images/sprites.png") no-repeat -288px -72px;
-}
-
-/* OLD CSS MENU.css  NEED TO REFACTOR INTO SCSS
----------------------------------------- */
-/*
-  SHARED CSS FOR MENUS
-*/
-/* line 87, ../src/partials/_main.scss */
-.menu label {
-  display: inline-block;
-  position: relative;
-  top: -5px;
-}
-
-/* line 93, ../src/partials/_main.scss */
-.menu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 99, ../src/partials/_main.scss */
-.menu li {
-  display: block;
-}
-
-/* line 103, ../src/partials/_main.scss */
-#appmenu_studio_btn div {
-  display: inline-block;
-}
-
-/* line 107, ../src/partials/_main.scss */
-ul.tabs, ul.tabs > li {
-  /*  height: 30px;*/
-}
-
-/* line 111, ../src/partials/_main.scss */
-#appmenu > ul.menuitems > li[id]:hover {
-  color: #fff;
-  text-shadow: 0px -1px 0px black;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
-  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
-  -moz-box-shadow: 0px 2px 4px #000;
-  -webkit-box-shadow: 0px 2px 4px #000;
-  box-shadow: 0px 2px 4px #000;
-}
-
-/* line 136, ../src/partials/_main.scss */
-.shadow {
-  -moz-box-shadow: 2px 0px 4px #666;
-  -webkit-box-shadow: 2px 0px 4px #666;
-  box-shadow: 2px 0px 4px #666;
-}
-
-/* line 143, ../src/partials/_main.scss */
-.menu li, .menu label {
-  /*  cursor:         pointer;*/
-}
-
-/* line 147, ../src/partials/_main.scss */
-.menu, .search_field input, .search_results {
-  font-size: 18px;
-}
-
-/* line 151, ../src/partials/_main.scss */
-.menu span {
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  /*  margin:   3px 5px 0 15px;*/
-}
-
-/* ==========================================================================
-*  MENU MODE: searching
-*  ==========================================================================
-*/
-/* line 164, ../src/partials/_main.scss */
-.menu .search_field {
-  margin: 15px 0;
-}
-
-/* line 168, ../src/partials/_main.scss */
-.menu .search_field > input {
-  margin: 0px 0px 0 10px;
-  border: 1px solid #000;
-  padding-left: 34px;
-  width: 185px;
-  /* why is padding and margin effecting SC and not html mockup? */
-  -webkit-border-radius: 25px;
-  /* width:185 for SC, width 229px for mockup */
-  -moz-border-radius: 25px;
-  border-radius: 25px;
-  background: white url("images/search.png") no-repeat 5px center;
-  background: white sc_static("images/search.png") no-repeat 5px center;
-  color: #ccc;
-}
-
-/* line 181, ../src/partials/_main.scss */
-.menu .search_field > input:focus {
-  outline: none;
-}
-
-/* line 185, ../src/partials/_main.scss */
-.menu .search_field > input:hover, .menu .search_field > input:focus, .searching .menu .search_field > input {
-  color: #000;
-  background: white url("images/search_on.png") no-repeat 5px center;
-  background: white sc_static("images/search_on.png") no-repeat 5px center;
-}
-
-/* line 192, ../src/partials/_main.scss */
-.search_results {
-  background: #fff;
-  display: block;
-  width: 229px;
-  margin: 10px 10px;
-  -webkit-border-radius: 10px;
-  -moz-border-radius: 10px;
-  border-radius: 10px;
-}
-
-/* line 202, ../src/partials/_main.scss */
-.menu .search_results li {
-  height: 42px;
-  color: #464646;
-  text-shadow: none;
-  cursor: move;
-}
-
-/* line 209, ../src/partials/_main.scss */
-.menu .search_results li {
-  border-bottom: 1px ridge #ddd;
-}
-
-/* line 213, ../src/partials/_main.scss */
-.menu .search_results li:hover {
-  border: 2px ridge #333;
-  height: 39px;
-}
-
-/* line 218, ../src/partials/_main.scss */
-.menu .search_results li:hover {
-  color: #fff;
-  text-shadow: 0px -1px 0px black;
-  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
-  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
-  -moz-box-shadow: 4px 4px 4px #000;
-  -webkit-box-shadow: 4px 4px 4px #000;
-  box-shadow: 4px 4px 4px #000;
-}
-
-/* line 242, ../src/partials/_main.scss */
-.menu .search_results li:first-child {
-  -webkit-border-top-right-radius: 10px;
-  -webkit-border-top-left-radius: 10px;
-  -moz-border-radius-topright: 10px;
-  -moz-border-radius-topleft: 10px;
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
-}
-
-/* line 251, ../src/partials/_main.scss */
-.menu .search_results li:last-child {
-  -webkit-border-bottom-right-radius: 10px;
-  -webkit-border-bottom-left-radius: 10px;
-  -moz-border-radius-bottomright: 10px;
-  -moz-border-radius-bottomleft: 10px;
-  border-bottom-right-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-/* line 260, ../src/partials/_main.scss */
-.menu .search_results li span {
-  width: 24px;
-  height: 24px;
-  margin: 8px 0 0 5px;
-}
-
-/* line 266, ../src/partials/_main.scss */
-.menu .search_results li label {
-  margin: 8px 0 0 5px;
-  cursor: move;
-}
-
-/* line 271, ../src/partials/_main.scss */
-.search_results li > div {
-  height: 39px;
-  margin: 0;
-  float: right;
-}
-
-/* line 277, ../src/partials/_main.scss */
-.search_results li:hover > div {
-  border-left: 1px ridge #ddd;
-  border-width: 2px;
-}
-
-/* line 282, ../src/partials/_main.scss */
-.search_results li:hover > div > span {
-  width: 12px;
-  background: url("images/sprites.png") no-repeat -218px -96px;
-  background: sc_static("images/sprites.png") no-repeat -218px -96px;
-}
-
-/*
-  TEMP ICONS
-*/
-/* line 291, ../src/partials/_main.scss */
-.search_results li > span:first-child {
-  background: url("images/sprites.png") no-repeat -168px 0px;
-  background: sc_static("images/sprites.png") no-repeat -168px 0px;
-}
-
-/* line 295, ../src/partials/_main.scss */
-.search_results li:hover > span:first-child {
-  background: url("images/sprites.png") no-repeat -168px -96px;
-  background: sc_static("images/sprites.png") no-repeat -168px -96px;
-}
-
-/* line 1, ../src/components/_top_menu.scss */
-#menu {
-  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 30px;
   text-shadow: white 0px 1px 0px;
   color: #464646;
   -moz-box-shadow: #666666 0px 2px 4px 0;
@@ -754,78 +105,186 @@ ul.tabs, ul.tabs > li {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0.38, #c2c2c2), color-stop(0.85, #ececec));
   background: -moz-linear-gradient(center bottom, #c2c2c2 38%, #ececec 85%);
 }
-/* line 20, ../src/components/_top_menu.scss */
-#menu li {
-  cursor: pointer;
+/* line 12, ../src/views/_top_menu.scss */
+.topmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
-/* line 23, ../src/components/_top_menu.scss */
-#menu ul.left {
+/* line 16, ../src/views/_top_menu.scss */
+.topmenu li {
+  cursor: pointer;
+  display: block;
+  padding: 3px 0;
+}
+/* line 21, ../src/views/_top_menu.scss */
+.topmenu ul.left {
   position: absolute;
   left: 0px;
   top: 0px;
 }
-/* line 28, ../src/components/_top_menu.scss */
-#menu ul.right {
+/* line 26, ../src/views/_top_menu.scss */
+.topmenu ul.right {
   position: absolute;
   right: 0px;
   top: 0px;
 }
-/* line 36, ../src/components/_top_menu.scss */
-#menu .studio_btn span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 34, ../src/views/_top_menu.scss */
+.topmenu .studio_btn span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: 0px 0px;
-  margin: 3px 5px 0 15px;
+  margin: 0px 5px 0 15px;
+  display: inline-block;
 }
-/* line 40, ../src/components/_top_menu.scss */
-#menu .studio_btn span:hover {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 38, ../src/views/_top_menu.scss */
+.topmenu .studio_btn span:hover {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: 0px -24px;
 }
-/* line 44, ../src/components/_top_menu.scss */
-#menu .studio_btn label {
+/* line 42, ../src/views/_top_menu.scss */
+.topmenu .studio_btn label {
   display: none;
 }
-/* line 51, ../src/components/_top_menu.scss */
-#menu .lib_btn span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 49, ../src/views/_top_menu.scss */
+.topmenu .lib_btn span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -24px 0px;
-  margin: 3px 15px 0 5px;
+  margin: 0px 15px 0 5px;
+  display: inline-block;
 }
-/* line 55, ../src/components/_top_menu.scss */
-#menu .lib_btn span:hover {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 53, ../src/views/_top_menu.scss */
+.topmenu .lib_btn span:hover {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -24px -24px;
 }
-/* line 59, ../src/components/_top_menu.scss */
-#menu .lib_btn label {
+/* line 57, ../src/views/_top_menu.scss */
+.topmenu .lib_btn label {
   display: none;
 }
-/* line 65, ../src/components/_top_menu.scss */
-#menu .title {
-  position: absolute;
+/* line 63, ../src/views/_top_menu.scss */
+.topmenu .title {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -transition: all 0.5s ease-in-out;
+}
+/* line 65, ../src/views/_top_menu.scss */
+.topmenu .title.open {
+  left: 305px !important;
 }
 
-/* line 1, ../src/components/_app_menu.scss */
+/* line 1, ../src/views/_app_menu.scss */
 #appmenu {
   position: absolute;
   background-color: #333;
   color: #e5e5e5;
-  text-shadow: 0px -1px 0px black;
+  font-size: 18px;
+  top: 0;
+  bottom: 0;
+  left: -241px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -transition: all 0.5s ease-in-out;
 }
-/* line 7, ../src/components/_app_menu.scss */
-#appmenu ul.tabs {
+/* line 11, ../src/views/_app_menu.scss */
+#appmenu.open {
+  left: 0px;
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 16, ../src/views/_app_menu.scss */
+#appmenu.open ul li.studio_btn {
+  -moz-box-shadow: black 0px 2px 4px 0;
+  -webkit-box-shadow: black 0px 2px 4px 0;
+  -o-box-shadow: black 0px 2px 4px 0;
+  box-shadow: black 0px 2px 4px 0;
+}
+/* line 22, ../src/views/_app_menu.scss */
+#appmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 25, ../src/views/_app_menu.scss */
+#appmenu ul li[class] {
+  cursor: pointer;
+  position: relative;
+  padding: 3px 0;
+  height: 24px;
+}
+/* line 31, ../src/views/_app_menu.scss */
+#appmenu ul li[class] span {
+  margin: 0px 5px 0 15px;
+  display: inline-block;
+}
+/* line 34, ../src/views/_app_menu.scss */
+#appmenu ul li[class] label {
+  cursor: pointer;
+  position: absolute;
+  line-height: 24px;
+}
+/* line 41, ../src/views/_app_menu.scss */
+#appmenu ul .studio_btn {
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
+  background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
+  text-shadow: black 0px -1px 0px;
+  border-right: none;
+  border-bottom: 1px solid #303030;
+}
+/* line 46, ../src/views/_app_menu.scss */
+#appmenu ul .studio_btn span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
+  width: 24px;
+  height: 24px;
+  overflow: hidden;
+  background-position: 0px -72px;
+}
+/* line 53, ../src/views/_app_menu.scss */
+#appmenu input {
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  margin: 10px 10px;
+  border: 1px solid #000;
+  padding-left: 34px;
+  width: 185px;
+  background: white sc_static("images/search.png") no-repeat 5px center;
+}
+/* line 61, ../src/views/_app_menu.scss */
+#appmenu input:focus {
+  outline: none;
+}
+/* line 65, ../src/views/_app_menu.scss */
+#appmenu input:hover {
+  background: white sc_static("images/search_on.png") no-repeat 5px center;
+  color: #000;
+}
+/* line 73, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems li {
+  margin: 10px 0;
+  padding: 5px 0;
+  border: 1px solid #333;
+}
+/* line 78, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems li[class]:hover {
+  text-shadow: black 0px -1px 0px;
+  color: #fff;
+  border: 1px ridge #000;
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
   background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
   -moz-box-shadow: black 0px 2px 4px 0;
@@ -833,105 +292,65 @@ ul.tabs, ul.tabs > li {
   -o-box-shadow: black 0px 2px 4px 0;
   box-shadow: black 0px 2px 4px 0;
 }
-/* line 10, ../src/components/_app_menu.scss */
-#appmenu ul.tabs li {
-  cursor: pointer;
-}
-/* line 20, ../src/components/_app_menu.scss */
-#appmenu ul.tabs .studio_btn {
-  border-right: none;
-  border-bottom: 1px ridge #000;
-}
-/* line 23, ../src/components/_app_menu.scss */
-#appmenu ul.tabs .studio_btn span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
-  width: 24px;
-  height: 24px;
-  overflow: hidden;
-  background-position: 0px -72px;
-  margin: 3px 5px 0 15px;
-}
-/* line 31, ../src/components/_app_menu.scss */
-#appmenu ul.menuitems li {
-  margin: 10px 0;
-  padding: 5px 0;
-  border: 1px ridge #333;
-}
-/* line 36, ../src/components/_app_menu.scss */
-#appmenu ul.menuitems li[id]:hover {
-  border: 1px ridge #000;
-}
-/* line 40, ../src/components/_app_menu.scss */
-#appmenu ul.menuitems li label {
-  padding: 0px 10px 0 5px;
-}
-/* line 44, ../src/components/_app_menu.scss */
-#appmenu ul.menuitems li span {
-  margin: 6px 0 0 15px;
-}
-
-/* line 55, ../src/components/_app_menu.scss */
-#appmenu_login span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 89, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .login span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -72px -72px;
 }
-/* line 59, ../src/components/_app_menu.scss */
-#appmenu_login:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 93, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .login:hover span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -72px -96px;
 }
-
-/* line 66, ../src/components/_app_menu.scss */
-#appmenu_new span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 100, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .new span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -96px -72px;
 }
-/* line 70, ../src/components/_app_menu.scss */
-#appmenu_new:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 104, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .new:hover span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -96px -96px;
 }
-
-/* line 77, ../src/components/_app_menu.scss */
-#appmenu_load span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 111, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .load span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -120px -72px;
 }
-/* line 81, ../src/components/_app_menu.scss */
-#appmenu_load:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 115, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .load:hover span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -120px -96px;
 }
-
-/* line 88, ../src/components/_app_menu.scss */
-#appmenu_clear span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 122, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .clear span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -144px -72px;
 }
-/* line 92, ../src/components/_app_menu.scss */
-#appmenu_clear:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+/* line 126, ../src/views/_app_menu.scss */
+#appmenu ul.menuitems .clear:hover span {
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
@@ -939,11 +358,9 @@ ul.tabs, ul.tabs > li {
 }
 
 /*
-
   NEED TO REFACTOR ALL THIS INTO SCSS
-
 */
-/* line 6, ../src/components/_lib_menu.scss */
+/* line 4, ../src/views/_lib_menu.scss */
 #libmenu {
   position: absolute;
   background-color: #333;
@@ -954,53 +371,53 @@ ul.tabs, ul.tabs > li {
   box-shadow: 2px 0px 4px #666;
 }
 
-/* line 16, ../src/components/_lib_menu.scss */
+/* line 14, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs label {
   display: none;
 }
 
-/* line 20, ../src/components/_lib_menu.scss */
+/* line 18, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs span {
   margin-left: 9px;
 }
 
-/* line 25, ../src/components/_lib_menu.scss */
+/* line 23, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs li.selected_menu label {
   display: inline-block;
 }
 
-/* line 29, ../src/components/_lib_menu.scss */
+/* line 27, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs li {
   width: 40px;
   display: inline-block;
   border-left: 2px ridge #111;
 }
 
-/* line 35, ../src/components/_lib_menu.scss */
+/* line 33, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs li.selected_menu {
   width: 199px;
   border-left: #000;
   opacity: 1;
 }
 
-/* line 41, ../src/components/_lib_menu.scss */
+/* line 39, ../src/views/_lib_menu.scss */
 #libmenu ul.tabs li.selected_menu span {
   margin-left: 15px;
 }
 
-/* line 45, ../src/components/_lib_menu.scss */
+/* line 43, ../src/views/_lib_menu.scss */
 li#libmenu_btn span {
   background: url("images/sprites.png") no-repeat -24px -96px;
   background: sc_static("images/sprites.png") no-repeat -24px -96px;
 }
 
-/* line 50, ../src/components/_lib_menu.scss */
+/* line 48, ../src/views/_lib_menu.scss */
 li#propmenu_btn span {
   background: url("images/sprites.png") no-repeat -48px -48px;
   background: sc_static("images/sprites.png") no-repeat -48px -48px;
 }
 
-/* line 55, ../src/components/_lib_menu.scss */
+/* line 53, ../src/views/_lib_menu.scss */
 #libcontent {
   position: absolute;
   background-color: #fff;
@@ -1008,7 +425,7 @@ li#propmenu_btn span {
   -webkit-border-radius: 7px;
 }
 
-/* line 1, ../src/components/_lib_menu_item.scss */
+/* line 1, ../src/views/_lib_menu_item.scss */
 .liblist {
   position: absolute;
   background-color: #fff;
@@ -1019,14 +436,14 @@ li#propmenu_btn span {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 8, ../src/components/_lib_menu_item.scss */
+/* line 8, ../src/views/_lib_menu_item.scss */
 .liblist .libmenu-item label {
   color: #000;
   font-size: 24px;
   font-weight: normal;
 }
 
-/* line 1, ../src/components/_node_panel.scss */
+/* line 1, ../src/views/_node_panel.scss */
 .nodepanel {
   color: #8a8a8a;
   text-align: center;
@@ -1039,13 +456,13 @@ li#propmenu_btn span {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 10, ../src/components/_node_panel.scss */
+/* line 10, ../src/views/_node_panel.scss */
 .nodepanel .title {
   padding: 5px;
   font-size: 20px;
   line-height: 20px;
 }
-/* line 16, ../src/components/_node_panel.scss */
+/* line 16, ../src/views/_node_panel.scss */
 .nodepanel .content {
   position: absolute;
   background-color: #f2f2f2;
@@ -1056,7 +473,7 @@ li#propmenu_btn span {
   -khtml-border-radius: 7px;
   border-radius: 7px;
 }
-/* line 22, ../src/components/_node_panel.scss */
+/* line 22, ../src/views/_node_panel.scss */
 .nodepanel.selected {
   color: #e5e5e5;
   -moz-box-shadow: black 0px 2px 4px 0;
@@ -1064,11 +481,11 @@ li#propmenu_btn span {
   -o-box-shadow: black 0px 2px 4px 0;
   box-shadow: black 0px 2px 4px 0;
 }
-/* line 26, ../src/components/_node_panel.scss */
+/* line 26, ../src/views/_node_panel.scss */
 .nodepanel.selected .content {
   background-color: #fff;
 }
-/* line 31, ../src/components/_node_panel.scss */
+/* line 31, ../src/views/_node_panel.scss */
 .nodepanel .info {
   position: absolute;
   top: 0px;
@@ -1076,26 +493,26 @@ li#propmenu_btn span {
   display: inline-block;
   padding: 3px 10px;
 }
-/* line 38, ../src/components/_node_panel.scss */
+/* line 38, ../src/views/_node_panel.scss */
 .nodepanel .info span {
   display: block;
   width: 24px;
   height: 24px;
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -240px -48px;
 }
-/* line 46, ../src/components/_node_panel.scss */
+/* line 46, ../src/views/_node_panel.scss */
 .nodepanel .info:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -240px -72px;
 }
-/* line 53, ../src/components/_node_panel.scss */
+/* line 53, ../src/views/_node_panel.scss */
 .nodepanel .edit {
   position: absolute;
   top: 0px;
@@ -1103,20 +520,20 @@ li#propmenu_btn span {
   display: inline-block;
   padding: 3px 10px;
 }
-/* line 60, ../src/components/_node_panel.scss */
+/* line 60, ../src/views/_node_panel.scss */
 .nodepanel .edit span {
   display: block;
   width: 24px;
   height: 24px;
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -264px -48px;
 }
-/* line 68, ../src/components/_node_panel.scss */
+/* line 68, ../src/views/_node_panel.scss */
 .nodepanel .edit:hover span {
-  background: url(/static/husky/en/current/resources/images/sprites.png) no-repeat;
+  background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
