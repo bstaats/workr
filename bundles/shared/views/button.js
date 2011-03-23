@@ -97,6 +97,25 @@ ButtonViewStatechart = SC.View.extend(Ki.StatechartManager, {
 
   mouseOverJustClicked: Ki.State.design({
 
+    enterState: function() {
+      this._timer = SC.Timer.schedule({
+        target: this,
+        action: 'timeout',
+        delay: 3000 // milliseconds
+      });
+    },
+    
+    exitState: function() {
+      this._timer.disable();
+      this._timer = null; // gc it
+    }
+    
+    timeout: function() {
+      // action here?
+      // animation parameters -- adjust CSS?
+      this.gotoState('mouseOverMouseDown');
+    },
+
     mouseMoved: function(evt) {
       // action here?
       // animation parameters -- adjust CSS?
@@ -112,7 +131,7 @@ ButtonViewStatechart = SC.View.extend(Ki.StatechartManager, {
     
   render: function(context, firstTime) {
     if (firstTime) context.push('Click Me');
-    else this.invokeStateMethod('render', context, firstTime);
+    this.invokeStateMethod('render', context, firstTime);
 
     // var state = this.get('currentStates'); // how does Ki do this?
     // switch (state) {
@@ -130,6 +149,8 @@ ButtonView = SC.View.extend({
   
   state: null,
   
+  displayProperties: ['state'],
+  
   init: function() {
     sc_super(); // always call sc_super() first
     this.goAmIOverTheButton();
@@ -137,15 +158,15 @@ ButtonView = SC.View.extend({
   
   goAmIOverTheButton: function() {
     // check the position of the mouse
-    this.state = 'amIOverTheButton' ;
+    this.set('state', 'amIOverTheButton') ;
     console.log(this.state);
     this.goMouseOutMouseUp() ;
   },
   
   goMouseOutMouseUp: function() {
-    this.state = 'mouseOutMouseUp' ;
+    this.set('state', 'mouseOutMouseUp') ;
     console.log(this.state);
-    // we're in point 1 or point 2 -- no rendering
+    // we're in point 1 -- no rendering
     this.displayDidChange(); // triggers a re-render
   },
   
