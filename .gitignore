@@ -39,3 +39,4 @@ Thumbs.db
 *.swp
 
 .sass-cache
+frameworks/**/*
