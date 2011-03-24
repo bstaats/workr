@@ -5,8 +5,8 @@ Workr.TopMenu = SC.View.extend(
 
   tagName: 'div',
   childViews: ['workrTitle'],
-  classNamesReset: YES,
   classNames: ['topmenu'],
+  wantsAcceleratedLayer: YES,
   delegate: null,
 
   topMenuDelegate: function() {
@@ -48,6 +48,8 @@ Workr.TopMenu = SC.View.extend(
 
   render: function(context, firstTime){
     if (firstTime) {
+
+      // how do I get this to recognize sub templateviews within this template?
       context.push(
         SC.TEMPLATES['top_menu']({sc_view:this})
       );
@@ -64,17 +66,11 @@ Workr.TopMenu = SC.View.extend(
   CHILDREN VIEWS
 */
   workrTitle: SC.LabelView.extend({
-    layout: { top: 7, left: Workr.LEFT_MARGIN*2, width:600, height: 22},
-    classNamesReset: YES,
+    layout: { top: 3, left: Workr.LEFT_MARGIN*2, width:600, height: 24},
     classNames: ['title'],
     isEditable: YES,
     contentBinding: 'Workr.masterWorkrController',
     contentValueKey: 'title'
-/*
-    transitions: {
-      left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
-    }
-*/
   })
 
 

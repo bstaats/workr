@@ -65,12 +65,6 @@
   @include text-shadow(#fff, 0px, 1px, 0px);
 }
 
-@mixin ul-reset{
-  list-style: none;
-  padding:    0;
-  margin:     0;
-}
-
 @mixin corner{
   -webkit-border-radius:  25px;
   -moz-border-radius:     25px;
@@ -78,9 +72,9 @@
 }
 
 // using SC.Animate not this
-@mixin transition{
+/*@mixin transition{
   -webkit-transition:all 0.5s ease-in-out;
   -moz-transition:all 0.5s ease-in-out;
   -o-transition:all 0.5s ease-in-out;
   -transition:all 0.5s ease-in-out;
-}
+}*/

@@ -4,16 +4,9 @@ Workr.AppMenu = SC.View.extend(
 
 
   tagName: 'div',
-  layerId: 'appmenu',
-  classNamesReset: YES,
-  classNames: ['menu'],
+  classNames: ['appmenu'],
   wantsAcceleratedLayer: YES,
   displayProperties:  ['viewClasses'],
-/*
-  transitions: {
-    left:{duration:0.4, timing:SC.Animatable.TRANSITION_EASE_IN_OUT}
-  },
-*/
   delegate: null,
 
   appMenuDelegate: function() {
@@ -39,27 +32,40 @@ Workr.AppMenu = SC.View.extend(
   opened: Ki.State.design({
 
     enterState: function(){
-      this.get('owner').animate('left', 0, Workr.TRANSITION);
+      this.get('owner').$().toggleClass('open');
+      // Have to set an empty call back here or the callback on the exitstate animate will fire.  WHY?
+      this.get('owner').animate('left', 0, Workr.TRANSITION, function(){});
     },
 
     exitState: function(){
-      this.get('owner').animate('left', -Workr.APPMENU_WIDTH, Workr.TRANSITION);
+      this.get('owner').animate('left', -Workr.APPMENU_WIDTH, Workr.TRANSITION, function(){
+        this.view.$().toggleClass('open');
+      });
+
     },
 
     close: function(){
       this.gotoState('closed')
     },
-    
+
+    mouseDown: function(evt){
+      var id = evt.target.id || evt.target.parentNode.id,
+          del = this.get('owner').get('appMenuDelegate');
+
+      if(id=='studio_btn'){
+        del.nothingClicked();
+      }
+    },
+
+
   }),
 
 
   render: function (context, firstTime) {
     if(firstTime){
+      // how do I get this to recognize sub templateviews within this template?
       context.push(
-        '<ul class="tabs">',
-          '<li id="menu_studio_btn" class="studio_btn"><span></span><label>Studio</label></li>',
-        '</ul>',
-        '<div class="search_field">  <input type="text" value="Search" ></div>'
+        SC.TEMPLATES['app_menu']({sc_view:this})
       );
 
       this.set('owner', this); // why should I have to do this? the owner is this objects parent by default
@@ -72,11 +78,12 @@ Workr.AppMenu = SC.View.extend(
 
   },
 
+/*
   createChildViews: function(){
     var content = this.get('content');
 
     this.set('childViews', [
-/*
+
       this.createChildView(
         SCUI.ComboBoxView.design({
           layerId: 'appmenu_search',
@@ -105,35 +112,11 @@ Workr.AppMenu = SC.View.extend(
 
         })
       ),
-*/
 
-      this.createChildView(
-        SC.View.extend({
-          tagName: 'ul',
-          classNamesReset: YES,
-          classNames:'menuitems',
-          layout: { top: 80, left: 0, right:0, bottom:0 },
-          update: function(context) {
-          },
-          render: function (context, firstTime) {
-            if(firstTime){
-              context.push(
-                '<li id="appmenu_login">   <span></span><label>Login</label></li>',
-                '<li></li>',
-                '<li id="appmenu_new">     <span></span><label>New Workr</label></li>',
-                '<li id="appmenu_load">    <span></span><label>Load Workr</label></li>',
-                '<li></li>',
-                '<li id="appmenu_clear">   <span></span><label>Clear Canvas</label></li>'
-              );
-            }else{
-              this.update(context);
-            }
-          }
 
-        })
-      )
     ]);
   }
+*/
 
 
 });

@@ -1,4 +1,4 @@
-#appmenu{
+.appmenu{
   position:           absolute;
   background-color:   #333;
   color:              #e5e5e5;
@@ -6,12 +6,9 @@
   top:                0;
   bottom:             0;
   left:               -$appMenu-width;
-  @include            transition;
 
   &.open{
-    left:             0px;
     @include            dark-shadow;
-
     ul{
       li.studio_btn{
         @include dark-shadow;
@@ -20,8 +17,6 @@
   }
 
   ul{
-    @include ul-reset;
-
     li[class]{
       cursor: pointer;
       position: relative;

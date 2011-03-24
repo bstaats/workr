@@ -40,3 +40,5 @@ Thumbs.db
 
 .sass-cache
 frameworks/**/*
+/frameworks/scui
+/frameworks/sproutcore

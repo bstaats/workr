@@ -15,14 +15,14 @@ $default-box-shadow-v-offset: 2px;
 $default-box-shadow-blur:     4px;
 
 // app vars
-$row-height: 30px;
-$menu-item-margin-left: 32px;
-$appMenu-width: 241px;
+$row-height:                  30px;
+$menu-item-margin-left:       32px;
+$appMenu-width:               241px;
 
-.sc-view{
-  font-size:    100%;
-  font-family:  Helvetica, Arial, sans-serif;
-}
+$default-font-size:         18px;
+$default-line-height:       24px;
+
+@import "partials/resets";
 
 @import "partials/mixins";
 

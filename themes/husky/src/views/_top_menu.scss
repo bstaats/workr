@@ -4,14 +4,10 @@
   right: 0;
   top:0;
   height:30px;
-  @include dark-text-shadow;
   color:          #464646;
+  @include dark-text-shadow;
   @include light-shadow;
   @include light-grad;
-
-  ul{
-    @include ul-reset;
-  }
 
   li{
     cursor: pointer;
@@ -61,10 +57,8 @@
 
   // title
   .title{
-    @include transition;
-    &.open{
-      left: $appMenu-width + ($menu-item-margin-left*2) !important;
-    }
-
+    font-weight:bolder;
+    font-size: $default-font-size;
+    line-height: $default-line-height;
   }
 }

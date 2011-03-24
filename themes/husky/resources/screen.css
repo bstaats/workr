@@ -81,14 +81,26 @@ a img {
   border: none;
 }
 
-/* line 22, ../src/screen.scss */
+/* line 1, ../src/partials/_resets.scss */
 .sc-view {
-  font-size: 100%;
   font-family: Helvetica, Arial, sans-serif;
+}
+
+/* line 5, ../src/partials/_resets.scss */
+ul, .sc-view ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 /* Hack to get around SC's sc_static BS
 ---------------------------------------- */
+/*@mixin transition{
+  -webkit-transition:all 0.5s ease-in-out;
+  -moz-transition:all 0.5s ease-in-out;
+  -o-transition:all 0.5s ease-in-out;
+  -transition:all 0.5s ease-in-out;
+}*/
 /* line 1, ../src/views/_top_menu.scss */
 .topmenu {
   position: absolute;
@@ -96,8 +108,8 @@ a img {
   right: 0;
   top: 0;
   height: 30px;
-  text-shadow: white 0px 1px 0px;
   color: #464646;
+  text-shadow: white 0px 1px 0px;
   -moz-box-shadow: #666666 0px 2px 4px 0;
   -webkit-box-shadow: #666666 0px 2px 4px 0;
   -o-box-shadow: #666666 0px 2px 4px 0;
@@ -106,30 +118,24 @@ a img {
   background: -moz-linear-gradient(center bottom, #c2c2c2 38%, #ececec 85%);
 }
 /* line 12, ../src/views/_top_menu.scss */
-.topmenu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* line 16, ../src/views/_top_menu.scss */
 .topmenu li {
   cursor: pointer;
   display: block;
   padding: 3px 0;
 }
-/* line 21, ../src/views/_top_menu.scss */
+/* line 17, ../src/views/_top_menu.scss */
 .topmenu ul.left {
   position: absolute;
   left: 0px;
   top: 0px;
 }
-/* line 26, ../src/views/_top_menu.scss */
+/* line 22, ../src/views/_top_menu.scss */
 .topmenu ul.right {
   position: absolute;
   right: 0px;
   top: 0px;
 }
-/* line 34, ../src/views/_top_menu.scss */
+/* line 30, ../src/views/_top_menu.scss */
 .topmenu .studio_btn span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
@@ -139,7 +145,7 @@ a img {
   margin: 0px 5px 0 15px;
   display: inline-block;
 }
-/* line 38, ../src/views/_top_menu.scss */
+/* line 34, ../src/views/_top_menu.scss */
 .topmenu .studio_btn span:hover {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
@@ -147,11 +153,11 @@ a img {
   overflow: hidden;
   background-position: 0px -24px;
 }
-/* line 42, ../src/views/_top_menu.scss */
+/* line 38, ../src/views/_top_menu.scss */
 .topmenu .studio_btn label {
   display: none;
 }
-/* line 49, ../src/views/_top_menu.scss */
+/* line 45, ../src/views/_top_menu.scss */
 .topmenu .lib_btn span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
@@ -161,7 +167,7 @@ a img {
   margin: 0px 15px 0 5px;
   display: inline-block;
 }
-/* line 53, ../src/views/_top_menu.scss */
+/* line 49, ../src/views/_top_menu.scss */
 .topmenu .lib_btn span:hover {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
@@ -169,24 +175,19 @@ a img {
   overflow: hidden;
   background-position: -24px -24px;
 }
-/* line 57, ../src/views/_top_menu.scss */
+/* line 53, ../src/views/_top_menu.scss */
 .topmenu .lib_btn label {
   display: none;
 }
-/* line 63, ../src/views/_top_menu.scss */
+/* line 59, ../src/views/_top_menu.scss */
 .topmenu .title {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -transition: all 0.5s ease-in-out;
-}
-/* line 65, ../src/views/_top_menu.scss */
-.topmenu .title.open {
-  left: 305px !important;
+  font-weight: bolder;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 /* line 1, ../src/views/_app_menu.scss */
-#appmenu {
+.appmenu {
   position: absolute;
   background-color: #333;
   color: #e5e5e5;
@@ -194,68 +195,57 @@ a img {
   top: 0;
   bottom: 0;
   left: -241px;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -transition: all 0.5s ease-in-out;
 }
-/* line 11, ../src/views/_app_menu.scss */
-#appmenu.open {
-  left: 0px;
+/* line 10, ../src/views/_app_menu.scss */
+.appmenu.open {
   -moz-box-shadow: black 0px 2px 4px 0;
   -webkit-box-shadow: black 0px 2px 4px 0;
   -o-box-shadow: black 0px 2px 4px 0;
   box-shadow: black 0px 2px 4px 0;
 }
-/* line 16, ../src/views/_app_menu.scss */
-#appmenu.open ul li.studio_btn {
+/* line 13, ../src/views/_app_menu.scss */
+.appmenu.open ul li.studio_btn {
   -moz-box-shadow: black 0px 2px 4px 0;
   -webkit-box-shadow: black 0px 2px 4px 0;
   -o-box-shadow: black 0px 2px 4px 0;
   box-shadow: black 0px 2px 4px 0;
 }
-/* line 22, ../src/views/_app_menu.scss */
-#appmenu ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-/* line 25, ../src/views/_app_menu.scss */
-#appmenu ul li[class] {
+/* line 20, ../src/views/_app_menu.scss */
+.appmenu ul li[class] {
   cursor: pointer;
   position: relative;
   padding: 3px 0;
   height: 24px;
 }
-/* line 31, ../src/views/_app_menu.scss */
-#appmenu ul li[class] span {
+/* line 26, ../src/views/_app_menu.scss */
+.appmenu ul li[class] span {
   margin: 0px 5px 0 15px;
   display: inline-block;
 }
-/* line 34, ../src/views/_app_menu.scss */
-#appmenu ul li[class] label {
+/* line 29, ../src/views/_app_menu.scss */
+.appmenu ul li[class] label {
   cursor: pointer;
   position: absolute;
   line-height: 24px;
 }
-/* line 41, ../src/views/_app_menu.scss */
-#appmenu ul .studio_btn {
+/* line 36, ../src/views/_app_menu.scss */
+.appmenu ul .studio_btn {
   background: -webkit-gradient(linear, left bottom, left top, color-stop(0, black), color-stop(0.5, black), color-stop(0.51, #222222), color-stop(1, #585858));
   background: -moz-linear-gradient(center bottom, black 0%, black 50%, #222222 51%, #585858 100%);
   text-shadow: black 0px -1px 0px;
   border-right: none;
   border-bottom: 1px solid #303030;
 }
-/* line 46, ../src/views/_app_menu.scss */
-#appmenu ul .studio_btn span {
+/* line 41, ../src/views/_app_menu.scss */
+.appmenu ul .studio_btn span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: 0px -72px;
 }
-/* line 53, ../src/views/_app_menu.scss */
-#appmenu input {
+/* line 48, ../src/views/_app_menu.scss */
+.appmenu input {
   -webkit-border-radius: 25px;
   -moz-border-radius: 25px;
   border-radius: 25px;
@@ -265,23 +255,23 @@ a img {
   width: 185px;
   background: white sc_static("images/search.png") no-repeat 5px center;
 }
-/* line 61, ../src/views/_app_menu.scss */
-#appmenu input:focus {
+/* line 56, ../src/views/_app_menu.scss */
+.appmenu input:focus {
   outline: none;
 }
-/* line 65, ../src/views/_app_menu.scss */
-#appmenu input:hover {
+/* line 60, ../src/views/_app_menu.scss */
+.appmenu input:hover {
   background: white sc_static("images/search_on.png") no-repeat 5px center;
   color: #000;
 }
-/* line 73, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems li {
+/* line 68, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems li {
   margin: 10px 0;
   padding: 5px 0;
   border: 1px solid #333;
 }
-/* line 78, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems li[class]:hover {
+/* line 73, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems li[class]:hover {
   text-shadow: black 0px -1px 0px;
   color: #fff;
   border: 1px ridge #000;
@@ -292,64 +282,64 @@ a img {
   -o-box-shadow: black 0px 2px 4px 0;
   box-shadow: black 0px 2px 4px 0;
 }
-/* line 89, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .login span {
+/* line 84, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .login span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -72px -72px;
 }
-/* line 93, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .login:hover span {
+/* line 88, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .login:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -72px -96px;
 }
-/* line 100, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .new span {
+/* line 95, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .new span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -96px -72px;
 }
-/* line 104, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .new:hover span {
+/* line 99, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .new:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -96px -96px;
 }
-/* line 111, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .load span {
+/* line 106, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .load span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -120px -72px;
 }
-/* line 115, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .load:hover span {
+/* line 110, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .load:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -120px -96px;
 }
-/* line 122, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .clear span {
+/* line 117, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .clear span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -144px -72px;
 }
-/* line 126, ../src/views/_app_menu.scss */
-#appmenu ul.menuitems .clear:hover span {
+/* line 121, ../src/views/_app_menu.scss */
+.appmenu ul.menuitems .clear:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
