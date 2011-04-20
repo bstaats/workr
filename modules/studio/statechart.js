@@ -41,14 +41,14 @@ Workr.StudioStatechart = Ki.Statechart.create({
       enterState: function() {
         return this.performAsync(function(){
           Workr.studioMainPage.get('appMenu').sendAction('open');
-          //Workr.studioMainPage.get('canvas').sendAction('move');
+          Workr.studioMainPage.get('canvas').sendAction('move');
           this.resumeGotoState();
         });
       },
 
       exitState: function() {
         return this.performAsync(function(){
-          //Workr.studioMainPage.get('canvas').sendAction('move');
+          Workr.studioMainPage.get('canvas').sendAction('move');
           Workr.studioMainPage.get('topMenu').sendAction('appMenuClosed');
           Workr.studioMainPage.get('appMenu').sendAction('close');
           this.resumeGotoState();

@@ -1,3 +1,6 @@
+/* SC resets  PLEASE!!!  There must be an easier way to get rid of all the default SC class names or CSS
+---------------------------------------- */
+
 .sc-view{
   font-family:  Helvetica, Arial, sans-serif;
 }
@@ -6,4 +9,8 @@ ul, .sc-view ul{
   list-style: none;
   padding:    0;
   margin:     0;
+}
+
+.sc-pane.sc-panel > .sc-view {
+  background: none;
 }

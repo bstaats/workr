@@ -4,7 +4,6 @@ Workr.CanvasView = LinkIt.CanvasView.extend(
   Workr.CanvasDelegate,
   Ki.StatechartManager,{
 
-  layerId: 'studio',
   contentBinding:   SC.Binding.from('Workr.workrsController').oneWay(),
   selectionBinding: 'Workr.workrsController.selection',
   exampleView:      Workr.WorkrNode,

@@ -4,7 +4,7 @@ Workr.CanvasDelegate = {
   isCanvasDelegate: YES,
 
   canvasClicked: function(){
-    Workr.statechart.sendAction('canvasClicked');
+    Workr.StudioStatechart.sendAction('canvasClicked');
   },
 
 }

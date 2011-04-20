@@ -24,7 +24,6 @@ Workr.WorkrPanel = SC.PalettePane.extend( Workr.WorkrPanelDelegate,{
     if(target.hasClass('title')){
       del.workrPanelClose();
     }
-    sc_super();
   },
 
   mouseDown: function(evt){

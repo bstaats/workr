@@ -1,0 +1,61 @@
+.linkit-canvas{
+  background:   sc_static('images/grid.png') repeat 0px 0px;
+  
+  
+   /* Nodes */
+  .workr{
+    background:            #231f20 sc_static('images/workr_icon.png') no-repeat 0px 0px;;
+    color:                 #333333;
+    text-shadow:           0px 1px 0px rgba(0, 0, 0, .5);
+    border:                1px solid #000;
+    -moz-border-radius:    7px;
+    -webkit-border-radius: 7px;
+    -moz-box-shadow:       2px 2px 5px rgba(0, 0, 0, .5);
+    -webkit-box-shadow:    2px 2px 5px rgba(0, 0, 0, .5);
+
+   overflow:              visible;
+    -moz-transition:       border .1s linear;
+    -webkit-transition:    border .1s linear;
+  }
+
+  .workr.selected{
+    border:                2px solid rgba(255, 255, 255, 1);
+    -moz-box-shadow:       3px 3px 8px rgba(0, 0, 0, .75);
+    -webkit-box-shadow:    3px 3px 8px rgba(0, 0, 0, .75);
+  }
+
+  /* Terminal colors*/
+  .workr-terminal{
+    border: 1px solid     #666;
+
+    -moz-transition:       border .1s linear;
+    -moz-box-shadow:       2px 2px 5px rgba(0,0,0,.5);
+    -moz-border-radius:    1px;
+
+    -webkit-transition:    border .1s linear;
+    -webkit-box-shadow:    2px 2px 5px rgba(0,0,0,.5);
+    -webkit-border-radius: 1px;
+  }
+
+  .workr-terminal:hover{
+    border: 1px solid     #fff;
+  }
+
+  .icon{
+    background: sc_static('images/workr_sprites.png') no-repeat 0px -105px;
+  }
+
+}
+
+/* Used for node_panel too
+---------------------------------------- */
+.handle{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px 0px;
+}
+
+.handle:hover{
+  position: absolute;
+  background: transparent sc_static('images/sprites.png') no-repeat -288px -72px;
+}
+
