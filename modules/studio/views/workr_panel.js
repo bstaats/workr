@@ -27,8 +27,7 @@ Workr.WorkrPanel = SC.PalettePane.extend( Workr.WorkrPanelDelegate,{
   },
 
   mouseDown: function(evt){
-    var del    = this.get('workrPanelDelegate'),
-        target = SC.CoreQuery(evt.target);
+    var del    = this.get('workrPanelDelegate');
     del.selectWorkrPanel();
     sc_super();
   },
