@@ -1,4 +1,4 @@
-.nodepanel{
+.sc-view.sc-pane.sc-panel.nodepanel{
   color:                #8a8a8a;
   text-align:           center;
   background:           #000 sc_static('images/workr_title_bg.png') repeat-x;
@@ -68,6 +68,16 @@
         @include sc-sprite('sprites.png', 12, 4);
       }
     }
+  }
+
+  .handle{
+    position: absolute;
+    background: transparent sc_static('images/sprites.png') no-repeat -288px 0px;
+  }
+
+  .handle:hover{
+    position: absolute;
+    background: transparent sc_static('images/sprites.png') no-repeat -288px -72px;
   }
 
 }

@@ -46,16 +46,3 @@
   }
 
 }
-
-/* Used for node_panel too
----------------------------------------- */
-.handle{
-  position: absolute;
-  background: transparent sc_static('images/sprites.png') no-repeat -288px 0px;
-}
-
-.handle:hover{
-  position: absolute;
-  background: transparent sc_static('images/sprites.png') no-repeat -288px -72px;
-}
-

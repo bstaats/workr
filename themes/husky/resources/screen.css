@@ -97,7 +97,7 @@ ul, .sc-view ul {
 
 /* line 14, ../src/partials/_resets.scss */
 .sc-pane.sc-panel > .sc-view {
-  background: none;
+  background: transparent;
 }
 
 /* Hack to get around SC's sc_static BS
@@ -485,22 +485,8 @@ li#propmenu_btn span {
   background: sc_static("images/workr_sprites.png") no-repeat 0px -105px;
 }
 
-/* Used for node_panel too
----------------------------------------- */
-/* line 52, ../src/views/_canvas.scss */
-.handle {
-  position: absolute;
-  background: transparent sc_static("images/sprites.png") no-repeat -288px 0px;
-}
-
-/* line 57, ../src/views/_canvas.scss */
-.handle:hover {
-  position: absolute;
-  background: transparent sc_static("images/sprites.png") no-repeat -288px -72px;
-}
-
 /* line 1, ../src/views/_node_panel.scss */
-.nodepanel {
+.sc-view.sc-pane.sc-panel.nodepanel {
   color: #8a8a8a;
   text-align: center;
   background: black sc_static("images/workr_title_bg.png") repeat-x;
@@ -513,13 +499,13 @@ li#propmenu_btn span {
   border-radius: 7px;
 }
 /* line 9, ../src/views/_node_panel.scss */
-.nodepanel .title {
+.sc-view.sc-pane.sc-panel.nodepanel .title {
   padding: 5px;
   font-size: 20px;
   line-height: 20px;
 }
 /* line 15, ../src/views/_node_panel.scss */
-.nodepanel .content {
+.sc-view.sc-pane.sc-panel.nodepanel .content {
   position: absolute;
   background-color: #f2f2f2;
   -moz-border-radius: 7px;
@@ -530,7 +516,7 @@ li#propmenu_btn span {
   border-radius: 7px;
 }
 /* line 21, ../src/views/_node_panel.scss */
-.nodepanel.selected {
+.sc-view.sc-pane.sc-panel.nodepanel.selected {
   color: #e5e5e5;
   -moz-box-shadow: black 0px 2px 4px 0;
   -webkit-box-shadow: black 0px 2px 4px 0;
@@ -538,11 +524,11 @@ li#propmenu_btn span {
   box-shadow: black 0px 2px 4px 0;
 }
 /* line 25, ../src/views/_node_panel.scss */
-.nodepanel.selected .content {
+.sc-view.sc-pane.sc-panel.nodepanel.selected .content {
   background-color: #fff;
 }
 /* line 30, ../src/views/_node_panel.scss */
-.nodepanel .info {
+.sc-view.sc-pane.sc-panel.nodepanel .info {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -550,7 +536,7 @@ li#propmenu_btn span {
   padding: 3px 10px;
 }
 /* line 37, ../src/views/_node_panel.scss */
-.nodepanel .info span {
+.sc-view.sc-pane.sc-panel.nodepanel .info span {
   display: block;
   width: 24px;
   height: 24px;
@@ -561,7 +547,7 @@ li#propmenu_btn span {
   background-position: -240px -48px;
 }
 /* line 45, ../src/views/_node_panel.scss */
-.nodepanel .info:hover span {
+.sc-view.sc-pane.sc-panel.nodepanel .info:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
@@ -569,7 +555,7 @@ li#propmenu_btn span {
   background-position: -240px -72px;
 }
 /* line 52, ../src/views/_node_panel.scss */
-.nodepanel .edit {
+.sc-view.sc-pane.sc-panel.nodepanel .edit {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -577,7 +563,7 @@ li#propmenu_btn span {
   padding: 3px 10px;
 }
 /* line 59, ../src/views/_node_panel.scss */
-.nodepanel .edit span {
+.sc-view.sc-pane.sc-panel.nodepanel .edit span {
   display: block;
   width: 24px;
   height: 24px;
@@ -588,10 +574,20 @@ li#propmenu_btn span {
   background-position: -264px -48px;
 }
 /* line 67, ../src/views/_node_panel.scss */
-.nodepanel .edit:hover span {
+.sc-view.sc-pane.sc-panel.nodepanel .edit:hover span {
   background: url(/static/workr/en/current/source/resources/images/sprites.png) no-repeat;
   width: 24px;
   height: 24px;
   overflow: hidden;
   background-position: -264px -72px;
+}
+/* line 73, ../src/views/_node_panel.scss */
+.sc-view.sc-pane.sc-panel.nodepanel .handle {
+  position: absolute;
+  background: transparent sc_static("images/sprites.png") no-repeat -288px 0px;
+}
+/* line 78, ../src/views/_node_panel.scss */
+.sc-view.sc-pane.sc-panel.nodepanel .handle:hover {
+  position: absolute;
+  background: transparent sc_static("images/sprites.png") no-repeat -288px -72px;
 }
