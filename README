@@ -1,28 +1,23 @@
 Sproutcore workflow engine
 
+SC v1.5.0
+
 === Installation ===
 
   git clone git@github.com:bstaats/workr.git
   cd workr
   mkdir frameworks
   cd frameworks
-  git clone git@github.com:erichocean/sproutcore.git
-  cd sproutcore
-  git checkout origin/gem
-  cd ..
   git clone git@github.com:etgryphon/sproutcore-ui.git scui
   git clone git@github.com:FrozenCanuck/Ki.git
 
 
-We also use Compass/SASS http://compass-style.org/
+Use Compass/SASS (http://compass-style.org) instead of SC built in Chance
 
   gem install compass
 
 The config.rb file is used to setup Compass. Just have compass watch the project directory during development and make changes to the scss files in themes/husky/src
 
+compass watch .
 
-== To Update Sproutcore ==
 
-cd workr/frameworks/sproutcore
-git fetch
-git merge origin/gem
